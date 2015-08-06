@@ -23,7 +23,7 @@ I'll try to keep the latest working build in the Gamecube folder. Please note th
 
 Here's the link, just replace your current boot.dol file in the apps/wiisx folder (i'll get a better download going later on):
 
-https://raw.githubusercontent.com/Mystro256/wiisxr/master/Gamecube/WiiSX.dol
+https://github.com/Mystro256/wiisxr/raw/master/Gamecube/WiiSX.dol
 
 ##Reporting Bugs
 
