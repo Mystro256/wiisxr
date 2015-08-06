@@ -80,12 +80,16 @@ I realize many people know how to build on devkitPro, but here's a guide for noo
 
 11. Make sure you specify the environment variables. On Linux or mac, you can do it like so (I used ~/devkitPro for the location):
 
+```bash
 export DEVKITPRO=$HOME/devkitPro
 export DEVKITPPC=$DEVKITPRO/devkitPPC
 export PATH=$PATH:$DEVKITPPC/bin
+```
 
 and if you want to add the manpage path too:
 
+```bash
 export MANPATH=$MANPATH:$DEVKITPPC/share/man
+```
 
 Feel free to add this to your ~/.bashrc, but know the consequences of doing this.
