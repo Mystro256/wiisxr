@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/579/trunk/source/utils
+END
+oggplayer.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/538/trunk/source/utils/oggplayer.h
+END
+ehcmodule_elf.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/537/trunk/source/utils/ehcmodule_elf.h
+END
+usb2storage.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/579/trunk/source/utils/usb2storage.c
+END
+mload.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/537/trunk/source/utils/mload.h
+END
+usb2storage.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/574/trunk/source/utils/usb2storage.h
+END
+pngu.c
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/538/trunk/source/utils/pngu.c
+END
+pngu.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/538/trunk/source/utils/pngu.h
+END
+http.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/571/trunk/source/utils/http.cpp
+END
+Metaphrasis.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/538/trunk/source/utils/Metaphrasis.cpp
+END
+FreeTypeGX.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/576/trunk/source/utils/FreeTypeGX.cpp
+END
+gettext.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/541/trunk/source/utils/gettext.cpp
+END
+http.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/538/trunk/source/utils/http.h
+END
+Metaphrasis.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/538/trunk/source/utils/Metaphrasis.h
+END
+ehcmodule.elf.o
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/537/trunk/source/utils/ehcmodule.elf.o
+END
+FreeTypeGX.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/576/trunk/source/utils/FreeTypeGX.h
+END
+oggplayer.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/538/trunk/source/utils/oggplayer.c
+END
+gettext.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/538/trunk/source/utils/gettext.h
+END
+mload.c
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/545/trunk/source/utils/mload.c
+END
