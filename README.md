@@ -49,10 +49,24 @@ I'm open to collaborators!
 
 If don't have the build system setup yet, see "Build System Guide" first
 
-Just cd into the Gamecube folder and run make.
+Just cd into the Gamecube folder and run
+
+```bash
+make
+```
 
 I used a symbolic link directed at Makefile_Wii, as there are two makefiles: Makefile\_GC and Makefile\_Wii.
-Just running make should build the wii version, but use "make -f Makefile\_Wii" if this doesn't work, or make -f "Makefile\_GC" to build it for gamecube.
+Just running make should build the wii version, but use the following if this doesn't work
+
+```bash
+make -f Makefile_Wii
+```
+
+or to build it for gamecube:
+
+```bash
+make -f Makefile_GC
+```
 
 ##Build System Guide
     
