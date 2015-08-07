@@ -32,8 +32,8 @@
 extern char mcd1Written;
 extern char mcd2Written;
 
-#include "PsxBios.h"
-#include "PsxHw.h"
+#include "psxbios.h"
+#include "psxhw.h"
 
 //We try to emulate bios :) HELP US :P
 

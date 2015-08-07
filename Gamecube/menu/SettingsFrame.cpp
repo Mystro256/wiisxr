@@ -27,7 +27,7 @@
 #include "../libgui/CursorManager.h"
 #include "../libgui/MessageBox.h"
 #include "../wiiSXconfig.h"
-#include "../../PsxCommon.h"
+#include "../../psxcommon.h"
 
 extern "C" {
 #include "../gc_input/controller.h"

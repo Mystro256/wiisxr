@@ -22,11 +22,11 @@
 * R3000A CPU functions.
 */
 
-#include "R3000A.h"
-#include "PsxHw.h"
-#include "PsxDma.h"
-#include "CdRom.h"
-#include "Mdec.h"
+#include "r3000a.h"
+#include "psxhw.h"
+#include "psxdma.h"
+#include "cdrom.h"
+#include "mdec.h"
 
 R3000Acpu *psxCpu;
 psxRegisters psxRegs;

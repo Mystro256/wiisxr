@@ -25,8 +25,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../PsxCommon.h"
-#include "../PSEmu_Plugin_Defs.h"
+#include "../psxcommon.h"
+#include "../psemu_plugin_defs.h"
 #include "gc_input/controller.h"
 #include "wiiSXconfig.h"
 

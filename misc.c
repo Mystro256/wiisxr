@@ -22,10 +22,10 @@
 * Miscellaneous functions, including savesates and CD-ROM loading.
 */
 
-#include "Misc.h"
-#include "CdRom.h"
-#include "PsxHw.h"
-#include "Mdec.h"
+#include "misc.h"
+#include "cdrom.h"
+#include "psxhw.h"
+#include "mdec.h"
 #include "Gamecube/wiiSXconfig.h"
 #include "Gamecube/fileBrowser/fileBrowser-libfat.h"
 

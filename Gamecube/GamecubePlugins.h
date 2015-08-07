@@ -22,8 +22,8 @@
 #ifndef NULL
 #define NULL ((void*)0)
 #endif
-#include "../Decode_XA.h"
-#include "../PSEmu_Plugin_Defs.h"
+#include "../decode_xa.h"
+#include "../psemu_plugin_defs.h"
 #include "../plugins.h"
 
 #define SYMS_PER_LIB 32

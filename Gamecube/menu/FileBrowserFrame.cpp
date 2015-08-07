@@ -27,7 +27,7 @@
 #include "../libgui/MessageBox.h"
 #include "../libgui/FocusManager.h"
 #include "../libgui/CursorManager.h"
-#include "../../PsxCommon.h"
+#include "../../psxcommon.h"
 
 extern "C" {
 #include "../fileBrowser/fileBrowser.h"

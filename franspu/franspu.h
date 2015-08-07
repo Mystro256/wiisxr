@@ -1,8 +1,8 @@
 #ifndef __SPUPSX4ALL_H__
 #define __SPUPSX4ALL_H__
 
-#include "../PsxCommon.h"
-#include "../Decode_XA.h"
+#include "../psxcommon.h"
+#include "../decode_xa.h"
 
 #ifndef __WIN32__
 #include <unistd.h>

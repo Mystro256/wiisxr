@@ -18,13 +18,55 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-/*
-* Sound (SPU) functions.
-*/
+#ifndef __MISC_H__
+#define __MISC_H__
 
-#include "Spu.h"
+#include "psxcommon.h"
+#include "coff.h"
+#include "plugins.h"
+#include "r3000a.h"
+#include "psxmem.h"
+#include "Gamecube/fileBrowser/fileBrowser.h"
 
-void CALLBACK SPUirq(void) {
-	psxHu32ref(0x1070)|= SWAPu32(0x200);
-	psxRegs.interrupt|= 0x80000000;
-}
+#undef s_addr
+
+typedef struct {
+	unsigned char id[8];
+    u32 text;                   
+    u32 data;                    
+    u32 pc0;
+    u32 gp0;                     
+    u32 t_addr;
+    u32 t_size;
+    u32 d_addr;                  
+    u32 d_size;                  
+    u32 b_addr;                  
+    u32 b_size;                  
+    u32 s_addr;
+    u32 s_size;
+    u32 SavedSP;
+    u32 SavedFP;
+    u32 SavedGP;
+    u32 SavedRA;
+    u32 SavedS0;
+} EXE_HEADER;
+
+char CdromId[10];
+char CdromLabel[33];
+
+int LoadCdrom();
+int LoadCdromFile(char *filename, EXE_HEADER *head);
+int CheckCdrom();
+int Load(fileBrowser_file *exe);
+
+int SaveState();
+int LoadState();
+int CheckState();
+
+int SendPcsxInfo();
+int RecvPcsxInfo();
+
+extern char *LabelAuthors;
+extern char *LabelGreets;
+
+#endif /* __MISC_H__ */

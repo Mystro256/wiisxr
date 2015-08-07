@@ -13,7 +13,7 @@
 #include "stdafx.h"
 #include "externals.h"*/
 #include "franspu.h"
-#include "../PsxCommon.h"
+#include "../psxcommon.h"
 
 ////////////////////////////////////////////////////////////////////////
 // cube audio globals

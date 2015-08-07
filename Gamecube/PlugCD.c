@@ -17,7 +17,7 @@
 #include <sys/stat.h>
 #include "../plugins.h"
 #include "PlugCD.h"
-#include "../PsxCommon.h"
+#include "../psxcommon.h"
 #include "DEBUG.h"
 
 

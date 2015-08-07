@@ -44,9 +44,9 @@
 #include <malloc.h>
 #include <gccore.h>
 #include <stdlib.h>
-#include "PsxMem.h"
-#include "R3000A.h"
-#include "PsxHw.h"
+#include "psxmem.h"
+#include "r3000a.h"
+#include "psxhw.h"
 #include "Gamecube/fileBrowser/fileBrowser.h"
 #include "Gamecube/fileBrowser/fileBrowser-libfat.h"
 #include "Gamecube/fileBrowser/fileBrowser-CARD.h"

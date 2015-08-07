@@ -36,7 +36,7 @@
 # include <debug.h>
 #endif
 
-#include "../PsxCommon.h"
+#include "../psxcommon.h"
 #include "wiiSXconfig.h"
 #include "menu/MenuContext.h"
 

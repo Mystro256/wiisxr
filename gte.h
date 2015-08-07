@@ -18,31 +18,40 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef __PSXCOUNTERS_H__
-#define __PSXCOUNTERS_H__
+#ifndef __GTE_H__
+#define __GTE_H__
 
-#include "PsxCommon.h"
-#include "R3000A.h"
-#include "PsxMem.h"
-#include "plugins.h"
+#include "psxcommon.h"
+#include "r3000a.h"
 
-typedef struct {
-	u32 count, mode, target;
-	u32 sCycle, Cycle, rate, interrupt;
-} psxCounter;
+void gteMFC2();
+void gteCFC2();
+void gteMTC2();
+void gteCTC2();
+void gteLWC2();
+void gteSWC2();
 
-extern psxCounter psxCounters[5];
+void gteRTPS();
+void gteOP();
+void gteNCLIP();
+void gteDPCS();
+void gteINTPL();
+void gteMVMVA();
+void gteNCDS();
+void gteNCDT();
+void gteCDP();
+void gteNCCS();
+void gteCC();
+void gteNCS();
+void gteNCT();
+void gteSQR();
+void gteDCPL();
+void gteDPCT();
+void gteAVSZ3();
+void gteAVSZ4();
+void gteRTPT();
+void gteGPF();
+void gteGPL();
+void gteNCCT();
 
-u32 psxNextCounter, psxNextsCounter;
-
-void psxRcntInit();
-void psxRcntUpdate();
-void psxRcntWcount(u32 index, u32 value);
-void psxRcntWmode(u32 index, u32 value);
-void psxRcntWtarget(u32 index, u32 value);
-u32 psxRcntRcount(u32 index);
-int psxRcntFreeze(gzFile f, int Mode);
-
-void psxUpdateVSyncRate();
-
-#endif /* __PSXCOUNTERS_H__ */
+#endif /* __GTE_H__ */

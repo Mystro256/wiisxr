@@ -18,22 +18,13 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef __MDEC_H__
-#define __MDEC_H__
+/*
+* Sound (SPU) functions.
+*/
 
-#include "PsxCommon.h"
-#include "R3000A.h"
-#include "PsxHw.h"
-#include "PsxDma.h"
+#include "spu.h"
 
-void mdecInit();
-void mdecWrite0(u32 data);
-void mdecWrite1(u32 data);
-u32  mdecRead0();
-u32  mdecRead1();
-void psxDma0(u32 madr, u32 bcr, u32 chcr);
-void psxDma1(u32 madr, u32 bcr, u32 chcr);
-void mdec1Interrupt();
-int  mdecFreeze(gzFile f, int Mode);
-
-#endif /* __MDEC_H__ */
+void CALLBACK SPUirq(void) {
+	psxHu32ref(0x1070)|= SWAPu32(0x200);
+	psxRegs.interrupt|= 0x80000000;
+}

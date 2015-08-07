@@ -18,79 +18,80 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef __CDROM_H__
-#define __CDROM_H__
+/*
+* Internal PSX HLE functions.
+*/
 
-#include "PsxCommon.h"
-#include "Decode_XA.h"
-#include "R3000A.h"
-#include "plugins.h"
-#include "PsxMem.h"
-#include "PsxHw.h"
+#include "psxhle.h"
 
-typedef struct {
-	unsigned char OCUP;
-	unsigned char Reg1Mode;
-	unsigned char Reg2;
-	unsigned char CmdProcess;
-	unsigned char Ctrl;
-	unsigned char Stat;
+static void hleDummy() {
+	psxRegs.pc = psxRegs.GPR.n.ra;
 
-	unsigned char StatP;
+	psxBranchTest();
+}
 
-	unsigned char Transfer[2352];
-	unsigned char *pTransfer;
+static void hleA0() {
+	u32 call = psxRegs.GPR.n.t1 & 0xff;
 
-	unsigned char Prev[4];
-	unsigned char Param[8];
-	unsigned char Result[8];
+	if (biosA0[call]) biosA0[call]();
 
-	unsigned char ParamC;
-	unsigned char ParamP;
-	unsigned char ResultC;
-	unsigned char ResultP;
-	unsigned char ResultReady;
-	unsigned char Cmd;
-	unsigned char Readed;
-	unsigned long Reading;
+	psxBranchTest();
+}
 
-	unsigned char ResultTN[6];
-	unsigned char ResultTD[4];
-	unsigned char SetSector[4];
-	unsigned char SetSectorSeek[4];
-	unsigned char Track;
-	int Play;
-	int CurTrack;
-	int Mode, File, Channel, Muted;
-	int Reset;
-	int RErr;
-	int FirstSector;
+static void hleB0() {
+	u32 call = psxRegs.GPR.n.t1 & 0xff;
 
-	xa_decode_t Xa;
+	if (biosB0[call]) biosB0[call]();
 
-	int Init;
+	psxBranchTest();
+}
 
-	unsigned char Irq;
-	unsigned long eCycle;
+static void hleC0() {
+	u32 call = psxRegs.GPR.n.t1 & 0xff;
 
-	int Seeked;
+	if (biosC0[call]) biosC0[call]();
 
-	char Unused[4083];
-} cdrStruct;
+	psxBranchTest();
+}
 
-cdrStruct cdr;
+static void hleBootstrap() { // 0xbfc00000
+	SysPrintf("hleBootstrap\n");
+	CheckCdrom();
+	LoadCdrom();
+	SysPrintf("CdromLabel: \"%s\": PC = %8.8lx (SP = %8.8lx)\n", CdromLabel, psxRegs.pc, psxRegs.GPR.n.sp);
+}
 
-void cdrReset();
-void cdrInterrupt();
-void cdrReadInterrupt();
-unsigned char cdrRead0(void);
-unsigned char cdrRead1(void);
-unsigned char cdrRead2(void);
-unsigned char cdrRead3(void);
-void cdrWrite0(unsigned char rt);
-void cdrWrite1(unsigned char rt);
-void cdrWrite2(unsigned char rt);
-void cdrWrite3(unsigned char rt);
-int cdrFreeze(gzFile f, int Mode);
+typedef struct {                   
+	u32 _pc0;      
+	u32 gp0;      
+	u32 t_addr;   
+	u32 t_size;   
+	u32 d_addr;   
+	u32 d_size;   
+	u32 b_addr;   
+	u32 b_size;   
+	u32 S_addr;
+	u32 s_size;
+	u32 _sp,_fp,_gp,ret,base;
+} EXEC;
 
-#endif /* __CDROM_H__ */
+static void hleExecRet() {
+	EXEC *header = (EXEC*)PSXM(psxRegs.GPR.n.s0);
+
+	SysPrintf("ExecRet %x: %x\n", psxRegs.GPR.n.s0, header->ret);
+
+	psxRegs.GPR.n.ra = header->ret;
+	psxRegs.GPR.n.sp = header->_sp;
+	psxRegs.GPR.n.s8 = header->_fp;
+	psxRegs.GPR.n.gp = header->_gp;
+	psxRegs.GPR.n.s0 = header->base;
+
+	psxRegs.GPR.n.v0 = 1;
+	psxRegs.pc = psxRegs.GPR.n.ra;
+}
+
+void (*psxHLEt[256])() = {
+	hleDummy, hleA0, hleB0, hleC0,
+	hleBootstrap, hleExecRet,
+	hleDummy, hleDummy
+};

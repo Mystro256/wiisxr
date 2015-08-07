@@ -22,7 +22,7 @@
 * Internal PSX counters.
 */
 
-#include "PsxCounters.h"
+#include "psxcounters.h"
 #include "Gamecube/DEBUG.h"
 
 static int cnts = 4;

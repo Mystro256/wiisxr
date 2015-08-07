@@ -18,55 +18,26 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef __MISC_H__
-#define __MISC_H__
+#ifndef __PSXBIOS_H__
+#define __PSXBIOS_H__
 
-#include "PsxCommon.h"
-#include "Coff.h"
-#include "plugins.h"
-#include "R3000A.h"
-#include "PsxMem.h"
-#include "Gamecube/fileBrowser/fileBrowser.h"
+#include "psxcommon.h"
+#include "r3000a.h"
+#include "psxmem.h"
+#include "misc.h"
+#include "sio.h"
 
-#undef s_addr
+extern char *biosA0n[256];
+extern char *biosB0n[256];
+extern char *biosC0n[256];
 
-typedef struct {
-	unsigned char id[8];
-    u32 text;                   
-    u32 data;                    
-    u32 pc0;
-    u32 gp0;                     
-    u32 t_addr;
-    u32 t_size;
-    u32 d_addr;                  
-    u32 d_size;                  
-    u32 b_addr;                  
-    u32 b_size;                  
-    u32 s_addr;
-    u32 s_size;
-    u32 SavedSP;
-    u32 SavedFP;
-    u32 SavedGP;
-    u32 SavedRA;
-    u32 SavedS0;
-} EXE_HEADER;
+void psxBiosInit();
+void psxBiosShutdown();
+void psxBiosException();
+void psxBiosFreeze(int Mode);
 
-char CdromId[10];
-char CdromLabel[33];
+extern void (*biosA0[256])();
+extern void (*biosB0[256])();
+extern void (*biosC0[256])();
 
-int LoadCdrom();
-int LoadCdromFile(char *filename, EXE_HEADER *head);
-int CheckCdrom();
-int Load(fileBrowser_file *exe);
-
-int SaveState();
-int LoadState();
-int CheckState();
-
-int SendPcsxInfo();
-int RecvPcsxInfo();
-
-extern char *LabelAuthors;
-extern char *LabelGreets;
-
-#endif /* __MISC_H__ */
+#endif /* __PSXBIOS_H__ */

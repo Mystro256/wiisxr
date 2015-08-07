@@ -1,8 +1,8 @@
 #ifdef ALTERNATESPU
 
 #include "franspu.h"
-#include "../PsxCommon.h"
-#include "../Decode_XA.h"
+#include "../psxcommon.h"
+#include "../decode_xa.h"
 
 
 extern void SoundFeedStreamData(unsigned char* pSound,long lBytes);

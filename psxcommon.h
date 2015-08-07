@@ -55,8 +55,8 @@ typedef uint64_t u64;
 typedef uintptr_t uptr;
 */
 /* Local includes */
-#include "System.h"
-#include "CoreDebug.h"
+#include "system.h"
+#include "coredebug.h"
 
 /* Ryan TODO WTF is this? */
 #if defined (__LINUX__) || defined (__MACOSX__) || defined(HW_RVL) || defined(HW_DOL)

@@ -18,40 +18,26 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef __GTE_H__
-#define __GTE_H__
+#ifndef __SPU_H__
+#define __SPU_H__
 
-#include "PsxCommon.h"
-#include "R3000A.h"
+#include "psxcommon.h"
+#include "plugins.h"
+#include "r3000a.h"
+#include "psxmem.h"
 
-void gteMFC2();
-void gteCFC2();
-void gteMTC2();
-void gteCTC2();
-void gteLWC2();
-void gteSWC2();
+#define CALLBACK  
 
-void gteRTPS();
-void gteOP();
-void gteNCLIP();
-void gteDPCS();
-void gteINTPL();
-void gteMVMVA();
-void gteNCDS();
-void gteNCDT();
-void gteCDP();
-void gteNCCS();
-void gteCC();
-void gteNCS();
-void gteNCT();
-void gteSQR();
-void gteDCPL();
-void gteDPCT();
-void gteAVSZ3();
-void gteAVSZ4();
-void gteRTPT();
-void gteGPF();
-void gteGPL();
-void gteNCCT();
+#define H_SPUirqAddr     0x0da4
+#define H_SPUaddr        0x0da6
+#define H_SPUdata        0x0da8
+#define H_SPUctrl        0x0daa
+#define H_SPUstat        0x0dae
+#define H_SPUon1         0x0d88
+#define H_SPUon2         0x0d8a
+#define H_SPUoff1        0x0d8c
+#define H_SPUoff2        0x0d8e
 
-#endif /* __GTE_H__ */
+void CALLBACK SPUirq(void);
+
+#endif /* __SPU_H__ */

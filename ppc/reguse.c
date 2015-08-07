@@ -1,8 +1,8 @@
 
-#include "../PsxCommon.h"
+#include "../psxcommon.h"
 #include "reguse.h"
 
-#include "../R3000A.h"
+#include "../r3000a.h"
 
 //#define SAME_CYCLE_MODE
 

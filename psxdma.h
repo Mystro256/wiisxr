@@ -18,26 +18,30 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef __PSXBIOS_H__
-#define __PSXBIOS_H__
+#ifndef __PSXDMA_H__
+#define __PSXDMA_H__
 
-#include "PsxCommon.h"
-#include "R3000A.h"
-#include "PsxMem.h"
-#include "Misc.h"
-#include "Sio.h"
+#include "psxcommon.h"
+#include "r3000a.h"
+#include "psxhw.h"
+#include "psxmem.h"
 
-extern char *biosA0n[256];
-extern char *biosB0n[256];
-extern char *biosC0n[256];
+#define GPUDMA_INT(eCycle) { \
+	psxRegs.interrupt |= 0x01000000; \
+	psxRegs.intCycle[3+24+1] = eCycle; \
+	psxRegs.intCycle[3+24] = psxRegs.cycle; \
+}
 
-void psxBiosInit();
-void psxBiosShutdown();
-void psxBiosException();
-void psxBiosFreeze(int Mode);
+#define MDECOUTDMA_INT(eCycle) { \
+	psxRegs.interrupt |= 0x02000000; \
+	psxRegs.intCycle[5+24+1] = eCycle; \
+	psxRegs.intCycle[5+24] = psxRegs.cycle; \
+}
 
-extern void (*biosA0[256])();
-extern void (*biosB0[256])();
-extern void (*biosC0[256])();
+void psxDma2(u32 madr, u32 bcr, u32 chcr);
+void psxDma3(u32 madr, u32 bcr, u32 chcr);
+void psxDma4(u32 madr, u32 bcr, u32 chcr);
+void psxDma6(u32 madr, u32 bcr, u32 chcr);
+void gpuInterrupt();
 
-#endif /* __PSXBIOS_H__ */
+#endif /* __PSXDMA_H__ */

@@ -21,8 +21,8 @@
 #ifndef __PLUGINS_H__
 #define __PLUGINS_H__
 
-#include "PsxCommon.h"
-#include "Spu.h"
+#include "psxcommon.h"
+#include "spu.h"
 
 typedef void* HWND;
 #define CALLBACK
@@ -35,8 +35,8 @@ long PAD1__open(void);
 long PAD2__open(void);
 typedef long (* NETopen)(unsigned long *);
 
-#include "PSEmu_Plugin_Defs.h"
-#include "Decode_XA.h"
+#include "psemu_plugin_defs.h"
+#include "decode_xa.h"
 
 int  LoadPlugins();
 void ReleasePlugins();

@@ -25,12 +25,12 @@
 #include <time.h>
 #include <sys/types.h>
 
-#include "../PsxCommon.h"
+#include "../psxcommon.h"
 #include "ppc.h"
 #include "reguse.h"
 #include "pR3000A.h"
-#include "../R3000A.h"
-#include "../PsxHLE.h"
+#include "../r3000a.h"
+#include "../psxhle.h"
 #include "../Gamecube/DEBUG.h"
 
 /* variable declarations */

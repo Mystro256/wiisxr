@@ -18,26 +18,26 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef __SPU_H__
-#define __SPU_H__
+#ifndef __DECODE_XA_H__
+#define __DECODE_XA_H__
 
-#include "PsxCommon.h"
-#include "plugins.h"
-#include "R3000A.h"
-#include "PsxMem.h"
+#include "psxcommon.h"
 
-#define CALLBACK  
+typedef struct {
+	s32	y0, y1;
+} ADPCM_Decode_t;
 
-#define H_SPUirqAddr     0x0da4
-#define H_SPUaddr        0x0da6
-#define H_SPUdata        0x0da8
-#define H_SPUctrl        0x0daa
-#define H_SPUstat        0x0dae
-#define H_SPUon1         0x0d88
-#define H_SPUon2         0x0d8a
-#define H_SPUoff1        0x0d8c
-#define H_SPUoff2        0x0d8e
+typedef struct {
+	int				freq;
+	int				nbits;
+	int				stereo;
+	int				nsamples;
+	ADPCM_Decode_t	left, right;
+	short			pcm[16384];
+} xa_decode_t;
 
-void CALLBACK SPUirq(void);
+s32 xa_decode_sector( xa_decode_t *xdp,
+					   unsigned char *sectorp,
+					   int is_first_sector );
 
-#endif /* __SPU_H__ */
+#endif

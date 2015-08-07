@@ -22,10 +22,10 @@
 * Handles PSX DMA functions.
 */
 #include "Gamecube/DEBUG.h"
-#include "PsxDma.h"
+#include "psxdma.h"
 
-// Dma0/1 in Mdec.c
-// Dma3   in CdRom.c
+// Dma0/1 in mdec.c
+// Dma3   in cdrom.c
 
 void psxDma4(u32 madr, u32 bcr, u32 chcr) { // SPU
 

@@ -18,13 +18,31 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef __PSXHLE_H__
-#define __PSXHLE_H__
+#ifndef __PSXCOUNTERS_H__
+#define __PSXCOUNTERS_H__
 
-#include "PsxCommon.h"
-#include "R3000A.h"
+#include "psxcommon.h"
+#include "r3000a.h"
+#include "psxmem.h"
 #include "plugins.h"
 
-extern void (*psxHLEt[256])();
+typedef struct {
+	u32 count, mode, target;
+	u32 sCycle, Cycle, rate, interrupt;
+} psxCounter;
 
-#endif /* __PSXHLE_H__ */
+extern psxCounter psxCounters[5];
+
+u32 psxNextCounter, psxNextsCounter;
+
+void psxRcntInit();
+void psxRcntUpdate();
+void psxRcntWcount(u32 index, u32 value);
+void psxRcntWmode(u32 index, u32 value);
+void psxRcntWtarget(u32 index, u32 value);
+u32 psxRcntRcount(u32 index);
+int psxRcntFreeze(gzFile f, int Mode);
+
+void psxUpdateVSyncRate();
+
+#endif /* __PSXCOUNTERS_H__ */
