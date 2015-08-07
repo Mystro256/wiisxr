@@ -10,10 +10,6 @@ http://mooby.psxfanatics.com
 
 ************************************************************************/
 
-#ifdef WINDOWS
-#pragma warning(disable:4786)
-#endif
-
 #include <iostream>
 #include <string>
 
@@ -24,15 +20,6 @@ http://mooby.psxfanatics.com
 
 #include "externs.h"
 #include <stdlib.h>
-
-#ifdef WINDOWS
-#include <FL/Fl.H>
-#include <FL/Fl_Button.H>
-#include <FL/Fl_Window.H>
-#include <FL/Fl_Input.H>
-#include <FL/Fl_File_Chooser.H>
-#include <FL/Fl_File_Icon.H>
-#endif
 
 extern "C" {
 #include "../DEBUG.h"
@@ -50,24 +37,6 @@ extern int rc;
 extern TDTNFormat tdtnformat;
 extern EMUMode mode;
 extern Preferences prefs;
-
-#ifdef _WINDOWS
-#include <windows.h>
-
-extern "C" 
-{
-  int WINAPI DllMain (HANDLE h, DWORD reason, void *ptr);
-}
-
-// DLL init.  thanks PEOPS =)
-int WINAPI DllMain(HANDLE hModule,                  // DLL INIT
-                   DWORD  dwReason, 
-                   LPVOID lpReserved)
-{
-   return TRUE;                                          // very quick :)
-}
-
-#endif
 
 int CD_Wait(void)
 {
@@ -103,15 +72,6 @@ void openIt(void)
    if (prefs.prefsMap[autorunString] == std::string())
    {
       char * returned;
-#ifdef WINDOWS
-      while ( (returned = moobyFileChooser("Choose an image to run", theUsualSuspects.c_str(), prefs.prefsMap[lastrunString])) == NULL)
-      {
-         if (moobyAsk("You hit cancel or didn't pick a file.\nPick a different file? ('No' will end the program)") == 0)
-         {
-            exit(0);
-         }
-      }
-#endif
       theFile = isoFile->name;
    }
    else

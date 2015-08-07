@@ -10,18 +10,10 @@ http://mooby.psxfanatics.com
 
 ************************************************************************/
 
-#ifdef WINDOWS
-#pragma warning(disable:4786)
-#endif
-
 #ifndef __DEFINES_H
 #define __DEFINES_H
 
-#if defined _WINDOWS || defined __CYGWIN32__
-#include <windows.h>
-#else
 #define CALLBACK
-#endif
 
 #include <gccore.h>
 
@@ -91,10 +83,8 @@ typedef short int   INT16;
 typedef unsigned char      UINT8;
 typedef unsigned short int UINT16;
 
-#if !defined _WINDOWS && !defined __CYGWIN32__
 typedef long int    INT32;
 typedef unsigned long int  UINT32;
-#endif
 
 #define	INT64 long long
 
@@ -110,22 +100,6 @@ typedef struct {
     int     (*MDEC0_DmaExec)();
     int     (*MDEC1_DmaExec)();
 } MDEC_Export;
-
-#if defined _WINDOWS || defined __CYGWIN32__
-// Main Struct for initialization
-typedef struct {
-    UINT8        *SystemRam;   // Pointer to the PSX system ram
-    UINT32        Flags;       // Flags to plugins
-    UINT32       *IrqPulsePtr; // Pointer to interrupt pending reg
-    MDEC_Export   MDecAltern;  // Use another MDEC engine
-    int         (*ReadCfg)();  // Read an item from INI
-    int         (*WriteCfg)(); // Write an item to INI
-    void        (*FlushRec)(); // Tell where the RAM is changed
-    HWND          HWnd;        // Window handle
-    HINSTANCE     HInstance;
-} FPSEWin32;
-
-#endif
 
 // cdr stat struct
 struct CdrStat
@@ -162,19 +136,6 @@ typedef struct {
 /* PS2 defines */
 
 #if 0
-#if defined(_WINDOWS)
-
-typedef __int8  s8;
-typedef __int16 s16;
-typedef __int32 s32;
-typedef __int64 s64;
-
-typedef unsigned __int8  u8;
-typedef unsigned __int16 u16;
-typedef unsigned __int32 u32;
-typedef unsigned __int64 u64;
-
-#else
 
 typedef char s8;
 typedef short s16;
@@ -186,7 +147,6 @@ typedef unsigned short u16;
 typedef unsigned long u32;
 typedef unsigned long long u64;
 
-#endif
 #endif
 
 typedef struct { // NOT bcd coded

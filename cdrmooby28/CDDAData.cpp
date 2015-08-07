@@ -11,10 +11,6 @@ http://mooby.psxfanatics.com
 
 ************************************************************************/
 
-#ifdef WINDOWS
-#pragma warning(disable:4786)
-#endif
-
 #include "CDDAData.hpp"
 #include "Preferences.hpp"
 
@@ -23,8 +19,6 @@ using namespace std;
 extern Preferences prefs;
 extern std::string programName;
 
-
-#ifdef __GAMECUBE__
 
 static sem_t audioReady;
 
@@ -78,7 +72,6 @@ static void* CDDAThread(void* userData){
 #endif
 	return NULL;
 }
-#endif // __GAMECUBE__
 
 // this callback repeats one track over and over
 int CDDACallbackRepeat(  void *inputBuffer, void *outputBuffer,
@@ -194,47 +187,30 @@ PlayCDDAData::PlayCDDAData(const std::vector<TrackInfo> ti, CDTime gapLength)
    if (volume < 0) volume = 0;
    else if (volume > 1) volume = 1;
    
-#ifdef __GAMECUBE__
    live = true;
    LWP_SemInit(&audioReady, 1, 1);
    LWP_SemInit(&firstAudio, 0, 1);
    LWP_CreateThread(&audioThread, CDDAThread, this,
                     audioStack, audioStackSize, audioPriority);
-#endif
 }
 
 PlayCDDAData::~PlayCDDAData()
 {
 	if (playing) stop(); 
-#ifdef WINDOWS
-	Pa_Terminate();
-#elif defined(__GAMECUBE__)
 	live = false;
 	LWP_SemPost(firstAudio);
 	LWP_SemDestroy(audioReady);
 	LWP_SemDestroy(firstAudio);
 	LWP_JoinThread(audioThread, NULL);
-#endif
 	delete theCD;
 }
 
 // initialize the CDDA file data and initalize the audio stream
 void PlayCDDAData::openFile(const std::string& file, int type) 
 {
-#ifdef WINDOWS
-   PaError err;
-#endif
    std::string extension;
    theCD = FileInterfaceFactory(file, extension, type);
    theCD->setPregap(pregapLength, trackList[2].trackStart);
-#ifdef WINDOWS
-   err = Pa_Initialize();
-   if( err != paNoError )
-   {
-      Exception e(string("PA Init error: ") + string(Pa_GetErrorText( err )));
-      THROW(e);
-   }
-#endif
       // disable extra caching on the file interface
    theCD->setCacheMode(FileInterface::oldMode);
 }
@@ -319,35 +295,7 @@ int PlayCDDAData::play(const CDTime& startTime)
 
       // open a stream - pass in this CDDA object as the user data.
       // depending on the play mode, use a different callback
-#ifdef WINDOWS
-   PaError err;
-   
-   if (prefs.prefsMap[repeatString] == repeatAllString)
-      err = Pa_OpenDefaultStream(&stream, 0, 2, paInt16, 44100, 5880, 
-                                 0, CDDACallbackRepeat, this);
-   else if (prefs.prefsMap[repeatString] == repeatOneString)
-      err = Pa_OpenDefaultStream(&stream, 0, 2, paInt16, 44100, 5880, 
-                                 0, CDDACallbackRepeat, this);
-   else if (prefs.prefsMap[repeatString] == playOneString)
-      err = Pa_OpenDefaultStream(&stream, 0, 2, paInt16, 44100, 5880, 
-                                 0, CDDACallbackOneTrackStop, this);
-
-   if( err != paNoError )
-   {
-     return 0;
-   }
-  
-      // start the stream.  the CDDACallback will automatically get 
-      // called to buffer the audio
-   err = Pa_StartStream( stream );
-
-   if( err != paNoError )
-   {
-     return 0;
-   }
-#elif (__GAMECUBE__)
    LWP_SemPost(firstAudio);
-#endif
    
    return 0;
 }
@@ -357,14 +305,6 @@ int PlayCDDAData::stop()
 {
    if (playing)
    {
-#ifdef WINDOWS
-      PaError err = Pa_CloseStream( stream );
-      if( err != paNoError )
-      {  
-         Exception e(string("PA Close Stream error: ") + string(Pa_GetErrorText( err )));
-         THROW(e);
-      }
-#endif
       playing = false;
    }
    return 0;

@@ -10,10 +10,6 @@ http://mooby.psxfanatics.com
 
 ************************************************************************/
 
-#ifdef WINDOWS
-#pragma warning(disable:4786)
-#endif
-
 #include "defines.h"
 #include "Utils.hpp"
 #include "CDInterface.hpp"

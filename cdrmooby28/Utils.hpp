@@ -10,26 +10,11 @@ http://mooby.psxfanatics.com
 
 ************************************************************************/
 
-#ifdef WINDOWS
-#pragma warning(disable:4786)
-#endif
-
 #ifndef UTILS_HPP
 #define UTILS_HPP
 
 #include <string>
 #include <sstream>
-#ifdef WINDOWS
-#include <FL/Fl.H>
-#include <FL/Fl_Button.H>
-#include <FL/fl_ask.h>
-#include <FL/Fl_File_Chooser.H>
-#include <FL/filename.H>
-#include <stdlib.h>
-#ifdef _WINDOWS
-#include <windows.h>
-#endif
-#endif
 
 /* 
    This file is for any utility function or constant that has use outside the scope of any
@@ -78,51 +63,21 @@ extern "C" {
 inline void moobyMessage(const std::string& message)
 {
   SysPrintf("%s\r\n",message.c_str());
-#ifdef WINDOWS  
-   fl_message("%s", message.c_str());
-#ifdef __LINUX__
-   Fl::wait();
-#endif
-#endif
 }
 
 inline void moobyMessage(const char* message)
 {
   SysPrintf("%s\r\n",message);
-#ifdef WINDOWS  
-   fl_message("%s", message);
-#ifdef __LINUX__
-   Fl::wait();
-#endif
-#endif
 }
 
 inline char* moobyFileChooser(const char* message, const char* filespec, 
                               const std::string& last = std::string())
 {
-#ifdef WINDOWS  
-   char* toReturn;
-   if (last.size())
-      toReturn = fl_file_chooser(message, filespec, last.c_str());
-   else
-      toReturn = fl_file_chooser(message, filespec, NULL);
-#ifdef __LINUX__
-   Fl::wait();
-#endif
-   return toReturn;
-#endif
   return NULL;
 }
 
 inline int moobyAsk(const char* message)
 {
-#ifdef WINDOWS  
-   int i = fl_ask(message);
-#ifdef __LINUX__
-   Fl::wait();
-#endif
-   return i;
-#endif
   return 0;
 }
 
@@ -193,42 +148,7 @@ inline bool extensionMatches(const std::string& file, const std::string& ext)
 inline std::string getProgramName(void)
 {
    std::string toReturn;
-
-#ifdef WINDOWS  
-#ifdef _WINDOWS
-   char buf[1024];
-   if (GetModuleFileName(NULL, (char*)&buf, 1024) == 0)
-   {
-      // i hope this never happens....  we'll just make an assumption ;)
-      toReturn = "epsxe";
-   }
-   else
-   {
-      toReturn = buf;
-   }
-#else // for the UNIXes
-   char* buf = getenv("_");
-   if (buf == NULL)
-   {
-      toReturn = "pcsx";
-   }
-   else
-   {
-      toReturn = buf;
-   }
-#endif
-
-	// strips all the useless crud from the retuned string
-   toReturn = fl_filename_name(toReturn.c_str());
-   std::string::size_type i;
-   i = toReturn.find_last_of('.');
-   if (i != std::string::npos)
-      toReturn.erase(i);
-   for (i = 0; i < toReturn.size(); i++)
-      toReturn[i] = tolower(toReturn[i]);
-   return toReturn;
-#endif
-  return "WiiSX";
+   return "WiiSX";
 }
 
 #endif

@@ -10,20 +10,12 @@ http://mooby.psxfanatics.com
 
 ************************************************************************/
 
-#ifdef WINDOWS
-#pragma warning(disable:4786)
-#endif
-
 #ifndef PREFERENCES_HPP
 #define PREFERENCES_HPP
 
 #include <map>
 #include <list>
 #include <string>
-
-#ifdef WINDOWS
-#include <FL/Fl_Preferences.h>
-#endif
 
 static const char* repeatString = "repeat";
 static const char* volumeString = "volume";

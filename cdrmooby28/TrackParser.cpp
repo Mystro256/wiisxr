@@ -10,10 +10,6 @@ http://mooby.psxfanatics.com
 
 ************************************************************************/
 
-#ifdef WINDOWS
-#pragma warning(disable:4786)
-#endif
-
 #include "TrackParser.hpp"
 #include "Utils.hpp"
 

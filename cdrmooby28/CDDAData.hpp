@@ -19,13 +19,9 @@ http://mooby.psxfanatics.com
 #include "CDTime.hpp"
 #include "TrackInfo.hpp"
 
-#ifdef WINDOWS
-#include <portaudio.h>
-#elif defined(__GAMECUBE__)
 #include <asndlib.h>
 #include <ogc/lwp.h>
 #include <ogc/semaphore.h>
-#endif
 
 // CDDA data virtual base class
 class CDDAData
@@ -75,14 +71,8 @@ public:
 	// All the data members are public so they can be accessed by the PortAudio
 	// callback
 
-#ifdef WINDOWS
-		// the PortAudio stream for playing
-   PortAudioStream* stream;
-#else
-   char* stream;
-#endif
+    char* stream;
    
-#ifdef __GAMECUBE__
    bool live;
    sem_t firstAudio;
    
@@ -90,7 +80,6 @@ public:
    static const int audioPriority = 128;
    static const int audioStackSize = 1024;
    unsigned char audioStack[audioStackSize];
-#endif
 
       // the volume as set in the configuration window
    double volume;

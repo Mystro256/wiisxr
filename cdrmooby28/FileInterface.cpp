@@ -10,10 +10,6 @@ http://mooby.psxfanatics.com
 
 ************************************************************************/
 
-#ifdef WINDOWS
-#pragma warning(disable:4786)
-#endif
-
 #include "FileInterface.hpp"
 #include "TrackParser.hpp"
 #include "Utils.hpp"
@@ -22,15 +18,6 @@ http://mooby.psxfanatics.com
 #include <sstream>
 
 #include <stdio.h>
-#ifdef WINDOWS
-#include <bzlib.h>
-#include <zlib.h>
-
-#include "unrar/unrarlib.h"
-bool RARFileInterface::alreadyUncompressed = false;
-unsigned char* RARFileInterface::theFile = NULL;
-unsigned long RARFileInterface::length = 0;
-#endif
 
 extern "C" {
 #include "../fileBrowser/fileBrowser.h"
