@@ -38,9 +38,9 @@ http://sourceforge.net/projects/devkitpro/files/devkitPPC/
 
 Some Goals in mind:
 
-- Fix build warnings and errors (see buildwarnings.log for details)
-- Update with code from pcsxr (as wiisx is based on pcsx and pcsxr is still actively maintained with great compatibility: http://pcsxr.codeplex.com)
-- Port to c++ (to make it more aligned with pcsxr and easier to update as needed)
+- Fix build warnings and errors (see Gamecube/build.log for details, seems like it can be optimized better too)
+- Update with code from pcsxr (Take as much as possible from pcsxr development... unfortunately the wii is limited and some fixes cannot be ported: http://pcsxr.codeplex.com)
+- Improve plugins (perhaps replace them?)... e.g. cdrmooby28 has some optimization and possible heap issues.
 
 Don't forget to fork me if you want to contribute! :)
 I'm open to collaborators!
