@@ -24,6 +24,4 @@
 //
 //*************************************************************************//
 
-#ifdef _WINDOWS
-BOOL CALLBACK DebugDlgProc(HWND hW, UINT uMsg, WPARAM wParam, LPARAM lParam);
-#endif
+

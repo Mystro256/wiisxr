@@ -115,19 +115,6 @@ void CALLBACK ZN_SPUplayADPCMchannel(xa_decode_t *xap)
 
 long CALLBACK PEOPS_SPUinit(void);
 
-#ifdef _WINDOWS
-
-long CALLBACK SPUopen(HWND hW);
-
-long CALLBACK ZN_SPUopen(HWND hW)                          
-{
- iZincEmu=1;
- SPUinit();
- return SPUopen(hW);
-}
-
-#else
-
 long PEOPS_SPUopen(void);
 
 long ZN_SPUopen(void)
@@ -136,8 +123,6 @@ long ZN_SPUopen(void)
  PEOPS_SPUinit();
  return PEOPS_SPUopen();
 }
-
-#endif
 
 //-------------------------------------------------------------------------// 
 

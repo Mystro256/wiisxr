@@ -25,30 +25,8 @@
 //*************************************************************************//
 
 //////////////////////////////////////////////////////////
-// WINDOWS
-//////////////////////////////////////////////////////////
-
-#ifdef _WINDOWS
-
-#define WIN32_LEAN_AND_MEAN
-#define STRICT
-#include <windows.h>
-#include <windowsx.h>
-#include "mmsystem.h"
-#include <process.h>
-#include <stdlib.h>
-
-// enable that for auxprintf();
-//#define SMALLDEBUG
-//#include <dbgout.h>
-//void auxprintf (LPCTSTR pFormat, ...);
-
-#define INLINE __inline
-
-//////////////////////////////////////////////////////////
 // LINUX
 //////////////////////////////////////////////////////////
-#else
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -72,7 +50,5 @@
 #define HIWORD(l)           ((unsigned short)(((unsigned long)(l) >> 16) & 0xFFFF)) 
 
 #define INLINE inline
-
-#endif
 
 #include "psemuxa.h"
