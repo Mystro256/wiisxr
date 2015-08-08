@@ -38,9 +38,10 @@ http://sourceforge.net/projects/devkitpro/files/devkitPPC/
 
 Some Goals in mind:
 
-- Fix build warnings and errors (see Gamecube/build.log for details, seems like it can be optimized better too)
+- Fix build warnings and errors (see Gamecube/build.log for details, seems like it could be optimized better too)
+- Remove Gamecube specific code and remake gui with libwiigui (easier to change, update and fix. Plus it's all draw with gx. Also this needs to be rebranded, as the wiisx logo and name does not belong to me)
 - Update with code from pcsxr (Take as much as possible from pcsxr development... unfortunately the wii is limited and some fixes cannot be ported: http://pcsxr.codeplex.com)
-- Improve plugins (perhaps replace them?)... e.g. cdrmooby28 has some optimization and possible heap issues.
+- Improve plugins (perhaps replace them?)... e.g. cdrmooby28 has some optimization and possible heap issues. As well, maybe an opengl plugin can be ported to gx (with the help of something like gl2gx).
 
 Don't forget to fork me if you want to contribute! :)
 I'm open to collaborators!
