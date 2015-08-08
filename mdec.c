@@ -228,7 +228,7 @@ u32 mdecRead1(void) {
 
 void psxDma0(u32 adr, u32 bcr, u32 chcr) {
 	int cmd = mdec.command;
-	int size;
+	//int size;
 
 #ifdef CDR_LOG
 	CDR_LOG("DMA0 %lx %lx %lx\n", adr, bcr, chcr);
@@ -236,7 +236,7 @@ void psxDma0(u32 adr, u32 bcr, u32 chcr) {
 
 	if (chcr!=0x01000201) return;
 
-	size = (bcr>>16)*(bcr&0xffff);
+	//size = (bcr>>16)*(bcr&0xffff);
 
 	if (cmd==0x60000000) {
 	} else

@@ -188,7 +188,9 @@ char * pConfigFile=NULL;
 void ReadConfigFile()
 {
  struct stat buf;
- FILE *in;char t[256];int len, size;
+ FILE *in;char t[256];
+ int size;
+ //int len;
  char * pB, * p;
 
  if(pConfigFile)
@@ -216,7 +218,8 @@ void ReadConfigFile()
  pB=(char *)malloc(size);
  memset(pB,0,size);
 
- len = fread(pB, 1, size, in);
+ //len = 
+ fread(pB, 1, size, in);
  fclose(in);
 
  GetValue("ResX", iResX);

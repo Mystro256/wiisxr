@@ -1199,7 +1199,7 @@ void psxBios_HookEntryInt() { // 19
 	PSXBIOS_LOG("psxBios_%s\n", biosB0n[0x19]);
 #endif
 
-	jmp_int = (unsigned long*)Ra0;
+	jmp_int = (u32*)Ra0;
 	pc0 = ra;
 }
 

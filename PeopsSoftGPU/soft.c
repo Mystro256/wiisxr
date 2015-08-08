@@ -7390,7 +7390,7 @@ void HorzLineFlat(int y, int x0, int x1, unsigned short colour)
 void DrawSoftwareLineShade(long rgb0, long rgb1)
 {
 	short x0, y0, x1, y1, xt, yt;
-	long rgbt;
+	//long rgbt;
 	double m, dy, dx;
 
 	if(lx0>drawW && lx1>drawW) return;
@@ -7429,7 +7429,7 @@ void DrawSoftwareLineShade(long rgb0, long rgb1)
 			{
 				xt = x0;
 				yt = y0;
-				rgbt = rgb0;
+				//rgbt = rgb0;
 				x0 = x1;
 				y0 = y1;
 				rgb0 = rgb1;

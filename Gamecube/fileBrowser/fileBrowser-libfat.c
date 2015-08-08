@@ -208,7 +208,7 @@ int fileBrowser_libfat_readDir(fileBrowser_file* file, fileBrowser_file** dir){
     struct stat fstat;
 
     // Set everything up to read
-    char filename[MAXPATHLEN];
+    //char filename[MAXPATHLEN];
     int num_entries = 2, i = 0;
     *dir = malloc( num_entries * sizeof(fileBrowser_file) );
     // Read each entry of the directory

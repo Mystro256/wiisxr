@@ -1,866 +1,832 @@
-In file included from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.cpp:1:0:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:28:20: warning: 'repeatString' defined but not used [-Wunused-variable]
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.cpp:1:0:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
  static const char* repeatString = "repeat";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'volumeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
  static const char* volumeString = "volume";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'autorunString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'autorunString' defined but not used [-Wunused-variable]
  static const char* autorunString = "autorun";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:23:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
  static const char* lastrunString = "lastrun";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:24:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
  static const char* cacheSizeString = "cachesize";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
  static const char* cachingModeString = "cachemode";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:34:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
  static const char* subEnableString = "subenable";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:37:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
  static const char* repeatAllString = "repeatAll";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:38:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
  static const char* repeatOneString = "repeatOne";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:39:20: warning: 'playOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'playOneString' defined but not used [-Wunused-variable]
  static const char* playOneString = "playOne";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:40:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
  static const char* oldCachingString = "old";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:41:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
  static const char* newCachingString = "new";
                     ^
-In file included from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/FileInterface.hpp:17:0,
-                 from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/FileInterface.cpp:17:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/FileInterface.hpp:17:0,
+                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/FileInterface.cpp:13:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
-In file included from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/FileInterface.cpp:20:0:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:28:20: warning: 'repeatString' defined but not used [-Wunused-variable]
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/FileInterface.cpp:16:0:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
  static const char* repeatString = "repeat";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'volumeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
  static const char* volumeString = "volume";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'autorunString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'autorunString' defined but not used [-Wunused-variable]
  static const char* autorunString = "autorun";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:23:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
  static const char* lastrunString = "lastrun";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:24:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
  static const char* cacheSizeString = "cachesize";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
  static const char* cachingModeString = "cachemode";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:34:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
  static const char* subEnableString = "subenable";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:37:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
  static const char* repeatAllString = "repeatAll";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:38:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
  static const char* repeatOneString = "repeatOne";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:39:20: warning: 'playOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'playOneString' defined but not used [-Wunused-variable]
  static const char* playOneString = "playOne";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:40:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
  static const char* oldCachingString = "old";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:41:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
  static const char* newCachingString = "new";
                     ^
-In file included from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/SubchannelData.hpp:17:0,
-                 from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/SubchannelData.cpp:17:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.hpp:17:0,
+                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp:13:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/SubchannelData.cpp: In member function 'virtual void SBISubchannelData::openFile(const string&, int)':
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/SubchannelData.cpp:151:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp: In member function 'virtual void SBISubchannelData::openFile(const string&, int)':
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp:147:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
        for(int i = 0; i < filePtr->size; i+=4)
                                    ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/SubchannelData.cpp:160:15: warning: unused variable 'convert1' [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp:156:15: warning: unused variable 'convert1' [-Wunused-variable]
           bool convert1 = false,
                ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/SubchannelData.cpp:161:13: warning: unused variable 'convert2' [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp:157:13: warning: unused variable 'convert2' [-Wunused-variable]
              convert2 = false;
              ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/SubchannelData.cpp: In member function 'virtual void M3SSubchannelData::openFile(const string&, int)':
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/SubchannelData.cpp:218:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp: In member function 'virtual void M3SSubchannelData::openFile(const string&, int)':
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp:214:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
     for(int i = 0; i < filePtr->size; i+=4)
                                 ^
-In file included from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/SubchannelData.cpp:18:0:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:28:20: warning: 'repeatString' defined but not used [-Wunused-variable]
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp:14:0:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
  static const char* repeatString = "repeat";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'volumeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
  static const char* volumeString = "volume";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'autorunString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'autorunString' defined but not used [-Wunused-variable]
  static const char* autorunString = "autorun";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:23:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
  static const char* lastrunString = "lastrun";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
  static const char* cachingModeString = "cachemode";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:34:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
  static const char* subEnableString = "subenable";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:37:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
  static const char* repeatAllString = "repeatAll";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:38:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
  static const char* repeatOneString = "repeatOne";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:39:20: warning: 'playOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'playOneString' defined but not used [-Wunused-variable]
  static const char* playOneString = "playOne";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:40:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
  static const char* oldCachingString = "old";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:41:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
  static const char* newCachingString = "new";
                     ^
-In file included from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/TrackInfo.hpp:17:0,
-                 from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDInterface.hpp:20,
-                 from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Open.cpp:20:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/TrackInfo.hpp:17:0,
+                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDInterface.hpp:20,
+                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Open.cpp:16:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
-In file included from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Open.cpp:22:0:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:28:20: warning: 'repeatString' defined but not used [-Wunused-variable]
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Open.cpp:18:0:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
  static const char* repeatString = "repeat";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'volumeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
  static const char* volumeString = "volume";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'autorunString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'autorunString' defined but not used [-Wunused-variable]
  static const char* autorunString = "autorun";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:23:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
  static const char* lastrunString = "lastrun";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:24:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
  static const char* cacheSizeString = "cachesize";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
  static const char* cachingModeString = "cachemode";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:34:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
  static const char* subEnableString = "subenable";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:37:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
  static const char* repeatAllString = "repeatAll";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:38:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
  static const char* repeatOneString = "repeatOne";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:39:20: warning: 'playOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'playOneString' defined but not used [-Wunused-variable]
  static const char* playOneString = "playOne";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:40:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
  static const char* oldCachingString = "old";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:41:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
  static const char* newCachingString = "new";
                     ^
-In file included from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/FileInterface.hpp:17:0,
-                 from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDDAData.hpp:18,
-                 from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDDAData.cpp:18:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/FileInterface.hpp:17:0,
+                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDDAData.hpp:18,
+                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDDAData.cpp:14:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
-In file included from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDDAData.cpp:19:0:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'autorunString' defined but not used [-Wunused-variable]
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDDAData.cpp:15:0:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'autorunString' defined but not used [-Wunused-variable]
  static const char* autorunString = "autorun";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:23:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
  static const char* lastrunString = "lastrun";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:24:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
  static const char* cacheSizeString = "cachesize";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
  static const char* cachingModeString = "cachemode";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:34:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
  static const char* subEnableString = "subenable";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:40:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
  static const char* oldCachingString = "old";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:41:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
  static const char* newCachingString = "new";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDDAData.cpp:31:13: warning: 'void AudioReady(s32)' defined but not used [-Wunused-function]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDDAData.cpp:25:13: warning: 'void AudioReady(s32)' defined but not used [-Wunused-function]
  static void AudioReady(s32 voice){
              ^
-In file included from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/TrackInfo.hpp:17:0,
-                 from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDInterface.hpp:20,
-                 from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Globals.cpp:19:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/TrackInfo.hpp:17:0,
+                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDInterface.hpp:20,
+                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Globals.cpp:15:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
-In file included from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Globals.cpp:20:0:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:28:20: warning: 'repeatString' defined but not used [-Wunused-variable]
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Globals.cpp:16:0:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
  static const char* repeatString = "repeat";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'volumeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
  static const char* volumeString = "volume";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'autorunString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'autorunString' defined but not used [-Wunused-variable]
  static const char* autorunString = "autorun";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:23:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
  static const char* lastrunString = "lastrun";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:24:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
  static const char* cacheSizeString = "cachesize";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
  static const char* cachingModeString = "cachemode";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:34:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
  static const char* subEnableString = "subenable";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:37:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
  static const char* repeatAllString = "repeatAll";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:38:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
  static const char* repeatOneString = "repeatOne";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:39:20: warning: 'playOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'playOneString' defined but not used [-Wunused-variable]
  static const char* playOneString = "playOne";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:40:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
  static const char* oldCachingString = "old";
                     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/Preferences.hpp:41:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
  static const char* newCachingString = "new";
                     ^
-In file included from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/TrackInfo.hpp:17:0,
-                 from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/TrackParser.hpp:21,
-                 from /home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/TrackParser.cpp:17:
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
-/home/ppc/devkitPPC/wiisx/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/TrackInfo.hpp:17:0,
+                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/TrackParser.hpp:21,
+                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/TrackParser.cpp:13:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
-/home/ppc/devkitPPC/wiisx/Gamecube/./libgui/Button.cpp: In member function 'virtual void menu::Button::drawComponent(menu::Graphics&)':
-/home/ppc/devkitPPC/wiisx/Gamecube/./libgui/Button.cpp:245:7: warning: variable 'strWidth' set but not used [-Wunused-but-set-variable]
+/home/jeremy/wiisxr/Gamecube/./libgui/Button.cpp: In member function 'virtual void menu::Button::drawComponent(menu::Graphics&)':
+/home/jeremy/wiisxr/Gamecube/./libgui/Button.cpp:245:7: warning: variable 'strWidth' set but not used [-Wunused-but-set-variable]
    int strWidth, strHeight;
        ^
-/home/ppc/devkitPPC/wiisx/Gamecube/./PlugCD.c:400:8: warning: return type defaults to 'int' [-Wreturn-type]
- static playCDDA(s32 voice) {
-        ^
-/home/ppc/devkitPPC/wiisx/Gamecube/./PlugCD.c: In function 'CDR__play':
-/home/ppc/devkitPPC/wiisx/Gamecube/./PlugCD.c:407:15: warning: unused variable 'byteSector' [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/./PlugCD.c: In function 'CDR__play':
+/home/jeremy/wiisxr/Gamecube/./PlugCD.c:407:15: warning: unused variable 'byteSector' [-Wunused-variable]
   unsigned int byteSector = time2addr(msf);  //peops way
                ^
-/home/ppc/devkitPPC/wiisx/Gamecube/./PlugCD.c: At top level:
-/home/ppc/devkitPPC/wiisx/Gamecube/./PlugCD.c:400:8: warning: 'playCDDA' defined but not used [-Wunused-function]
- static playCDDA(s32 voice) {
-        ^
-/home/ppc/devkitPPC/wiisx/Gamecube/./PadWiiSX.c: In function '_PADstartPoll':
-/home/ppc/devkitPPC/wiisx/Gamecube/./PadWiiSX.c:151:17: warning: unused variable 'value' [-Wunused-variable]
-  unsigned short value ;
-                 ^
-/home/ppc/devkitPPC/wiisx/Gamecube/./PadWiiSX.c:150:6: warning: unused variable 'i' [-Wunused-variable]
-  int i ;
-      ^
-/home/ppc/devkitPPC/wiisx/Gamecube/./PadSSSPSX.c: In function 'SSS_PADpoll':
-/home/ppc/devkitPPC/wiisx/Gamecube/./PadSSSPSX.c:268:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/./PadSSSPSX.c: In function 'SSS_PADpoll':
+/home/jeremy/wiisxr/Gamecube/./PadSSSPSX.c:268:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     *(u16*)&buf[2] = global.padStat[pad];
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/./fileBrowser/fileBrowser-libfat.c: In function 'fileBrowser_libfat_readDir':
-/home/ppc/devkitPPC/wiisx/Gamecube/./fileBrowser/fileBrowser-libfat.c:211:10: warning: unused variable 'filename' [-Wunused-variable]
-     char filename[MAXPATHLEN];
-          ^
-/home/ppc/devkitPPC/wiisx/Gamecube/./fileBrowser/fileBrowser-CARD.c: In function 'fileBrowser_CARD_writeFile':
-/home/ppc/devkitPPC/wiisx/Gamecube/./fileBrowser/fileBrowser-CARD.c:142:29: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+/home/jeremy/wiisxr/Gamecube/./fileBrowser/fileBrowser-CARD.c: In function 'fileBrowser_CARD_writeFile':
+/home/jeremy/wiisxr/Gamecube/./fileBrowser/fileBrowser-CARD.c:142:29: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
     memset(tmpBuffer,0,sizeof(tmpBuffer));
                              ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../Mdec.c: In function 'psxDma0':
-/home/ppc/devkitPPC/wiisx/Gamecube/../Mdec.c:231:6: warning: variable 'size' set but not used [-Wunused-but-set-variable]
-  int size;
-      ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c: In function 'gteRTPS':
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c: In function 'gteRTPS':
+/home/jeremy/wiisxr/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_RTPS1(0);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:699:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:699:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_RTPS2(2);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c: In function 'gteRTPT':
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:882:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c: In function 'gteRTPT':
+/home/jeremy/wiisxr/Gamecube/../gte.c:882:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_RTPS1(0); 
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:882:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:882:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:882:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:882:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:882:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:882:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:889:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:882:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:882:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:882:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:882:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:882:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:882:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:889:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_RTPS2(0);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:891:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:891:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_RTPS1(1); 
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:891:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:891:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:891:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:891:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:891:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:891:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:898:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:891:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:891:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:891:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:891:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:891:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:891:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:898:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_RTPS2(1);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:900:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:900:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_RTPS1(2);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:900:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:900:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:900:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:900:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:900:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:900:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:907:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:900:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:900:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:900:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:900:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:900:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:900:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:907:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_RTPS2(2);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c: In function 'gteMVMVA':
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:967:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c: In function 'gteMVMVA':
+/home/jeremy/wiisxr/Gamecube/../gte.c:967:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     _MVMVA_FUNC(gteVX0, gteVY0, gteVZ0, gteR); break;
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:967:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:967:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:967:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:967:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:967:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:967:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:969:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:967:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:967:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:967:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:967:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:967:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:967:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:969:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     _MVMVA_FUNC(gteVX1, gteVY1, gteVZ1, gteR); break;
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:969:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:969:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:969:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:969:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:969:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:969:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:971:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:969:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:969:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:969:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:969:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:969:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:969:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:971:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     _MVMVA_FUNC(gteVX2, gteVY2, gteVZ2, gteR); break;
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:971:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:971:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:971:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:971:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:971:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:971:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:973:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:971:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:971:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:971:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:971:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:971:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:971:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:973:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     _MVMVA_FUNC((short)gteIR1, (short)gteIR2, (short)gteIR3, gteR); 
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:973:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:973:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:973:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:976:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:973:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:973:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:973:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:976:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     _MVMVA_FUNC(gteVX0, gteVY0, gteVZ0, gteL); break;
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:976:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:976:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:976:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:976:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:976:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:976:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:978:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:976:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:976:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:976:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:976:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:976:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:976:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:978:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     _MVMVA_FUNC(gteVX1, gteVY1, gteVZ1, gteL); break;
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:978:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:978:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:978:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:978:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:978:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:978:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:980:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:978:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:978:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:978:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:978:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:978:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:978:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:980:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     _MVMVA_FUNC(gteVX2, gteVY2, gteVZ2, gteL); break;
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:980:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:980:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:980:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:980:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:980:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:980:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:982:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:980:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:980:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:980:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:980:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:980:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:980:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:982:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     _MVMVA_FUNC((short)gteIR1, (short)gteIR2, (short)gteIR3, gteL); break;
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:982:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:982:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:982:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:984:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:982:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:982:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:982:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:984:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     _MVMVA_FUNC(gteVX0, gteVY0, gteVZ0, gte_C); break;
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:984:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:984:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:984:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:984:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:984:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:984:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:986:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:984:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:984:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:984:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:984:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:984:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:984:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:986:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     _MVMVA_FUNC(gteVX1, gteVY1, gteVZ1, gte_C); break;
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:986:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:986:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:986:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:986:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:986:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:986:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:988:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:986:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:986:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:986:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:986:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:986:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:986:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:988:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     _MVMVA_FUNC(gteVX2, gteVY2, gteVZ2, gte_C); break;
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:988:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:988:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:988:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:988:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:988:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:988:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:990:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:988:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:988:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:988:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:988:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:988:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:988:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:990:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     _MVMVA_FUNC((short)gteIR1, (short)gteIR2, (short)gteIR3, gte_C); break;
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:990:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:990:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:990:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c: In function 'gteNCLIP':
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1066:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:990:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:990:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:990:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c: In function 'gteNCLIP':
+/home/jeremy/wiisxr/Gamecube/../gte.c:1066:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   gteMAC0 = gteSX0 * (gteSY1 - gteSY2) +
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1066:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1067:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1066:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1067:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
      gteSX1 * (gteSY2 - gteSY0) +
      ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1067:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1068:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1067:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1068:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
      gteSX2 * (gteSY0 - gteSY1);
      ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1068:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c: In function 'gteNCCS':
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1068:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c: In function 'gteNCCS':
+/home/jeremy/wiisxr/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_NCCS(0);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c: In function 'gteNCCT':
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c: In function 'gteNCCT':
+/home/jeremy/wiisxr/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_NCCS(0);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1539:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_NCCS(1);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1545:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_NCCS(2);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c: In function 'gteNCDS':
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1551:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c: In function 'gteNCDS':
+/home/jeremy/wiisxr/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
      GTE_NCDS(0);
      ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c: In function 'gteNCDT':
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1724:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c: In function 'gteNCDT':
+/home/jeremy/wiisxr/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
      GTE_NCDS(0);
      ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1926:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
      GTE_NCDS(1);
      ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1932:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
      GTE_NCDS(2);
      ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c: In function 'gteNCS':
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:1938:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c: In function 'gteNCS':
+/home/jeremy/wiisxr/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_NCS(0);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c: In function 'gteNCT':
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2708:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c: In function 'gteNCT':
+/home/jeremy/wiisxr/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_NCS(0);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2801:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_NCS(1);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2807:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_NCS(2);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c: In function 'gteCC':
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2902:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2812:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c: In function 'gteCC':
+/home/jeremy/wiisxr/Gamecube/../gte.c:2902:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   RR0 = FNC_OVERFLOW1(gteRBK + ((gteLR1*gteIR1 + gteLR2*gteIR2 + gteLR3*gteIR3) >> 12));
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2903:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2903:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GG0 = FNC_OVERFLOW2(gteGBK + ((gteLG1*gteIR1 + gteLG2*gteIR2 + gteLG3*gteIR3) >> 12));
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2903:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:2904:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2903:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:2904:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   BB0 = FNC_OVERFLOW3(gteBBK + ((gteLB1*gteIR1 + gteLB2*gteIR2 + gteLB3*gteIR3) >> 12));
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c: In function 'gteCDP':
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:3073:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c: In function 'gteCDP':
+/home/jeremy/wiisxr/Gamecube/../gte.c:3073:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   RR0 = NC_OVERFLOW1(gteRBK + (gteLR1*gteIR1 +gteLR2*gteIR2 + gteLR3*gteIR3));
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:3074:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:3074:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GG0 = NC_OVERFLOW2(gteGBK + (gteLG1*gteIR1 +gteLG2*gteIR2 + gteLG3*gteIR3));
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:3074:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../gte.c:3075:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:3074:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../gte.c:3075:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   BB0 = NC_OVERFLOW3(gteBBK + (gteLB1*gteIR1 +gteLB2*gteIR2 + gteLB3*gteIR3));
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../Misc.c: In function 'CheckCdrom':
-/home/ppc/devkitPPC/wiisx/Gamecube/../Misc.c:315:4: warning: array subscript has type 'char' [-Wchar-subscripts]
+/home/jeremy/wiisxr/Gamecube/../misc.c: In function 'CheckCdrom':
+/home/jeremy/wiisxr/Gamecube/../misc.c:315:4: warning: array subscript has type 'char' [-Wchar-subscripts]
     if (isalnum(exename[i])) CdromId[c--] = exename[i];
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c: In function 'psxBios_InitHeap':
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:547:2: warning: implicit declaration of function 'SysPrintf' [-Wimplicit-function-declaration]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c: In function 'psxBios_InitHeap':
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:547:2: warning: implicit declaration of function 'SysPrintf' [-Wimplicit-function-declaration]
   SysPrintf("InitHeap %lx,%lx : %lx\n",a0,a1,SWAP32(chunk->size));
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c: In function 'psxBios_printf':
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:562:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c: In function 'psxBios_printf':
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:562:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(sp) = SWAP32((u32)a0);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:563:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:563:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(sp + 4) = SWAP32((u32)a1);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:564:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:564:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(sp + 8) = SWAP32((u32)a2);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:565:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:565:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(sp + 12) = SWAP32((u32)a3);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:590:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:590:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
        ptmp+= sprintf(ptmp, tmp2, (float)psxMu32(t)); n++; break;
        ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:590:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:590:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:590:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:595:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:590:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:590:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:590:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:595:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
        ptmp+= sprintf(ptmp, tmp2, (double)psxMu32(t)); n++; break;
        ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:595:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:595:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:595:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:602:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:595:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:595:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:595:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:602:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
        ptmp+= sprintf(ptmp, tmp2, (unsigned int)psxMu32(t)); n++; break;
        ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:602:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:602:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:602:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:605:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:602:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:602:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:602:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:605:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
        ptmp+= sprintf(ptmp, tmp2, (unsigned char)psxMu32(t)); n++; break;
        ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:605:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:605:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:605:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:605:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:605:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:605:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
        ptmp+= sprintf(ptmp, tmp2, (char*)PSXM(psxMu32(t))); n++; break;
        ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c: In function 'psxBios_HookEntryInt':
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:1202:10: warning: assignment from incompatible pointer type [enabled by default]
-  jmp_int = (unsigned long*)Ra0;
-          ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c: In function 'psxBiosInit':
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2158:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c: In function 'psxBiosInit':
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2158:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x0150) = SWAPu32(0x160);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2159:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2159:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x0154) = SWAPu32(0x320);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2160:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2160:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x0160) = SWAPu32(0x248);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2169:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2169:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxRu32ref(0x0000) = SWAPu32((0x3b << 26) | 4);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2170:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2170:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x0000) = SWAPu32((0x3b << 26) | 0);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2171:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2171:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x00a0) = SWAPu32((0x3b << 26) | 1);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2172:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2172:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x00b0) = SWAPu32((0x3b << 26) | 2);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2173:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2173:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x00c0) = SWAPu32((0x3b << 26) | 3);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2174:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2174:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x4c54) = SWAPu32((0x3b << 26) | 0);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2175:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2175:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x8000) = SWAPu32((0x3b << 26) | 5);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2176:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2176:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x07a0) = SWAPu32((0x3b << 26) | 0);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2177:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2177:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x0884) = SWAPu32((0x3b << 26) | 0);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2178:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2178:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x0894) = SWAPu32((0x3b << 26) | 0);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c: In function 'psxBiosFreeze':
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2386:42: warning: argument to 'sizeof' in 'memcpy' call is the same expression as the source; did you mean to remove the addressof? [-Wsizeof-pointer-memaccess]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c: In function 'psxBiosFreeze':
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2386:42: warning: argument to 'sizeof' in 'memcpy' call is the same expression as the source; did you mean to remove the addressof? [-Wsizeof-pointer-memaccess]
  #define bfreezes(ptr) bfreeze(ptr, sizeof(ptr))
                                           ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2382:42: note: in definition of macro 'bfreeze'
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2382:42: note: in definition of macro 'bfreeze'
   if (Mode == 1) memcpy(&psxR[base], ptr, size); \
                                           ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2438:2: note: in expansion of macro 'bfreezes'
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2438:2: note: in expansion of macro 'bfreezes'
   bfreezes(&signature);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2386:42: warning: argument to 'sizeof' in 'memcpy' call is the same expression as the destination; did you mean to remove the addressof? [-Wsizeof-pointer-memaccess]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2386:42: warning: argument to 'sizeof' in 'memcpy' call is the same expression as the destination; did you mean to remove the addressof? [-Wsizeof-pointer-memaccess]
  #define bfreezes(ptr) bfreeze(ptr, sizeof(ptr))
                                           ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2383:42: note: in definition of macro 'bfreeze'
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2383:42: note: in definition of macro 'bfreeze'
   if (Mode == 0) memcpy(ptr, &psxR[base], size); \
                                           ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2438:2: note: in expansion of macro 'bfreezes'
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2438:2: note: in expansion of macro 'bfreezes'
   bfreezes(&signature);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(jmp_int);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(pad_buf);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(pad_buf1);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(pad_buf2);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(heap_addr);
   ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c: At top level:
-/home/ppc/devkitPPC/wiisx/Gamecube/../PsxBios.c:1771:14: warning: 'fileload' defined but not used [-Wunused-function]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c: At top level:
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:1771:14: warning: 'fileload' defined but not used [-Wunused-function]
  static void *fileload(char *file,void *buf)
               ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../ppc/pR3000A.c: In function 'recLH':
-/home/ppc/devkitPPC/wiisx/Gamecube/../ppc/pR3000A.c:1775:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c: In function 'recLH':
+/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1775:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     MapConst(_Rt_, psxRs16(addr));
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../ppc/pR3000A.c:1775:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../ppc/pR3000A.c: In function 'recLHU':
-/home/ppc/devkitPPC/wiisx/Gamecube/../ppc/pR3000A.c:1815:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1775:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c: In function 'recLHU':
+/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1815:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     MapConst(_Rt_, psxRu16(addr));
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../ppc/pR3000A.c:1815:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../ppc/pR3000A.c: In function 'recLW':
-/home/ppc/devkitPPC/wiisx/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1815:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c: In function 'recLW':
+/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     MapConst(_Rt_, psxRu32(addr));
     ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/ppc/devkitPPC/wiisx/Gamecube/../ppc/pR3000A.c: In function 'GetFreeHWReg':
-/home/ppc/devkitPPC/wiisx/Gamecube/../ppc/pR3000A.c:115:25: warning: array subscript is above array bounds [-Warray-bounds]
+/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c: In function 'GetFreeHWReg':
+/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:115:25: warning: array subscript is above array bounds [-Warray-bounds]
       least = HWRegisters[i].lastUsed; index = i;
                          ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PeopsSoftGPU/soft.c: In function 'DrawSoftwareLineShade':
-/home/ppc/devkitPPC/wiisx/Gamecube/../PeopsSoftGPU/soft.c:7393:7: warning: variable 'rgbt' set but not used [-Wunused-but-set-variable]
-  long rgbt;
-       ^
-/home/ppc/devkitPPC/wiisx/Gamecube/../PeopsSoftGPU/cfg.c: In function 'ReadConfigFile':
-/home/ppc/devkitPPC/wiisx/Gamecube/../PeopsSoftGPU/cfg.c:191:27: warning: variable 'len' set but not used [-Wunused-but-set-variable]
-  FILE *in;char t[256];int len, size;
-                           ^

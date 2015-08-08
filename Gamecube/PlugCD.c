@@ -397,10 +397,10 @@ unsigned char *CDR__getBufferSub(void) {
   return getSector(1);
 }
 
-static playCDDA(s32 voice) {
+//static playCDDA(s32 voice) {
 	// If voice == -1, this is the start of the track
 	// TODO: Read in some CDDA, and send it to ASND
-}
+//}
 
 long CDR__play(unsigned char *msf) {
 	//unsigned long byteSector = ( msf[0] * 75 * 60 ) + ( msf[1] * 75 ) + msf[2]; //xbox way
