@@ -38,10 +38,6 @@ void          DisplayPic(void);
 void          ShowGpuPic(void);
 void          ShowTextGpuPic(void);
 
-#ifdef _WINDOWS
-void          MoveScanLineArea(HWND hwnd);
-#endif
-
 ///////////////////////////////////////////////////////////////////////
 
 #endif // _GPU_DRAW_H_

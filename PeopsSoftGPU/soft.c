@@ -72,9 +72,7 @@
 
 #include "stdafx.h"
 
-#ifdef __GX__
 #include "../Gamecube/DEBUG.h"
-#endif //__GX__
 
 #define _IN_SOFT
                    
@@ -139,11 +137,6 @@
 #define X32PSXCOL(r,g,b) ((g<<10)|(b<<5)|r)
 
 #define XPSXCOL(r,g,b) ((g&0x7c00)|(b&0x3e0)|(r&0x1f))
-
-#ifdef _WINDOWS
-#pragma warning (disable:4244)
-#pragma warning (disable:4761)
-#endif
 
 ////////////////////////////////////////////////////////////////////////////////////
 // soft globals
@@ -1270,15 +1263,6 @@ static int left_R, delta_left_R, right_R, delta_right_R;
 static int left_G, delta_left_G, right_G, delta_right_G;
 static int left_B, delta_left_B, right_B, delta_right_B;
 
-#ifdef __i386__
-
-// NASM version (external):
-#define shl10idiv i386_shl10idiv
-
-__inline__ int shl10idiv(int x, int y);
-
-#else
-
 #ifdef VC_INLINE
 
 #pragma warning  (disable : 4035)
@@ -1305,7 +1289,6 @@ __inline__ int shl10idiv(int x, int y)
  bi<<=10;
  return bi/y;
 }
-#endif
 #endif
 
 /*

@@ -24,43 +24,6 @@
 //
 //*************************************************************************// 
 
-#ifdef _WINDOWS
-
-#define  STRICT
-#define  D3D_OVERLOADS
-#define  DIRECT3D_VERSION 0x600
-#define  CINTERFACE
-
-#include <WINDOWS.H>
-#include <WINDOWSX.H>
-#include <TCHAR.H>
-#include "resource.h"
-
-// Pete: since my last OS + compiler reinstall, I needed to user newer 
-// defines/libs, therefore I've decided to use the mingw headers and 
-// the d3dx.lib (old libs: d3dim.lib dxguid.lib)
-
-//#include <ddraw.h>
-//#include <d3d.h>
-
-#include "mingw_ddraw.h"                       
-#include "mingw_d3dtypes.h"
-#include "mingw_d3d.h"
-                                                       
-
-// stupid intel compiler warning on extern __inline funcs
-#pragma warning (disable:864)
-// disable stupid MSVC2005 warnings as well...
-#pragma warning (disable:4996)
-#pragma warning (disable:4244)
-
-// enable that for auxprintf();
-//#define SMALLDEBUG
-//#include <dbgout.h>
-//void auxprintf (LPCTSTR pFormat, ...);
-
-#else
-
 #ifndef _SDL
 #define __X11_C_ 
 //X11 render
@@ -90,7 +53,5 @@
 #include <sys/time.h> 
 #include <math.h> 
 
-#endif
- 
 #endif
 

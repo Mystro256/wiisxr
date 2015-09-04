@@ -25,19 +25,3 @@
 //*************************************************************************// 
 
 #include "stdafx.h"
-
-///////////////////////////////////////////////////////////////////////////
-// GENERIC FUNCS //////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////
-
-#ifndef __GX__
-HINSTANCE hInst=NULL;
-
-BOOL APIENTRY DllMain(HANDLE hModule,                  // DLL INIT
-                      DWORD  dwReason, 
-                      LPVOID lpReserved)
-{
- hInst=(HINSTANCE)hModule;
- return TRUE;                                          // very quick :)
-}
-#endif //!__GX__
