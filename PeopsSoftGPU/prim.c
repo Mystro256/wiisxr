@@ -136,33 +136,7 @@ __inline unsigned short BGR24to16 (unsigned long BGR)
 __inline void UpdateGlobalTP(unsigned short gdata)
 {
  GlobalTextAddrX = (gdata << 6) & 0x3c0;               // texture addr
-#ifndef __GX__ //The iGPUHeight is set to 512.
- if(iGPUHeight==1024)
-  {
-   if(dwGPUVersion==2)
-    {
-     GlobalTextAddrY =((gdata & 0x60 ) << 3);
-     GlobalTextIL    =(gdata & 0x2000) >> 13;
-     GlobalTextABR = (unsigned short)((gdata >> 7) & 0x3);
-     GlobalTextTP = (gdata >> 9) & 0x3;
-     if(GlobalTextTP==3) GlobalTextTP=2;             
-     usMirror =0;
-     lGPUstatusRet = (lGPUstatusRet & 0xffffe000 ) | (gdata & 0x1fff );
-
-     // tekken dithering? right now only if dithering is forced by user
-     if(iUseDither==2) iDither=2; else iDither=0;
-
-     return;
-    }
-   else
-    {
-     GlobalTextAddrY = (unsigned short)(((gdata << 4) & 0x100) | ((gdata >> 2) & 0x200));
-    }
-  }
- else GlobalTextAddrY = (gdata << 4) & 0x100;
-#else //!__GX__
  GlobalTextAddrY = (gdata << 4) & 0x100;
-#endif //__GX__
 
  usMirror=gdata&0x3000;
 
