@@ -6240,17 +6240,6 @@ void drawPoly3FT(unsigned char * baseAddr)
   {
    	sprintf(txtbuffer,"Missing function drawPoly3TEx4_IL(). Notify sepp256 as to which game.");
 	DEBUG_print(txtbuffer,DBG_GPU1);
-#ifndef __GX__
-   if(GlobalTextTP==0)
-    drawPoly3TEx4_IL(lx0,ly0,lx1,ly1,lx2,ly2,
-                     (GETLE32(&gpuData[2]) & 0x000000ff), ((GETLE32(&gpuData[2])>>8) & 0x000000ff), (GETLE32(&gpuData[4]) & 0x000000ff), ((GETLE32(&gpuData[4])>>8) & 0x000000ff),(GETLE32(&gpuData[6]) & 0x000000ff), ((GETLE32(&gpuData[6])>>8) & 0x000000ff), 
-                     ((GETLE32(&gpuData[2])>>12) & 0x3f0), ((GETLE32(&gpuData[2])>>22) & iGPUHeightMask));
-   else
-    drawPoly3TEx8_IL(lx0,ly0,lx1,ly1,lx2,ly2,
-                     (GETLE32(&gpuData[2]) & 0x000000ff), ((GETLE32(&gpuData[2])>>8) & 0x000000ff), (GETLE32(&gpuData[4]) & 0x000000ff), ((GETLE32(&gpuData[4])>>8) & 0x000000ff),(GETLE32(&gpuData[6]) & 0x000000ff), ((GETLE32(&gpuData[6])>>8) & 0x000000ff), 
-                     ((GETLE32(&gpuData[2])>>12) & 0x3f0), ((GETLE32(&gpuData[2])>>22) & iGPUHeightMask));
-   return;
-#endif //!__GX__
   }
 
  if(!bUsingTWin && !(dwActFixes&0x100))

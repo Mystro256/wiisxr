@@ -312,7 +312,7 @@ int CheckCdrom() {
 		if (exename[i - 2] == ';') i-= 2;
 		c = 8; i--;
 		while (i >= 0 && c >= 0) {
-			if (isalnum(exename[i])) CdromId[c--] = exename[i];
+			if (isalnum((int) exename[i])) CdromId[c--] = exename[i];
 			i--;
 		}
 	}

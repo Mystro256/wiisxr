@@ -144,7 +144,7 @@ void SBISubchannelData::openFile(const std::string& file, int type)
          Exception e(file + string(" isn't an SBI file"));
          THROW(e);
       }
-      for(int i = 0; i < filePtr->size; i+=4)
+      for(unsigned int i = 0; i < filePtr->size; i+=4)
       {
          isoFile_seekFile(filePtr,i,FILE_BROWSER_SEEK_SET);
          isoFile_readFile(filePtr,(char*)&buffer, 4);
@@ -153,8 +153,6 @@ void SBISubchannelData::openFile(const std::string& file, int type)
          SubchannelFrame subf(now);
             // numbers are BCD in file, so only convert the
             // generated subchannel data
-         bool convert1 = false,
-            convert2 = false;
          switch(buffer[3])
          {
          case 1:
@@ -211,7 +209,7 @@ void M3SSubchannelData::openFile(const std::string& file, int type)
 
    CDTime t(3,0,0);
    char buffer[16];
-   for(int i = 0; i < filePtr->size; i+=4)
+   for(unsigned int i = 0; i < filePtr->size; i+=4)
    {
       isoFile_seekFile(filePtr,i,FILE_BROWSER_SEEK_SET);
       isoFile_readFile(filePtr,(char*)&buffer, 16);

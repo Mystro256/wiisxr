@@ -318,19 +318,11 @@ extern char * pConfigFile;
 
 #ifndef _IN_ZN
 
-#ifndef __GX__
-extern unsigned long dwGPUVersion;
-extern int           iGPUHeight;
-extern int           iGPUHeightMask;
-extern int           GlobalTextIL;
-extern int           iTileCheat;
-#else //!__GX__
 #define dwGPUVersion 0
 #define iGPUHeight 512
 #define iGPUHeightMask 511
 #define GlobalTextIL 0
 #define iTileCheat 0
-#endif //__GX__
 
 #endif
 

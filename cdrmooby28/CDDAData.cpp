@@ -22,9 +22,11 @@ extern std::string programName;
 
 static sem_t audioReady;
 
+#if 0
 static void AudioReady(s32 voice){
 	LWP_SemPost(audioReady);
 }
+#endif
 
 static void* CDDAThread(void* userData){
 #if 0
@@ -244,7 +246,7 @@ int PlayCDDAData::play(const CDTime& startTime)
        (prefs.prefsMap[repeatString] != playOneString))
    {
       prefs.prefsMap[repeatString] = repeatAllString;
-      prefs.write();
+      //prefs.write();
    }
 
       // figure out which track to play to set the end time

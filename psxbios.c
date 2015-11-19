@@ -544,7 +544,7 @@ void psxBios_InitHeap() { // 39
 	chunk->fd = NULL;
 	chunk->bk = NULL;
 
-	SysPrintf("InitHeap %lx,%lx : %lx\n",a0,a1,SWAP32(chunk->size));
+	//SysPrintf("InitHeap %lx,%lx : %lx\n",a0,a1,SWAP32(chunk->size));
 
 	pc0 = ra;
 }
@@ -619,7 +619,7 @@ _start:
 
 	memcpy((char*)SANE_PSXM(sp), save, 4*4);
 
-	SysPrintf(tmp);
+	//SysPrintf(tmp);
 
 	pc0 = ra;
 }
@@ -1231,7 +1231,7 @@ void psxBios_UnDeliverEvent() { // 0x20
 		if ((*ptr & 0xF0) != 0x50) continue; \
 		if (strcmp(FDesc[1 + slot].name, ptr+0xa)) continue; \
 		FDesc[1 + slot].mcfile = i; \
-		SysPrintf("open %s\n", ptr+0xa); \
+		/*SysPrintf("open %s\n", ptr+0xa);*/ \
 		v0 = 1 + slot; \
 		break; \
 	} \
@@ -1252,7 +1252,7 @@ void psxBios_UnDeliverEvent() { // 0x20
 			for (j=0; j<127; j++) xor^= ptr[j]; \
 			ptr[127] = xor; \
 			FDesc[1 + slot].mcfile = i; \
-			SysPrintf("openC %s\n", ptr); \
+			/*SysPrintf("openC %s\n", ptr);*/ \
 			v0 = 1 + slot; \
 			mcd##slot##Written = 1; \
 			break; \
@@ -1312,7 +1312,7 @@ void psxBios_lseek() { // 0x33
 }
 
 #define buread(mcd) { \
-	SysPrintf("read %d: %x,%x (%s)\n", FDesc[1 + mcd].mcfile, FDesc[1 + mcd].offset, a2, Mcd##mcd##Data + 128 * FDesc[1 + mcd].mcfile + 0xa); \
+	/*SysPrintf("read %d: %x,%x (%s)\n", FDesc[1 + mcd].mcfile, FDesc[1 + mcd].offset, a2, Mcd##mcd##Data + 128 * FDesc[1 + mcd].mcfile + 0xa);*/ \
 	ptr = Mcd##mcd##Data + 8192 * FDesc[1 + mcd].mcfile + FDesc[1 + mcd].offset; \
 	memcpy(Ra1, ptr, a2); \
 	if (FDesc[1 + mcd].mode & 0x8000) v0 = 0; \
@@ -1344,7 +1344,7 @@ void psxBios_read() { // 0x34
 
 #define buwrite(slot) { \
 	u32 offset =  + 8192 * FDesc[1 + slot].mcfile + FDesc[1 + slot].offset; \
-	SysPrintf("write %d: %x,%x\n", FDesc[1 + slot].mcfile, FDesc[1 + slot].offset, a2); \
+	/*SysPrintf("write %d: %x,%x\n", FDesc[1 + slot].mcfile, FDesc[1 + slot].offset, a2);*/ \
 	ptr = Mcd##slot##Data + offset; \
 	memcpy(ptr, Ra1, a2); \
 	mcd##slot##Written = 1; \
@@ -1362,11 +1362,12 @@ void psxBios_write() { // 0x35/0x03
 	char *ptr;
 
     if (a0 == 1) { // stdout
-		char *ptr = Ra1;
+		//char *ptr = Ra1;
 
-		while (a2 > 0) {
+		/*while (a2 > 0) {
 			SysPrintf("%c", *ptr++); a2--;
-		}
+		}*/
+    a2 = 0;
 		pc0 = ra; return;
     }
 #ifdef PSXBIOS_LOG
@@ -1399,13 +1400,13 @@ void psxBios_putchar () { // 3d
     char tmp[12];
 
     sprintf (tmp,"%c",(char)a0);
-    SysPrintf(tmp);
+    //SysPrintf(tmp);
 
     pc0 = ra;
 }
 
 void psxBios_puts () { // 3e/3f
-    SysPrintf(Ra0);
+    //SysPrintf(Ra0);
 
     pc0 = ra;
 }
@@ -1431,7 +1432,7 @@ int nfile;
 				strcpy(dir->name+i, ptr+i); break; } \
 			match = 0; break; \
 		} \
-		SysPrintf("%d : %s = %s + %s (match=%d)\n", nfile, dir->name, pfile, ptr, match); \
+		/*SysPrintf("%d : %s = %s + %s (match=%d)\n", nfile, dir->name, pfile, ptr, match);*/ \
 		if (match == 0) continue; \
 		dir->size = SWAP32(8192); \
 		v0 = _dir; \
@@ -1504,7 +1505,7 @@ void psxBios_nextfile() { // 43
 		if ((*ptr & 0xF0) != 0x50) continue; \
 		if (strcmp(Ra0+5, ptr+0xa)) continue; \
 		*ptr = (*ptr & 0xf) | 0xA0; \
-		SysPrintf("delete %s\n", ptr+0xa); \
+		/*SysPrintf("delete %s\n", ptr+0xa);*/ \
 		mcd##slot##Written = 1; \
 		v0 = 1; \
 		break; \
@@ -1767,6 +1768,7 @@ void psxBios_dummy() {
 	pc0 = ra; 
 }
 
+/*
 // Added by GP
 static void *fileload(char *file,void *buf)
 {
@@ -1784,6 +1786,7 @@ static void *fileload(char *file,void *buf)
 	fclose(f);
 	return buf;
 }
+*/
 
 void (*biosA0[256])();
 void (*biosB0[256])();

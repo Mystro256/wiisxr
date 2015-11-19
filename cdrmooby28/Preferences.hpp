@@ -19,29 +19,20 @@ http://mooby.psxfanatics.com
 
 static const char* repeatString = "repeat";
 static const char* volumeString = "volume";
-static const char* autorunString = "autorun";
-static const char* lastrunString = "lastrun";
 static const char* cacheSizeString = "cachesize";
-static const char* cachingModeString = "cachemode";
-static const char* subEnableString = "subenable";
 
 // these are the repeat mode strings
 static const char* repeatAllString = "repeatAll";
 static const char* repeatOneString = "repeatOne";
 static const char* playOneString = "playOne";
-static const char* oldCachingString = "old";
-static const char* newCachingString = "new";
 
 // a wrapper for preference information.
 class Preferences
 {
 public:
    Preferences();
-   ~Preferences();
-	void write();
 
 private:
-   void open();
    bool initialized;
 
 public:

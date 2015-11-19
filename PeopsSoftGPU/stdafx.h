@@ -44,9 +44,6 @@
 #define __inline inline
 #define CALLBACK
 
-#ifndef __GX__
-#include <SDL/SDL.h>
-#endif //!__GX__
 #include <stdio.h> 
 #include <stdlib.h> 
 #include <string.h>

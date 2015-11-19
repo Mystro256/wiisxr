@@ -106,7 +106,7 @@ static int GetFreeHWReg()
 		DstCPUReg = -1;
 	} else {
 	    // LRU algorith with a twist ;)
-	    for (i=0; i<NUM_HW_REGISTERS; i++) {
+	    for (i=0; i<NUM_HW_REGISTERS-1; i++) {
 		    if (!(HWRegisters[i].usage & HWUSAGE_RESERVED)) {
 			    break;
 		    }

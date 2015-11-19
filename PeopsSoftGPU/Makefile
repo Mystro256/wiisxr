@@ -3,7 +3,7 @@
 #
 
 include ./makes/plg.mk
-include ./makes/mk.x11
+#include ./makes/mk.x11
 #include ./makes/mk.fpse
 
 # Dependencies
@@ -22,8 +22,7 @@ prim.o: prim.c stdafx.h externals.h gpu.h draw.h soft.h
 record.o: record.c stdafx.h externals.h record.h gpu.h
 soft.o: soft.c stdafx.h externals.h gpu.h soft.h prim.h menu.h
 zn.o: zn.c stdafx.h externals.h
-hq3x32.o: hq3x32.asm
-hq2x32.o: hq2x32.asm
-hq3x16.o: hq3x16.asm
-hq2x16.o: hq2x16.asm
-
+#hq3x32.o: hq3x32.asm
+#hq2x32.o: hq2x32.asm
+#hq3x16.o: hq3x16.asm
+#hq2x16.o: hq2x16.asm

@@ -479,6 +479,7 @@ inline std::istream& operator>>(std::istream& i, CDTime& cdt)
 {
    i >> cdt.MSF;
    cdt.convertTime();
+   return i;
 }
 #endif
 

@@ -5,281 +5,99 @@ In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.cpp
 /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
  static const char* volumeString = "volume";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'autorunString' defined but not used [-Wunused-variable]
- static const char* autorunString = "autorun";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:23:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
- static const char* lastrunString = "lastrun";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:24:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
  static const char* cacheSizeString = "cachesize";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
- static const char* cachingModeString = "cachemode";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
- static const char* subEnableString = "subenable";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
  static const char* repeatAllString = "repeatAll";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
  static const char* repeatOneString = "repeatOne";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'playOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:27:20: warning: 'playOneString' defined but not used [-Wunused-variable]
  static const char* playOneString = "playOne";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
- static const char* oldCachingString = "old";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
- static const char* newCachingString = "new";
-                    ^
-In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/FileInterface.hpp:17:0,
-                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/FileInterface.cpp:13:
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
 In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/FileInterface.cpp:16:0:
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
 /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
  static const char* repeatString = "repeat";
                     ^
 /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
  static const char* volumeString = "volume";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'autorunString' defined but not used [-Wunused-variable]
- static const char* autorunString = "autorun";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:23:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
- static const char* lastrunString = "lastrun";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:24:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
  static const char* cacheSizeString = "cachesize";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
- static const char* cachingModeString = "cachemode";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
- static const char* subEnableString = "subenable";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
  static const char* repeatAllString = "repeatAll";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
  static const char* repeatOneString = "repeatOne";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'playOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:27:20: warning: 'playOneString' defined but not used [-Wunused-variable]
  static const char* playOneString = "playOne";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
- static const char* oldCachingString = "old";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
- static const char* newCachingString = "new";
-                    ^
-In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.hpp:17:0,
-                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp:13:
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp: In member function 'virtual void SBISubchannelData::openFile(const string&, int)':
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp:147:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-       for(int i = 0; i < filePtr->size; i+=4)
-                                   ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp:156:15: warning: unused variable 'convert1' [-Wunused-variable]
-          bool convert1 = false,
-               ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp:157:13: warning: unused variable 'convert2' [-Wunused-variable]
-             convert2 = false;
-             ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp: In member function 'virtual void M3SSubchannelData::openFile(const string&, int)':
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp:214:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    for(int i = 0; i < filePtr->size; i+=4)
-                                ^
 In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/SubchannelData.cpp:14:0:
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
 /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
  static const char* repeatString = "repeat";
                     ^
 /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
  static const char* volumeString = "volume";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'autorunString' defined but not used [-Wunused-variable]
- static const char* autorunString = "autorun";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:23:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
- static const char* lastrunString = "lastrun";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
- static const char* cachingModeString = "cachemode";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
- static const char* subEnableString = "subenable";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
  static const char* repeatAllString = "repeatAll";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
  static const char* repeatOneString = "repeatOne";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'playOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:27:20: warning: 'playOneString' defined but not used [-Wunused-variable]
  static const char* playOneString = "playOne";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
- static const char* oldCachingString = "old";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
- static const char* newCachingString = "new";
-                    ^
-In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/TrackInfo.hpp:17:0,
-                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDInterface.hpp:20,
-                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Open.cpp:16:
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
-In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Open.cpp:18:0:
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
- static const char* repeatString = "repeat";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
- static const char* volumeString = "volume";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'autorunString' defined but not used [-Wunused-variable]
- static const char* autorunString = "autorun";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:23:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
- static const char* lastrunString = "lastrun";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:24:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
- static const char* cacheSizeString = "cachesize";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
- static const char* cachingModeString = "cachemode";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
- static const char* subEnableString = "subenable";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
- static const char* repeatAllString = "repeatAll";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
- static const char* repeatOneString = "repeatOne";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'playOneString' defined but not used [-Wunused-variable]
- static const char* playOneString = "playOne";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
- static const char* oldCachingString = "old";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
- static const char* newCachingString = "new";
-                    ^
-In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/FileInterface.hpp:17:0,
-                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDDAData.hpp:18,
-                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDDAData.cpp:14:
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
 In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDDAData.cpp:15:0:
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'autorunString' defined but not used [-Wunused-variable]
- static const char* autorunString = "autorun";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:23:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
- static const char* lastrunString = "lastrun";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:24:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
  static const char* cacheSizeString = "cachesize";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
- static const char* cachingModeString = "cachemode";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
- static const char* subEnableString = "subenable";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
- static const char* oldCachingString = "old";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
- static const char* newCachingString = "new";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDDAData.cpp:25:13: warning: 'void AudioReady(s32)' defined but not used [-Wunused-function]
- static void AudioReady(s32 voice){
-             ^
-In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/TrackInfo.hpp:17:0,
-                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDInterface.hpp:20,
-                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Globals.cpp:15:
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
 In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Globals.cpp:16:0:
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
 /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
  static const char* repeatString = "repeat";
                     ^
 /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
  static const char* volumeString = "volume";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'autorunString' defined but not used [-Wunused-variable]
- static const char* autorunString = "autorun";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:23:20: warning: 'lastrunString' defined but not used [-Wunused-variable]
- static const char* lastrunString = "lastrun";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:24:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
  static const char* cacheSizeString = "cachesize";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'cachingModeString' defined but not used [-Wunused-variable]
- static const char* cachingModeString = "cachemode";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'subEnableString' defined but not used [-Wunused-variable]
- static const char* subEnableString = "subenable";
-                    ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:29:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
  static const char* repeatAllString = "repeatAll";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:30:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
  static const char* repeatOneString = "repeatOne";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:31:20: warning: 'playOneString' defined but not used [-Wunused-variable]
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:27:20: warning: 'playOneString' defined but not used [-Wunused-variable]
  static const char* playOneString = "playOne";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:32:20: warning: 'oldCachingString' defined but not used [-Wunused-variable]
- static const char* oldCachingString = "old";
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Open.cpp:18:0:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
+ static const char* repeatString = "repeat";
                     ^
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:33:20: warning: 'newCachingString' defined but not used [-Wunused-variable]
- static const char* newCachingString = "new";
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
+ static const char* volumeString = "volume";
                     ^
-In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/TrackInfo.hpp:17:0,
-                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/TrackParser.hpp:21,
-                 from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/TrackParser.cpp:13:
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp: In function 'std::istream& operator>>(std::istream&, CDTime&)':
-/home/jeremy/wiisxr/Gamecube/../cdrmooby28/CDTime.hpp:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
-/home/jeremy/wiisxr/Gamecube/./libgui/Button.cpp: In member function 'virtual void menu::Button::drawComponent(menu::Graphics&)':
-/home/jeremy/wiisxr/Gamecube/./libgui/Button.cpp:245:7: warning: variable 'strWidth' set but not used [-Wunused-but-set-variable]
-   int strWidth, strHeight;
-       ^
-/home/jeremy/wiisxr/Gamecube/./PlugCD.c: In function 'CDR__play':
-/home/jeremy/wiisxr/Gamecube/./PlugCD.c:407:15: warning: unused variable 'byteSector' [-Wunused-variable]
-  unsigned int byteSector = time2addr(msf);  //peops way
-               ^
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:22:20: warning: 'cacheSizeString' defined but not used [-Wunused-variable]
+ static const char* cacheSizeString = "cachesize";
+                    ^
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
+ static const char* repeatAllString = "repeatAll";
+                    ^
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
+ static const char* repeatOneString = "repeatOne";
+                    ^
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:27:20: warning: 'playOneString' defined but not used [-Wunused-variable]
+ static const char* playOneString = "playOne";
+                    ^
 /home/jeremy/wiisxr/Gamecube/./PadSSSPSX.c: In function 'SSS_PADpoll':
 /home/jeremy/wiisxr/Gamecube/./PadSSSPSX.c:268:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     *(u16*)&buf[2] = global.padStat[pad];
     ^
-/home/jeremy/wiisxr/Gamecube/./fileBrowser/fileBrowser-CARD.c: In function 'fileBrowser_CARD_writeFile':
-/home/jeremy/wiisxr/Gamecube/./fileBrowser/fileBrowser-CARD.c:142:29: warning: argument to 'sizeof' in 'memset' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
-    memset(tmpBuffer,0,sizeof(tmpBuffer));
-                             ^
 /home/jeremy/wiisxr/Gamecube/../gte.c: In function 'gteRTPS':
 /home/jeremy/wiisxr/Gamecube/../gte.c:686:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   GTE_RTPS1(0);
@@ -627,14 +445,6 @@ In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/TrackInfo.hpp:1
 /home/jeremy/wiisxr/Gamecube/../gte.c:3075:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   BB0 = NC_OVERFLOW3(gteBBK + (gteLB1*gteIR1 +gteLB2*gteIR2 + gteLB3*gteIR3));
   ^
-/home/jeremy/wiisxr/Gamecube/../misc.c: In function 'CheckCdrom':
-/home/jeremy/wiisxr/Gamecube/../misc.c:315:4: warning: array subscript has type 'char' [-Wchar-subscripts]
-    if (isalnum(exename[i])) CdromId[c--] = exename[i];
-    ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c: In function 'psxBios_InitHeap':
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:547:2: warning: implicit declaration of function 'SysPrintf' [-Wimplicit-function-declaration]
-  SysPrintf("InitHeap %lx,%lx : %lx\n",a0,a1,SWAP32(chunk->size));
-  ^
 /home/jeremy/wiisxr/Gamecube/../psxbios.c: In function 'psxBios_printf':
 /home/jeremy/wiisxr/Gamecube/../psxbios.c:562:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(sp) = SWAP32((u32)a0);
@@ -687,128 +497,124 @@ In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/TrackInfo.hpp:1
 /home/jeremy/wiisxr/Gamecube/../psxbios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /home/jeremy/wiisxr/Gamecube/../psxbios.c:608:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /home/jeremy/wiisxr/Gamecube/../psxbios.c: In function 'psxBiosInit':
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2158:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2161:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x0150) = SWAPu32(0x160);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2159:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2162:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x0154) = SWAPu32(0x320);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2160:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2163:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x0160) = SWAPu32(0x248);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2169:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2172:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxRu32ref(0x0000) = SWAPu32((0x3b << 26) | 4);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2170:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2173:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x0000) = SWAPu32((0x3b << 26) | 0);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2171:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2174:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x00a0) = SWAPu32((0x3b << 26) | 1);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2172:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2175:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x00b0) = SWAPu32((0x3b << 26) | 2);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2173:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2176:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x00c0) = SWAPu32((0x3b << 26) | 3);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2174:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2177:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x4c54) = SWAPu32((0x3b << 26) | 0);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2175:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2178:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x8000) = SWAPu32((0x3b << 26) | 5);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2176:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2179:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x07a0) = SWAPu32((0x3b << 26) | 0);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2177:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2180:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x0884) = SWAPu32((0x3b << 26) | 0);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2178:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2181:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(0x0894) = SWAPu32((0x3b << 26) | 0);
   ^
 /home/jeremy/wiisxr/Gamecube/../psxbios.c: In function 'psxBiosFreeze':
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2386:42: warning: argument to 'sizeof' in 'memcpy' call is the same expression as the source; did you mean to remove the addressof? [-Wsizeof-pointer-memaccess]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2389:42: warning: argument to 'sizeof' in 'memcpy' call is the same expression as the source; did you mean to remove the addressof? [-Wsizeof-pointer-memaccess]
  #define bfreezes(ptr) bfreeze(ptr, sizeof(ptr))
                                           ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2382:42: note: in definition of macro 'bfreeze'
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2385:42: note: in definition of macro 'bfreeze'
   if (Mode == 1) memcpy(&psxR[base], ptr, size); \
                                           ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2438:2: note: in expansion of macro 'bfreezes'
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2441:2: note: in expansion of macro 'bfreezes'
   bfreezes(&signature);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2386:42: warning: argument to 'sizeof' in 'memcpy' call is the same expression as the destination; did you mean to remove the addressof? [-Wsizeof-pointer-memaccess]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2389:42: warning: argument to 'sizeof' in 'memcpy' call is the same expression as the destination; did you mean to remove the addressof? [-Wsizeof-pointer-memaccess]
  #define bfreezes(ptr) bfreeze(ptr, sizeof(ptr))
                                           ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2383:42: note: in definition of macro 'bfreeze'
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2386:42: note: in definition of macro 'bfreeze'
   if (Mode == 0) memcpy(ptr, &psxR[base], size); \
                                           ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2438:2: note: in expansion of macro 'bfreezes'
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2441:2: note: in expansion of macro 'bfreezes'
   bfreezes(&signature);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(jmp_int);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2449:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(pad_buf);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2450:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(pad_buf1);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2451:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(pad_buf2);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2452:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(heap_addr);
   ^
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../psxbios.c: At top level:
-/home/jeremy/wiisxr/Gamecube/../psxbios.c:1771:14: warning: 'fileload' defined but not used [-Wunused-function]
- static void *fileload(char *file,void *buf)
-              ^
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c: In function 'recLH':
 /home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1775:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     MapConst(_Rt_, psxRs16(addr));
@@ -826,7 +632,3 @@ In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/TrackInfo.hpp:1
 /home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c: In function 'GetFreeHWReg':
-/home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:115:25: warning: array subscript is above array bounds [-Warray-bounds]
-      least = HWRegisters[i].lastUsed; index = i;
-                         ^
