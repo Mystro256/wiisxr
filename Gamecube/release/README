@@ -1,14 +1,11 @@
-README : WiiSX / CubeSX
-Beta 2.1
+README : WiiSXR / CubeSXR
+Beta 2.1R
 
 LICENSE:
     This software is licensed under the GNU General Public License v2
       which is available at: http://www.gnu.org/licenses/gpl-2.0.txt
     This requires any released modifications to be licensed similarly,
       and to have the source available.
-    
-    WiiSX/CubeSX and their respective logos are trademarks of Team Wii64
-      and should not be used in unofficial builds.
 
 QUICK USAGE:
  * ISOs can be .bin/.cue (Make sure .cue contains _relative_ directory!), .img, or .iso format
@@ -62,25 +59,48 @@ Settings:
    * Delete Saves: Not yet implemented
 
 COMPATIBILITY LIST:
- Report any issues to http://code.google.com/p/pcsxgc/issues/list
+ Report any issues to https://github.com/Mystro256/wiisxr/issues
 
 CREDITS:
  * General Coder: emu_kidid
  * Graphics & Menu Coder: sepp256
  * Audio & Core Coder: tehpola
  * Artwork: drmr
+ * WIISXR fork: mystro256
+ * USB 2.0 support: matguitarist
+ * LIBWUPC support: Daxtsu
  * pcsx team http://www.pcsx.net/
  * pcsx-df http://pcsx-df.sourceforge.net/
+ * pcsxr http://pcsxr.codeplex.com/
  * pcsx 1.5-test3 mac version by Gil Pederson http://pcsx.gpost.dk/
  * P.E.Op.S. PSX Gpu & SPU http://sourceforge.net/projects/peops/ 
  * franspu
  * CDRMooby
  * SSSPSX
- * Compiled using devKitPro r21 and libOGC SVN
+ * Compiled using devKitPro r27
      ( http://sourceforge.net/projects/devkitpro )
  * Visit us on www.emulatemii.com and http://code.google.com/p/pcsxgc
 
 CHANGE LOG:
+Beta 2.1R rolling/master:
+   * Fixed some compiler warnings
+   * Build on devKitPro r27
+   * Rebranding (logos and trademarks not "free")
+   * Lots of code cleanup
+
+Beta 2.1 Mod 6 (Daxtsu):
+   + LibWupc (support for WiiU Classic Controller Pro)
+
+Beta 2.1 Mod 4 (matguitarist):
+   + cIOS no longer required (official IOS58 required)
+
+Beta 2.1 Mod 3 (matguitarist):
+   + improved support for USB 2.0
+   + support for both USB Port 0 and Port 1
+
+Beta 2.1 Mod 2 (matguitarist):
+   + support for USB 2.0
+
 Beta 2.1:
    * Compiled with devkitPPC r21 / libOGC SVN
    * Compiled with new libDI / DVDx V2
