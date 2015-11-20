@@ -12,66 +12,22 @@ http://mooby.psxfanatics.com
 ************************************************************************/
 
 #include "CDDAData.hpp"
-#include "Preferences.hpp"
+//#include "Preferences.hpp"
 
 using namespace std;
 
-extern Preferences prefs;
+//extern Preferences prefs;
 extern std::string programName;
 
 
 static sem_t audioReady;
 
-#if 0
-static void AudioReady(s32 voice){
-	LWP_SemPost(audioReady);
-}
-#endif
+#define REPEATALL 0
+#define REPEATONE 1
+#define PLAYONE   2
+static int repeatPref = REPEATALL;
 
 static void* CDDAThread(void* userData){
-#if 0
-  PlayCDDAData* data = static_cast<PlayCDDAData*>(userData);
-	
-	while(data->live){
-		// Wait for the beginning of the first track
-		LWP_SemWait(data->firstAudio);
-		
-		s32 voice = ASND_GetFirstUnusedVoice();
-		bool first = true;
-		
-		while(data->live && data->playing){
-			data->theCD->seek(data->CDDAPos);
-			void* buffer = data->theCD->getBuffer();
-			
-			// Wait for the sound system to request more audio
-			LWP_SemWait(audioReady);
-			
-			if(first){
-				s32 vol = static_cast<s32>(data->volume * MAX_VOLUME);
-				// Set up the audio stream for the first time
-				ASND_SetVoice(voice, VOICE_STEREO_16BIT, 44100, 0,
-				              buffer, bytesPerFrame, vol, vol, AudioReady);
-				ASND_Pause(0);
-				first = false;
-			} else {
-				ASND_AddVoice(voice, buffer, bytesPerFrame);
-			}
-			
-			data->CDDAPos += CDTime(0,0,1);
-			
-			if(data->CDDAPos == data->CDDAEnd){
-				if(data->repeat){
-					data->CDDAPos = data->CDDAStart;
-				} else {
-					data->endOfTrack = true;
-					break;
-				}
-			}
-		}
-		
-		ASND_StopVoice(voice);
-	}
-#endif
 	return NULL;
 }
 
@@ -90,7 +46,7 @@ int CDDACallbackRepeat(  void *inputBuffer, void *outputBuffer,
    
    buffer += data->frameOffset;
 
-   double volume = data->volume;
+   float volume = data->volume;
 
       // buffer the data
    for( i=0; i<framesPerBuffer; i++ )
@@ -144,7 +100,7 @@ int CDDACallbackOneTrackStop(  void *inputBuffer, void *outputBuffer,
 
    buffer += data->frameOffset;
 
-   double volume = data->volume;
+   float volume = data->volume;
 
       // buffer the data
    for( i=0; i<framesPerBuffer; i++ )
@@ -185,9 +141,10 @@ PlayCDDAData::PlayCDDAData(const std::vector<TrackInfo> ti, CDTime gapLength)
      repeat(false), endOfTrack(false), pregapLength(gapLength)
 {
    memset(nullAudio, 0, sizeof(nullAudio));
-   volume = atof(prefs.prefsMap[volumeString].c_str());
-   if (volume < 0) volume = 0;
-   else if (volume > 1) volume = 1;
+   //volume = atof(prefs.prefsMap[volumeString].c_str());
+   //if (volume < 0) volume = 0;
+   //else if (volume > 1)
+     volume = 1;
    
    live = true;
    LWP_SemInit(&audioReady, 1, 1);
@@ -240,18 +197,8 @@ int PlayCDDAData::play(const CDTime& startTime)
 
    InitialTime = startTime;
 
-   // make sure there's a valid option chosen
-   if ((prefs.prefsMap[repeatString] != repeatOneString) &&
-       (prefs.prefsMap[repeatString] != repeatAllString) &&
-       (prefs.prefsMap[repeatString] != playOneString))
-   {
-      prefs.prefsMap[repeatString] = repeatAllString;
-      //prefs.write();
-   }
-
       // figure out which track to play to set the end time
-   if ( (prefs.prefsMap[repeatString] == repeatOneString) ||
-        (prefs.prefsMap[repeatString] == playOneString))
+   if ( repeatPref != REPEATALL )
    {
       unsigned int i = 1;
       while ( (i < (trackList.size() - 1)) && (startTime > trackList[i].trackStart) )
@@ -277,7 +224,7 @@ int PlayCDDAData::play(const CDTime& startTime)
       CDDAEnd = trackList[i].trackStart + trackList[i].trackLength;
    }
 
-   else if (prefs.prefsMap[repeatString] == repeatAllString)
+   else //repeatPref == REPEATALL
    {
       CDDAEnd = trackList[trackList.size() - 1].trackStart +
          trackList[trackList.size() - 1].trackLength;

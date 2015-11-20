@@ -86,7 +86,6 @@ inline int moobyAsk(const char* message)
 template <class T>
 inline void flipBits(T& num)
 {
-#if 1
    char* front = (char*)&num;
    char* end = front + sizeof(T) - 1;
    char t;
@@ -98,7 +97,6 @@ inline void flipBits(T& num)
       front++;
       end--;
    }
-#endif
 }
 
 // given a string and a number, returns the ' ' delimited word

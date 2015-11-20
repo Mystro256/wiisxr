@@ -82,7 +82,7 @@ public:
    unsigned char audioStack[audioStackSize];
 
       // the volume as set in the configuration window
-   double volume;
+   float volume;
 		// the current position of playing
    CDTime CDDAPos;
 		// the end time of this track

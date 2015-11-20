@@ -11,7 +11,7 @@ http://mooby.psxfanatics.com
 ************************************************************************/
 
 #include "SubchannelData.hpp"
-#include "Preferences.hpp"
+//#include "Preferences.hpp"
 
 extern "C" {
 #include "../fileBrowser/fileBrowser.h"
@@ -21,7 +21,7 @@ extern "C" {
 extern fileBrowser_file subFile;
 };
 
-extern Preferences prefs;
+//extern Preferences prefs;
 
 using namespace std;
 
@@ -32,13 +32,7 @@ using namespace std;
 SubchannelData* SubchannelDataFactory(const std::string& fileroot, int type)
 {
    SubchannelData* scd = NULL;
-#if 0
-   if (prefs.prefsMap[subEnableString] == std::string())
-   {
-      scd = new DisabledSubchannelData();
-      return scd;
-   }
-#endif
+
    fileBrowser_file tempFile;
    memset(&tempFile, 0, sizeof(fileBrowser_file));
    strcpy(&tempFile.name[0], (fileroot + std::string(".sub")).c_str());
@@ -75,7 +69,7 @@ SubchannelData* SubchannelDataFactory(const std::string& fileroot, int type)
 SUBSubchannelData::SUBSubchannelData() 
 {
       // set the cache to be the size given in the prefs
-   cache.setMaxSize(atoi(prefs.prefsMap[cacheSizeString].c_str()));
+   //cache.setMaxSize(atoi(prefs.prefsMap[cacheSizeString].c_str()));
 }
 
 // SUB files read from the file whenever data is needed

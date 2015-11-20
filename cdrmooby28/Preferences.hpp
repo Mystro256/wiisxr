@@ -30,12 +30,6 @@ static const char* playOneString = "playOne";
 class Preferences
 {
 public:
-   Preferences();
-
-private:
-   bool initialized;
-
-public:
    std::map<std::string, std::string> prefsMap;
    std::list<std::string> allPrefs;
 };

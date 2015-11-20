@@ -15,7 +15,7 @@ http://mooby.psxfanatics.com
 
 #include "CDInterface.hpp"
 #include "defines.h"
-#include "Preferences.hpp"
+//#include "Preferences.hpp"
 
 
 #include "externs.h"
@@ -36,7 +36,7 @@ extern CDInterface* theCD;
 extern int rc;
 extern TDTNFormat tdtnformat;
 extern EMUMode mode;
-extern Preferences prefs;
+//extern Preferences prefs;
 
 int CD_Wait(void)
 {

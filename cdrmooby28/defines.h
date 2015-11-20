@@ -131,24 +131,6 @@ typedef struct {
     char    Description[1024];  // Description to put in the edit box
 } FPSEAbout;
 
-
-
-/* PS2 defines */
-
-#if 0
-
-typedef char s8;
-typedef short s16;
-typedef long s32;
-typedef long long s64;
-
-typedef unsigned char u8;
-typedef unsigned short u16;
-typedef unsigned long u32;
-typedef unsigned long long u64;
-
-#endif
-
 typedef struct { // NOT bcd coded
 	u8 minute;
 	u8 second;
