@@ -4,10 +4,8 @@
 #include "../psxcommon.h"
 #include "../decode_xa.h"
 
-#ifndef __WIN32__
 #include <unistd.h>
-#include <sys/time.h>  
-#endif
+#include <sys/time.h>
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -36,10 +36,10 @@
 
 enum { STICK_X, STICK_Y };
 static int getStickValue(joystick_t* j, int axis, int maxAbsValue){
-	double angle = PI * j->ang/180.0f;
-	double magnitude = (j->mag > 1.0f) ? 1.0f :
+	float angle = PI * j->ang/180.0f;
+	float magnitude = (j->mag > 1.0f) ? 1.0f :
 	                    (j->mag < -1.0f) ? -1.0f : j->mag;
-	double value;
+	float value;
 	if(axis == STICK_X)
 		value = magnitude * sin( angle );
 	else

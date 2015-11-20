@@ -9,9 +9,6 @@
  *   additional informations.                                              *
  *                                                                         *
  ***************************************************************************/
-/*
-#include "stdafx.h"
-#include "externals.h"*/
 #include "franspu.h"
 #include "../psxcommon.h"
 

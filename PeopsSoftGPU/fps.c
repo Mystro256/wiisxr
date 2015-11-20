@@ -177,7 +177,7 @@ void FrameCap (void)
 void FrameCapSSSPSX(void)                              // frame limit func SSSPSX
 {
  static DWORD reqticks, curticks;
- static double offset;
+ static float offset;
 
 //---------------------------------------------------------
  if(bInitCap)

@@ -7363,7 +7363,7 @@ void DrawSoftwareLineShade(long rgb0, long rgb1)
 {
 	short x0, y0, x1, y1, xt, yt;
 	//long rgbt;
-	double m, dy, dx;
+	float m, dy, dx;
 
 	if(lx0>drawW && lx1>drawW) return;
 	if(ly0>drawH && ly1>drawH) return;
@@ -7435,7 +7435,7 @@ void DrawSoftwareLineShade(long rgb0, long rgb1)
 void DrawSoftwareLineFlat(long rgb)
 {
 	short x0, y0, x1, y1, xt, yt;
-	double m, dy, dx;
+	float m, dy, dx;
 	unsigned short colour = 0;
  
 	if(lx0>drawW && lx1>drawW) return;

@@ -152,13 +152,13 @@ char * pConfigFile=NULL;
   p+=strlen(name); \
   while ((*p == ' ') || (*p == '=')) p++; \
   if (*p != '\n') { \
-   len = sprintf(t1, "%.1f", (double)var); \
+   len = sprintf(t1, "%.1f", (float)var); \
    strncpy(p, t1, len); \
    if (p[len] != ' ' && p[len] != '\n' && p[len] != 0) p[len] = ' '; \
   } \
  } \
  else { \
-  size+=sprintf(pB+size, "%s = %.1f\n", name, (double)var); \
+  size+=sprintf(pB+size, "%s = %.1f\n", name, (float)var); \
  }
 
 /////////////////////////////////////////////////////////////////////////////

@@ -37,14 +37,14 @@
 //============================================
 
 #ifndef _FIXED
-static double K0[4] = {
+static float K0[4] = {
     0.0,
     0.9375,
     1.796875,
     1.53125
 };
 
-static double K1[4] = {
+static float K1[4] = {
     0.0,
     0.0,
     -0.8125,
