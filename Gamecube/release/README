@@ -66,9 +66,11 @@ CREDITS:
  * Graphics & Menu Coder: sepp256
  * Audio & Core Coder: tehpola
  * Artwork: drmr
+ * WIISXR logo: iiiGerardoiii
  * WIISXR fork: mystro256
  * USB 2.0 support: matguitarist
- * LIBWUPC support: Daxtsu
+ * LibWUPC integration: Daxtsu
+ * LibWUPC: https://github.com/FIX94/libwupc
  * pcsx team http://www.pcsx.net/
  * pcsx-df http://pcsx-df.sourceforge.net/
  * pcsxr http://pcsxr.codeplex.com/
@@ -82,7 +84,7 @@ CREDITS:
  * Visit us on www.emulatemii.com and http://code.google.com/p/pcsxgc
 
 CHANGE LOG:
-Beta 2.1R rolling/master:
+Beta 2.2 (WIP, not released yet) rolling/master:
    * Fixed some compiler warnings
    * Build on devKitPro r27
    * Rebranding (logos and trademarks not "free")
