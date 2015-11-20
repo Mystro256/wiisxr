@@ -19,7 +19,7 @@ http://mooby.psxfanatics.com
 
 static const char* repeatString = "repeat";
 static const char* volumeString = "volume";
-static const char* cacheSizeString = "cachesize";
+//static const char* cacheSizeString = "cachesize";
 
 // these are the repeat mode strings
 static const char* repeatAllString = "repeatAll";

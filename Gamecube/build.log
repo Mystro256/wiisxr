@@ -1,3 +1,35 @@
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/FileInterface.cpp:16:0:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
+ static const char* repeatString = "repeat";
+                    ^
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
+ static const char* volumeString = "volume";
+                    ^
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
+ static const char* repeatAllString = "repeatAll";
+                    ^
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
+ static const char* repeatOneString = "repeatOne";
+                    ^
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:27:20: warning: 'playOneString' defined but not used [-Wunused-variable]
+ static const char* playOneString = "playOne";
+                    ^
+In file included from /home/jeremy/wiisxr/Gamecube/../cdrmooby28/Globals.cpp:16:0:
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
+ static const char* repeatString = "repeat";
+                    ^
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
+ static const char* volumeString = "volume";
+                    ^
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
+ static const char* repeatAllString = "repeatAll";
+                    ^
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
+ static const char* repeatOneString = "repeatOne";
+                    ^
+/home/jeremy/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:27:20: warning: 'playOneString' defined but not used [-Wunused-variable]
+ static const char* playOneString = "playOne";
+                    ^
 /home/jeremy/wiisxr/Gamecube/./PadSSSPSX.c: In function 'SSS_PADpoll':
 /home/jeremy/wiisxr/Gamecube/./PadSSSPSX.c:268:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     *(u16*)&buf[2] = global.padStat[pad];
@@ -536,3 +568,7 @@
 /home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /home/jeremy/wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/jeremy/wiisxr/Gamecube/./utils/mload.c: In function 'mload_memset':
+/home/jeremy/wiisxr/Gamecube/./utils/mload.c:158:2: warning: implicit declaration of function 'iosDestroyHeap' [-Wimplicit-function-declaration]
+  iosDestroyHeap(hid);
+  ^
