@@ -1,4 +1,5 @@
-# WiiSXR
+![WiiSXR logo](./logo.png)
+
 Fork of wiisx, a GameCube/Wii/Wii U PSX emulator.
 
 The starting point for this code base will be daxtsu's libwupc mod of wiisx, which is in turn based off of Matguitarist's "USB mod5"
