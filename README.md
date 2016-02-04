@@ -39,28 +39,37 @@ http://sourceforge.net/projects/devkitpro/files/devkitPPC/
 
 Some Goals in mind:
 
-- Fix build warnings and errors (see Gamecube/build.log for details, seems like it could be optimized better too)
-- Remove Gamecube specific code and remake gui with libwiigui (easier to change, update and fix. Plus it's all draw with gx. Also this needs to be rebranded, as the wiisx logo and name does not belong to me)
-- Update with code from pcsxr (Take as much as possible from pcsxr development... unfortunately the wii is limited and some fixes cannot be ported: http://pcsxr.codeplex.com)
+- Fix gcc build warnings (see build.log for details). Not sure how much the punned pointers will effect optimization, but no warnings is always better than any at all IMHO.
+- Update with any code from pcsxr (Take as much as possible from pcsxr development... unfortunately the wii is limited and some things cannot be ported: http://pcsxr.codeplex.com). As well, most the focus of their development is for x86, leaving not much to take for PPC/Wii. Any fixes can be ported to PCSXR if desired or applicable as well.
 - Improve plugins (perhaps replace them?)... e.g. cdrmooby28 has some optimization and possible heap issues. As well, maybe an opengl plugin can be ported to gx (with the help of something like gl2gx), and a sound plugin with the help of a SDL layer (or ported?).
+- A new GUI with libwiigui, and in turn remove all the Gamecube specific code, to simplify things. It will be easier to change, update and fix. Plus it's all draw with gx (not sure how wiisx gui works TBH) and doesn't have unmaintainable assembly code. It seems like everything breaks in the GUI when I change minor things, so this maybe a necessity... it maybe somewhere in the assembly that's messing things up.
+- More controller support, i.e. gamecube, hid, etc... the wii u pro controller is supported but very buggy.
 
 Don't forget to fork me if you want to contribute! :)
 I'm open to collaborators!
+Unfortunately its a lot of work and I'm limited on time as is, so any help is appreciated.
 
 ##How to Build
 
 If don't have the build system setup yet, see "Build System Guide" first
 
-For the Wii version, just cd into the Gamecube folder and run
+For the Wii version, just cd into the wiisxr folder and run
 
 ```bash
-make -f Makefile_Wii
+make Wii
 ```
 
 or to build it for GameCube:
 
 ```bash
-make -f Makefile_GC
+make GC
+```
+
+If you're going to do some development, I would suggest always making a clean build and regenerating build.log.
+To do this, just call the make command like so and it'll do the rest for you:
+
+```bash
+make
 ```
 
 ##Build System Guide
