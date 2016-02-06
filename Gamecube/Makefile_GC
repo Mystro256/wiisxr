@@ -17,7 +17,7 @@ include $(DEVKITPPC)/gamecube_rules
 #---------------------------------------------------------------------------------
 TARGET		:=	CubeSX
 BUILD		:=	build
-SOURCES		:=	. ../cdrmooby28/ ./gc_input/ ./libgui/ ./menu/ ./fileBrowser/ .. ../ppc/ ../PeopsSoftGPU/ ../franspu/
+SOURCES		:=	. ../cdrmooby28/ ./gc_input/ ./libgui/ ./menu/ ./fileBrowser/ .. ../ppc/ ../PeopsGXGPU/ ../franspu/
 
 DATA		:=	data  
 
@@ -28,7 +28,7 @@ INCLUDES	:=
 #---------------------------------------------------------------------------------
 
 CFLAGS	= -g -O3 -Wall $(MACHDEP) $(INCLUDE) -D__GAMECUBE__ -DHW_DOL -D__ppc__ \
-		  -D__GX__ -D_SDL -DEMBEDDED_FONTS \
+		  -D__GX__ -DEMBEDDED_FONTS \
 		  -DTHREADED_AUDIO -DRELEASE #-DSHOW_DEBUG -DPROFILE
 		  
 CXXFLAGS	=	$(CFLAGS)
