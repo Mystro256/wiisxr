@@ -24,31 +24,12 @@
 //
 //*************************************************************************// 
 
-#ifndef _SDL
-#define __X11_C_ 
-//X11 render
 #define __inline inline
 #define CALLBACK
 
-#include <stdio.h> 
-#include <stdlib.h> 
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include <sys/time.h> 
-#include <GL/gl.h>  
-#include <GL/glx.h>  
-#include <math.h> 
-#include <X11/cursorfont.h> 
-
-#else 		//SDL render
-
-#define __inline inline
-#define CALLBACK
-
-#include <stdio.h> 
-#include <stdlib.h> 
-#include <string.h>
-#include <sys/time.h> 
-#include <math.h> 
-
-#endif
+#include <sys/time.h>
+#include <math.h>
 

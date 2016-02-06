@@ -19,49 +19,6 @@
 #define GETLEs32(X) ((short)GETLE32((unsigned short *)X))
 
 #ifdef _BIG_ENDIAN
-#if 0
-// Metrowerks styles
-#if 1
-#define GETLE16(X) ((unsigned short)__lhbrx(X, 0))
-#define GETLE32(X) ((unsigned long)__lwbrx(X, 0))
-#define GETLE16D(X) ((unsigned long)__rlwinm(GETLE32(X), 16, 0, 31))
-#define PUTLE16(X, Y) __sthbrx(Y, X, 0)
-#define PUTLE32(X, Y) __stwbrx(Y, X, 0)
-#else
-__inline__ unsigned short GETLE16(register unsigned short *ptr) {
-  register unsigned short ret;
-  asm {
-    lhbrx ret, r0, ptr;
-  }
-  return ret;
-}
-__inline__ unsigned long GETLE32(register unsigned long *ptr) {
-  register unsigned long ret;
-  asm {
-    lwbrx ret, r0, ptr;
-  }
-  return ret;
-}
-__inline__ unsigned long GETLE16D(register unsigned long *ptr) {
-  register unsigned short ret;
-  asm {
-    lwbrx ret, r0, ptr;
-    rlwinm ret, ret, 16, 0, 31;
-  }
-  return ret;
-}
-__inline__ void PUTLE16(register unsigned short *ptr, register unsigned short val) {
-  asm {
-    sthbrx val, r0, ptr;
-  }
-}
-__inline__ void PUTLE32(register unsigned long *ptr, register unsigned long val) {
-  asm {
-    stwbrx val, r0, ptr;
-  }
-}
-#endif
-#else
 // GCC style
 extern __inline__ unsigned short GETLE16(unsigned short *ptr) {
     unsigned short ret; __asm__ ("lhbrx %0, 0, %1" : "=r" (ret) : "r" (ptr));
@@ -85,7 +42,6 @@ extern __inline__ void PUTLE16(unsigned short *ptr, unsigned short val) {
 extern __inline__ void PUTLE32(unsigned long *ptr, unsigned long val) {
     __asm__ ("stwbrx %0, 0, %1" : : "r" (val), "r" (ptr) : "memory");
 }
-#endif
 #else // _BIG_ENDIAN
 #define GETLE16(X) ((unsigned short *)X)
 #define GETLE32(X) ((unsigned long *)X)
