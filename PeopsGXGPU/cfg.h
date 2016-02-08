@@ -1,5 +1,5 @@
 /***************************************************************************
-                        stdafx.h  -  description
+                          cfg.h  -  description
                              -------------------
     begin                : Sun Oct 28 2001
     copyright            : (C) 2001 by Pete Bernert
@@ -24,11 +24,15 @@
 //
 //*************************************************************************// 
 
-#define __inline inline
-#define CALLBACK
+#ifndef _GPU_CFG_H_
+#define _GPU_CFG_H_
 
-#include <stdio.h> 
-#include <stdlib.h> 
-#include <string.h>
-#include <sys/time.h> 
-#include <math.h>
+void ReadConfig(void);
+void WriteConfig(void);
+void ReadWinSizeConfig(void);
+
+void SoftDlgProc(void);
+void AboutDlgProc(void);
+
+#endif // _GPU_CFG_H_
+

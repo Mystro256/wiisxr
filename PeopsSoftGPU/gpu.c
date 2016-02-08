@@ -500,9 +500,7 @@ long PEOPS_GPUopen(unsigned long * disp,char * CapText,char * CfgFile)
 
  pCaptionText=CapText;
 
-#ifndef _FPSE
  pConfigFile=CfgFile;
-#endif
 
  ReadConfig();                                         // read registry
 
@@ -1558,11 +1556,7 @@ long PEOPS_GPUdmaChain(unsigned long * baseAddrL, unsigned long addr)
 
 void CALLBACK GPUabout(void)                           // ABOUT
 {
-
-#ifndef _FPSE
  AboutDlgProc();
-#endif
- return;
 }
 
 ////////////////////////////////////////////////////////////////////////

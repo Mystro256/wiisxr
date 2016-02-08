@@ -16,19 +16,6 @@
  *                                                                         *
  ***************************************************************************/
 
-//TODO These are variables are "stubbed"
-//TODO Delete these after implementation
-int iUseDither = 0;
-unsigned long dwCoreFlags = 0;
-int iResX = 640;
-int iResY = 480;
-int UseFrameLimit = 1;
-int UseFrameSkip = 1;
-float fFrameRate = 60.0f;
-int iFrameLimit = 2;
-unsigned long dwCfgFixes = 0;
-int iUseFixes = 0;
-
 //TODO WIP, lots of stubbed functions
 
 #include "stdafx.h"
@@ -39,14 +26,13 @@ int iUseFixes = 0;
 #define _IN_GPU
 
 #include "externals.h"
-//#include "gpu.h"
+#include "gpu.h"
 //#include "draw.h"
-//#include "cfg.h"
+#include "cfg.h"
 //#include "prim.h"
 #include "psemu.h"
 //#include "menu.h"
-//#include "key.h"
-//#include "fps.h"
+#include "fps.h"
 
 ////////////////////////////////////////////////////////////////////////
 // PPDK developer must change libraryName field and can change revision and build
@@ -139,19 +125,23 @@ void CALLBACK GPUdisplayFlags(unsigned long dwFlags)   // some info func
 // stuff to make this a true PDK module
 ////////////////////////////////////////////////////////////////////////
 
-char * CALLBACK PSEgetLibName(void) {
+char * CALLBACK PSEgetLibName()
+{
 	return libraryName;
 }
 
-unsigned long CALLBACK PSEgetLibType(void) {
+unsigned long CALLBACK PSEgetLibType()
+{
 	return PSE_LT_GPU;
 }
 
-unsigned long CALLBACK PSEgetLibVersion(void) {
+unsigned long CALLBACK PSEgetLibVersion()
+{
 	return version << 16 | revision << 8 | build;
 }
 
-char * GPUgetLibInfos(void) {
+char * GPUgetLibInfos()
+{
 	return libraryInfo;
 }
 
@@ -159,7 +149,8 @@ char * GPUgetLibInfos(void) {
 // Snapshot func
 ////////////////////////////////////////////////////////////////////////
 
-char * pGetConfigInfos(void) {
+char * pGetConfigInfos()
+{
 	char szO[2][4] = { "off", "on " };
 	char szTxt[256];
 	char * pB = (char *) malloc(32767);
@@ -199,12 +190,13 @@ char * pGetConfigInfos(void) {
 	return pB;
 }
 
-void DoTextSnapShot(int iNum) {
+void DoTextSnapShot(int iNum)
+{
 	FILE *txtfile;
 	char szTxt[256];
 	char * pB;
 
-	sprintf(szTxt, "%s/peopssoft%03d.txt", getenv("HOME"), iNum);
+	sprintf(szTxt, "%s/peopsgx%03d.txt", getenv("HOME"), iNum);
 
 	if ((txtfile = fopen(szTxt, "wb")) == NULL)
 		return;
@@ -219,7 +211,7 @@ void DoTextSnapShot(int iNum) {
 
 ////////////////////////////////////////////////////////////////////////
 
-void CALLBACK GPUmakeSnapshot(void)                    // snapshot of whole vram
+void CALLBACK GPUmakeSnapshot()                    // snapshot of whole vram
 {
 	FILE *bmpfile;
 	char filename[256];
@@ -293,7 +285,8 @@ void CALLBACK GPUmakeSnapshot(void)                    // snapshot of whole vram
 // GPU Init, init for vars and whatnot
 ////////////////////////////////////////////////////////////////////////
 
-long PEOPS_GPUinit() {
+long PEOPS_GPUinit()
+{
 	memset(ulStatusControl, 0, 256 * sizeof(unsigned long)); // init save state scontrol field
 
 	szDebugText[0] = 0;                                // init debug text buffer
@@ -312,8 +305,7 @@ long PEOPS_GPUinit() {
 	memset(psxVSecure, 0x00, (iGPUHeight * 2) * 1024 + (1024 * 1024));
 	memset(lGPUInfoVals, 0x00, 16 * sizeof(unsigned long));
 
-	//TODO
-	//SetFPSHandler();
+	SetFPSHandler();
 
 	PSXDisplay.RGB24 = FALSE;                      // init some stuff
 	PSXDisplay.Interlaced = FALSE;
@@ -349,25 +341,50 @@ long PEOPS_GPUinit() {
 // Open GPU, start
 ////////////////////////////////////////////////////////////////////////
 
-long PEOPS_GPUopen(unsigned long * disp, char * CapText, char * CfgFile) {
-	//TODO STUB
-	return 0;
+long PEOPS_GPUopen(unsigned long * disp, char * CapText, char * CfgFile)
+{
+	 unsigned long d;
+
+	 pCaptionText=CapText;
+
+	 pConfigFile=CfgFile;
+
+	 ReadConfig();                                         // read registry
+
+	 iShowFPS=1;	//Default config turns this off..
+
+	 InitFPS();
+
+	 bIsFirstFrame  = TRUE;                                // we have to init later
+	 bDoVSyncUpdate = TRUE;
+
+	 //TODO
+	 d=0;//ulInitDisplay();
+
+	 if(disp) *disp=d;
+
+	 if(d) return 0;
+	 return -1;
 }
 
 ////////////////////////////////////////////////////////////////////////
 // Close GPU, ending and cleanup
 ////////////////////////////////////////////////////////////////////////
 
-long PEOPS_GPUclose() {
-	return 0;
+long PEOPS_GPUclose()
+{
+	 //TODO
+	 //CloseDisplay();                                       // shutdown direct draw
+
+	 return 0;
 }
 
 ////////////////////////////////////////////////////////////////////////
 // Shutdown GPU, likely abrupt or on error/fault
 ////////////////////////////////////////////////////////////////////////
 
-long PEOPS_GPUshutdown() {
-	//TODO STUB
+long PEOPS_GPUshutdown()
+{
 	return 0;
 }
 
@@ -375,7 +392,8 @@ long PEOPS_GPUshutdown() {
 // Update Lace, called every VSync
 ////////////////////////////////////////////////////////////////////////
 
-void PEOPS_GPUupdateLace(void) {
+void PEOPS_GPUupdateLace()
+{
 	//TODO STUB
 }
 
@@ -383,7 +401,8 @@ void PEOPS_GPUupdateLace(void) {
 // Read Request, process request from GPU status register
 ////////////////////////////////////////////////////////////////////////
 
-unsigned long PEOPS_GPUreadStatus(void) {
+unsigned long PEOPS_GPUreadStatus()
+{
 	return 0; //TODO STUB lGPUstatusRet;
 }
 
@@ -392,7 +411,8 @@ unsigned long PEOPS_GPUreadStatus(void) {
 // These should be single packet commands.
 ////////////////////////////////////////////////////////////////////////
 
-void PEOPS_GPUwriteStatus(unsigned long gdata) {
+void PEOPS_GPUwriteStatus(unsigned long gdata)
+{
 	//TODO STUB
 }
 
@@ -400,13 +420,15 @@ void PEOPS_GPUwriteStatus(unsigned long gdata) {
 // Read core data from vram
 ////////////////////////////////////////////////////////////////////////
 
-void PEOPS_GPUreadDataMem(unsigned long * pMem, int iSize) {
+void PEOPS_GPUreadDataMem(unsigned long * pMem, int iSize)
+{
 	//TODO STUB
 }
 
 ////////////////////////////////////////////////////////////////////////
 
-unsigned long PEOPS_GPUreadData(void) {
+unsigned long PEOPS_GPUreadData()
+{
 	//TODO STUB
 	return 0;
 }
@@ -415,21 +437,34 @@ unsigned long PEOPS_GPUreadData(void) {
 // Write core data to vram
 ////////////////////////////////////////////////////////////////////////
 
-void PEOPS_GPUwriteDataMem(unsigned long * pMem, int iSize) {
+void PEOPS_GPUwriteDataMem(unsigned long * pMem, int iSize)
+{
 	//TODO STUB
 }
 
 ////////////////////////////////////////////////////////////////////////
 
-void PEOPS_GPUwriteData(unsigned long gdata) {
+void PEOPS_GPUwriteData(unsigned long gdata)
+{
 	PEOPS_GPUwriteDataMem(&gdata, 1);
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Unsure what this does
+// Set Misc Fixes
 ////////////////////////////////////////////////////////////////////////
 
-long PEOPS_GPUdmaChain(unsigned long * baseAddrL, unsigned long addr) {
+void SetFixes(void)
+ {
+  if(dwActFixes&0x02) sDispWidths[4]=384;
+  else                sDispWidths[4]=368;
+ }
+
+////////////////////////////////////////////////////////////////////////
+// GPU dma Chain, process the GPU commands
+////////////////////////////////////////////////////////////////////////
+
+long PEOPS_GPUdmaChain(unsigned long * baseAddrL, unsigned long addr)
+{
 	//TODO STUB
 	return 0;
 }
@@ -449,7 +484,8 @@ typedef struct GPUFREEZETAG {
 // Freeze GPU
 ////////////////////////////////////////////////////////////////////////
 
-long PEOPS_GPUfreeze(unsigned long ulGetFreezeData, GPUFreeze_t * pF) {
+long PEOPS_GPUfreeze(unsigned long ulGetFreezeData, GPUFreeze_t * pF)
+{
 	//TODO STUB
 	return 0;
 }
@@ -458,6 +494,7 @@ long PEOPS_GPUfreeze(unsigned long ulGetFreezeData, GPUFreeze_t * pF) {
 // Unsure what this does
 ////////////////////////////////////////////////////////////////////////
 
-void CALLBACK GPUsetframelimit(unsigned long option) {
+void CALLBACK GPUsetframelimit(unsigned long option)
+{
 	//TODO STUB
 }

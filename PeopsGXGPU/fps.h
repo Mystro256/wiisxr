@@ -1,5 +1,5 @@
 /***************************************************************************
-                        stdafx.h  -  description
+                          fps.h -  description
                              -------------------
     begin                : Sun Oct 28 2001
     copyright            : (C) 2001 by Pete Bernert
@@ -24,11 +24,18 @@
 //
 //*************************************************************************// 
 
-#define __inline inline
-#define CALLBACK
+#ifndef _FPS_INTERNALS_H
+#define _FPS_INTERNALS_H
 
-#include <stdio.h> 
-#include <stdlib.h> 
-#include <string.h>
-#include <sys/time.h> 
-#include <math.h>
+void FrameCap(void); 
+void FrameCapSSSPSX (void);
+void FrameSkip(void); 
+void calcfps(void);
+void PCFrameCap (void);
+void PCcalcfps(void);
+void SetAutoFrameCap(void);
+void SetFPSHandler(void);
+void InitFPS(void);
+void CheckFrameRate(void);
+
+#endif // _FPS_INTERNALS_H
