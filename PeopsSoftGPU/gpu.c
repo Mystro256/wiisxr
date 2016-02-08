@@ -144,13 +144,8 @@ const  unsigned char build    = 18;   // increase that with each version
 
 
 
-#ifndef _SDL
-static char *libraryName      = "P.E.Op.S. SoftX Driver";
-static char *libraryInfo      = "P.E.Op.S. SoftX Driver V1.18\nCoded by Pete Bernert and the P.E.Op.S. team\n";
-#else
-static char *libraryName      = "P.E.Op.S. SoftSDL Driver";
-static char *libraryInfo      = "P.E.Op.S. SoftSDL Driver V1.18\nCoded by Pete Bernert and the P.E.Op.S. team\n";
-#endif
+static char *libraryName      = "P.E.Op.S. SoftGPU Driver";
+static char *libraryInfo      = "P.E.Op.S. SoftGPU Driver V1.18\nCoded by Pete Bernert and the P.E.Op.S. team\n";
 
 static char *PluginAuthor     = "Pete Bernert and the P.E.Op.S. team";
  
@@ -202,19 +197,6 @@ unsigned long     lGPUInfoVals[16];
 int               iFakePrimBusy=0;
 int               iRumbleVal=0;
 int               iRumbleTime=0;
-
-
-
-// Linux: Stub the functions
-BOOL LoadKernel32(void)
-{
-	return TRUE;
-}
-
-BOOL FreeKernel32(void)
-{
-	return TRUE;
-}
 
 ////////////////////////////////////////////////////////////////////////
 // some misc external display funcs
@@ -484,9 +466,6 @@ long PEOPS_GPUinit()                                // GPU INIT
  GPUIsReadyForCommands;
  bDoVSyncUpdate=TRUE;
 
- // Get a handle for kernel32.dll, and access the required export function
- LoadKernel32();
-
  return 0;
 }
 
@@ -539,8 +518,6 @@ long PEOPS_GPUclose()
 
 long PEOPS_GPUshutdown()
 {
- // screensaver: release the handle for kernel32.dll
- FreeKernel32();
 
 // free(psxVSecure);
 
@@ -643,10 +620,10 @@ void ChangeDispOffsetsX(void)                          // X CENTER
      PreviousPSXDisplay.Range.x0+=2; //???
 
      PreviousPSXDisplay.Range.x1+=(short)(lx-l);
-     PreviousPSXDisplay.Range.x1-=2; // makes linux stretching easier
+     PreviousPSXDisplay.Range.x1-=2; // makes stretching easier
     }
 
-   // some linux alignment security
+   // some alignment security
    PreviousPSXDisplay.Range.x0=PreviousPSXDisplay.Range.x0>>1;
    PreviousPSXDisplay.Range.x0=PreviousPSXDisplay.Range.x0<<1;
    PreviousPSXDisplay.Range.x1=PreviousPSXDisplay.Range.x1>>1;
@@ -1891,12 +1868,6 @@ void PaintPicDot(unsigned char * p,unsigned char c)
 // so you have to use the frontbuffer to get a fully
 // rendered picture
 
-// LINUX version:
-
-#ifdef USE_DGA2
-#include <X11/extensions/xf86dga.h>
-extern XDGADevice *dgaDev;
-#endif
 extern char * Xpixels;
 
 void GPUgetScreenPic(unsigned char * pMem)

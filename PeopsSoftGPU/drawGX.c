@@ -268,15 +268,6 @@ void BlitScreenNS_GX(unsigned char * surf,long x,long y, short dx, short dy)
  unsigned short LineOffset,SurfOffset;
  long lPitch=iResX_Max<<1;
 // long lPitch=iResX<<1;
-#ifdef USE_DGA2
- int DGA2fix;
- int dga2Fix;
- if (!iWindowMode)
-  {
-   DGA2fix = (char*)surf == Xpixels;
-   dga2Fix = dgaDev->mode.imageWidth - dgaDev->mode.viewportWidth;
-  } else DGA2fix = dga2Fix = 0;
-#endif
 
  if(PreviousPSXDisplay.Range.y0)                       // centering needed?
   {
@@ -289,9 +280,6 @@ void BlitScreenNS_GX(unsigned char * surf,long x,long y, short dx, short dy)
    unsigned char * pD;unsigned int startxy;
 
    surf+=PreviousPSXDisplay.Range.x0<<1;
-#ifdef USE_DGA2
-   if (DGA2fix) lPitch+= dga2Fix*2;
-#endif
 
    for(column=0;column<dy;column++)
     {
@@ -316,9 +304,6 @@ void BlitScreenNS_GX(unsigned char * surf,long x,long y, short dx, short dy)
    unsigned long * DSTPtr =
     ((unsigned long *)surf)+(PreviousPSXDisplay.Range.x0>>1);
 
-#ifdef USE_DGA2
-   dga2Fix/=2;
-#endif
    dx>>=1;
 
    LineOffset = 512 - dx;
@@ -335,9 +320,6 @@ void BlitScreenNS_GX(unsigned char * surf,long x,long y, short dx, short dy)
       }
      SRCPtr += LineOffset;
      DSTPtr += SurfOffset;
-#ifdef USE_DGA2
-     if (DGA2fix) DSTPtr+= dga2Fix;
-#endif
     }
   }
 }
