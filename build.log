@@ -568,23 +568,19 @@
 /wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../PeopsGXGPU/gpu.c: In function 'GPUdisplayFlags':
-/wiisxr/Gamecube/../PeopsGXGPU/gpu.c:121:2: warning: implicit declaration of function 'BuildDispMenu' [-Wimplicit-function-declaration]
-  BuildDispMenu(0);
-  ^
-/wiisxr/Gamecube/../PeopsGXGPU/gpu.c: At top level:
-/wiisxr/Gamecube/../PeopsGXGPU/gpu.c:75:22: warning: 'gpuDataM' defined but not used [-Wunused-variable]
- static unsigned long gpuDataM[256];
-                      ^
-/wiisxr/Gamecube/../PeopsGXGPU/gpu.c:76:22: warning: 'gpuCommand' defined but not used [-Wunused-variable]
- static unsigned char gpuCommand = 0;
-                      ^
-/wiisxr/Gamecube/../PeopsGXGPU/gpu.c:77:13: warning: 'gpuDataC' defined but not used [-Wunused-variable]
- static long gpuDataC = 0;
-             ^
-/wiisxr/Gamecube/../PeopsGXGPU/gpu.c:78:13: warning: 'gpuDataP' defined but not used [-Wunused-variable]
- static long gpuDataP = 0;
-             ^
+/wiisxr/Gamecube/../PeopsGXGPU/gpu.c: In function 'GPUmakeSnapshot':
+/wiisxr/Gamecube/../PeopsGXGPU/gpu.c:213:17: warning: unused variable 'color' [-Wunused-variable]
+  unsigned short color;
+                 ^
+/wiisxr/Gamecube/../PeopsGXGPU/gpu.c:211:11: warning: unused variable 'j' [-Wunused-variable]
+  short i, j;
+           ^
+/wiisxr/Gamecube/../PeopsGXGPU/gpu.c:211:8: warning: unused variable 'i' [-Wunused-variable]
+  short i, j;
+        ^
+/wiisxr/Gamecube/../PeopsGXGPU/gpu.c:210:16: warning: unused variable 'line' [-Wunused-variable]
+  unsigned char line[1024 * 3];
+                ^
 /wiisxr/Gamecube/../PeopsGXGPU/stubs.c:38:16: warning: array 'ptCursorPoint' assumed to have one element [enabled by default]
  PSXPoint_t     ptCursorPoint[];
                 ^

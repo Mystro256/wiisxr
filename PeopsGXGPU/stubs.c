@@ -69,5 +69,5 @@ unsigned long dwCoreFlags;
 // key.c
 
 #define _IN_KEY
-//TODO Stick this in another file, key.c is useless
+//TODO Replace all instances of this with 0, key.c is useless
 unsigned long ulKeybits=0;
