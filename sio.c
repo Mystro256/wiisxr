@@ -498,7 +498,6 @@ void ConvertMcd(char *mcd, char *data) {
 void GetMcdBlockInfo(int mcd, int block, McdBlock *Info) {
 	char *data = NULL, *ptr, *str;
 	unsigned short clut[16];
-	unsigned short c;
 	int i, x;
 
 	memset(Info, 0, sizeof(McdBlock));
@@ -518,7 +517,7 @@ void GetMcdBlockInfo(int mcd, int block, McdBlock *Info) {
 	memcpy(Info->sTitle, ptr, 48*2);
 
 	for (i=0; i < 48; i++) {
-		c = *(ptr) << 8;
+		unsigned short c = *(ptr) << 8;
 		c|= *(ptr+1);
 		if (!c) break;
 

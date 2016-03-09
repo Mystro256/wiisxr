@@ -99,12 +99,13 @@ u32 dyna_total = RECMEM_SIZE;
 
 static int GetFreeHWReg()
 {
-	int i, least, index;
+	int index;
 	
 	if (DstCPUReg != -1) {
 		index = GetHWRegFromCPUReg(DstCPUReg);
 		DstCPUReg = -1;
 	} else {
+		int i;
 	    // LRU algorith with a twist ;)
 	    for (i=0; i<NUM_HW_REGISTERS-1; i++) {
 		    if (!(HWRegisters[i].usage & HWUSAGE_RESERVED)) {
@@ -112,7 +113,7 @@ static int GetFreeHWReg()
 		    }
 	    }
     
-	    least = HWRegisters[i].lastUsed; index = i;
+	    int least = HWRegisters[i].lastUsed; index = i;
 	    for (; i<NUM_HW_REGISTERS; i++) {
 		    if (!(HWRegisters[i].usage & HWUSAGE_RESERVED)) {
 			    if (HWRegisters[i].usage == HWUSAGE_NONE && HWRegisters[i].code >= 13) {
@@ -296,10 +297,10 @@ void SetDstCPUReg(int cpureg)
 
 static void ReserveArgs(int args)
 {
-	int index, i;
-	
+	int i;
+
 	for (i=0; i<args; i++) {
-		index = GetHWRegFromCPUReg(3+i);
+		int index = GetHWRegFromCPUReg(3+i);
 		HWRegisters[index].usage |= HWUSAGE_RESERVED | HWUSAGE_HARDWIRED | HWUSAGE_ARG;
 	}
 }

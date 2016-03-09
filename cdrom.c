@@ -585,9 +585,8 @@ void cdrReadInterrupt() {
     cdr.Result[0] = cdr.StatP;
 
 	buf = CDR_getBuffer();
-	if (buf == NULL) cdr.RErr = -1;
-
-	if (cdr.RErr == -1) {
+	if (buf == NULL) {
+		cdr.RErr = -1;
 #ifdef CDR_LOG
 		fprintf(emuLog, "cdrReadInterrupt() Log: err\n");
 #endif
@@ -752,7 +751,7 @@ void cdrWrite1(unsigned char rt) {
         	break;
 
     	case CdlPlay:
-        	if (!cdr.SetSector[0] & !cdr.SetSector[1] & !cdr.SetSector[2]) {
+        	if (!cdr.SetSector[0] && !cdr.SetSector[1] && !cdr.SetSector[2]) {
             	if (CDR_getTN(cdr.ResultTN) != -1) {
 	                if (cdr.CurTrack > cdr.ResultTN[1]) cdr.CurTrack = cdr.ResultTN[1];
                     if (CDR_getTD((unsigned char)(cdr.CurTrack), cdr.ResultTD) != -1) {

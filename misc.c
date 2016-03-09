@@ -147,7 +147,6 @@ int LoadCdrom() {
 	struct iso_directory_record *dir;
 	u8 time[4],*buf;
 	u8 mdir[4096];
-	char exename[256];
 
 
 	if (!Config.HLE) {
@@ -177,10 +176,11 @@ int LoadCdrom() {
 	else {
 		// read the SYSTEM.CNF
 		READTRACK();
+		char exename[256];
 
-		sscanf((char*)buf+12, "BOOT = cdrom:\\%256s", exename);
+		sscanf((char*)buf+12, "BOOT = cdrom:\\%255s", exename);
 		if (GetCdromFile(mdir, time, exename) == -1) {
-			sscanf((char*)buf+12, "BOOT = cdrom:%256s", exename);
+			sscanf((char*)buf+12, "BOOT = cdrom:%255s", exename);
 			if (GetCdromFile(mdir, time, exename) == -1) {
 				char *ptr = strstr((char*)buf+12, "cdrom:");
 				if(ptr) {
@@ -267,7 +267,7 @@ int CheckCdrom() {
 	unsigned char time[4],*buf;
 	unsigned char mdir[4096];
 	char exename[256];
-	int i, c;
+	int i;
 
 	time[0] = itob(0); time[1] = itob(2); time[2] = itob(0x10);
 
@@ -288,9 +288,9 @@ int CheckCdrom() {
 	if (GetCdromFile(mdir, time, "SYSTEM.CNF;1") != -1) {
 		READTRACK();
 
-		sscanf((char*)buf+12, "BOOT = cdrom:\\%256s", exename);
+		sscanf((char*)buf+12, "BOOT = cdrom:\\%255s", exename);
 		if (GetCdromFile(mdir, time, exename) == -1) {
-			sscanf((char*)buf+12, "BOOT = cdrom:%256s", exename);
+			sscanf((char*)buf+12, "BOOT = cdrom:%255s", exename);
 			if (GetCdromFile(mdir, time, exename) == -1) {
 				char *ptr = strstr((char*)buf+12, "cdrom:");			// possibly the executable is in some subdir
 				for (i=0; i<32; i++) {
@@ -310,7 +310,7 @@ int CheckCdrom() {
 	i = strlen(exename);
 	if (i >= 2) {
 		if (exename[i - 2] == ';') i-= 2;
-		c = 8; i--;
+		int c = 8; i--;
 		while (i >= 0 && c >= 0) {
 			if (isalnum((int) exename[i])) CdromId[c--] = exename[i];
 			i--;
@@ -370,7 +370,7 @@ static int PSXGetFileType(fileBrowser_file *f) {
 int Load(fileBrowser_file *exe) {
 
 	EXE_HEADER tmpHead;
-	int type, temp;
+	int temp;
 	int retval = 0;
 
 	strncpy(CdromId, "Homebrew\0", 9);
@@ -381,7 +381,7 @@ int Load(fileBrowser_file *exe) {
 		retval = 0;
 	} else {
   	exe->offset = 0;  //reset the offset back to 0
-		type = PSXGetFileType(exe);
+		int type = PSXGetFileType(exe);
 		switch (type) {
 			case PSX_EXE:
 				isoFile_readFile(exe, &tmpHead, sizeof(EXE_HEADER));
@@ -439,14 +439,14 @@ int SaveState() {
 	unsigned char *pMem;
 	char *filename;
 	
-  /* fix the filename to %s.st%d format */
+  /* fix the filename to %s.st%u format */
 	filename = malloc(1024);
 	
 #ifdef HW_RVL
-  sprintf(filename, "%s%s%s.st%d",(saveStateDevice==SAVESTATEDEVICE_USB)?"usb:":"sd:",
+  sprintf(filename, "%s%s%s.st%u",(saveStateDevice==SAVESTATEDEVICE_USB)?"usb:":"sd:",
                            statespath, CdromId, savestates_slot);
 #else
-  sprintf(filename, "sd:%s%s.st%d", statespath, CdromId, savestates_slot);
+  sprintf(filename, "sd:%s%s.st%u", statespath, CdromId, savestates_slot);
 #endif
 
 	f = gzopen(filename, "wb");
@@ -522,13 +522,13 @@ int LoadState() {
 	char header[32];
 	char *filename;
 	
-  /* fix the filename to %s.st%d format */
+  /* fix the filename to %s.st%u format */
 	filename = malloc(1024);
 #ifdef HW_RVL
-  sprintf(filename, "%s%s%s.st%d",(saveStateDevice==SAVESTATEDEVICE_USB)?"usb:":"sd:",
+  sprintf(filename, "%s%s%s.st%u",(saveStateDevice==SAVESTATEDEVICE_USB)?"usb:":"sd:",
                            statespath, CdromId, savestates_slot);
 #else
-  sprintf(filename, "sd:%s%s.st%d", statespath, CdromId, savestates_slot);
+  sprintf(filename, "sd:%s%s.st%u", statespath, CdromId, savestates_slot);
 #endif
 
 	f = gzopen(filename, "rb");

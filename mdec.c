@@ -349,7 +349,7 @@ void iqtab_init(int *iqtab,unsigned char *iq_y) {
 
 #define	NOP	0xfe00
 unsigned short* rl2blk(int *blk,unsigned short *mdec_rl) {
-	int i,k,q_scale,rl;
+	int i,k;
 	int *iqtab;
 
 	memset (blk, 0, 6*DCTSIZE2*4);
@@ -358,8 +358,8 @@ unsigned short* rl2blk(int *blk,unsigned short *mdec_rl) {
 		if (i>1) iqtab = iq_y;
 
 		// zigzag transformation
-		rl = SWAP16(*mdec_rl); mdec_rl++;
-		q_scale = RUNOF(rl);
+		int rl = SWAP16(*mdec_rl); mdec_rl++;
+		int q_scale = RUNOF(rl);
 		blk[0] = iqtab[0]*VALOF(rl);
 		for(k = 0;;) {
 			rl = SWAP16(*mdec_rl); mdec_rl++;
@@ -431,7 +431,6 @@ void round_init(void) {
 void yuv2rgb15(int *blk,unsigned short *image) {
 	int x,y;
 	int *Yblk = blk+DCTSIZE2*2;
-	int Cb,Cr,R,G,B;
 	int *Cbblk = blk;
 	int *Crblk = blk+DCTSIZE2;
 
@@ -439,11 +438,11 @@ void yuv2rgb15(int *blk,unsigned short *image) {
 	for (y=0;y<16;y+=2,Crblk+=4,Cbblk+=4,Yblk+=8,image+=24) {
 		if (y==8) Yblk+=DCTSIZE2;
 		for (x=0;x<4;x++,image+=2,Crblk++,Cbblk++,Yblk+=2) {
-			Cr = *Crblk;
-			Cb = *Cbblk;
-			R = MULR(Cr);
-			G = MULG(Cb) + MULG2(Cr);
-			B = MULB(Cb);
+			int Cr = *Crblk;
+			int Cb = *Cbblk;
+			int R = MULR(Cr);
+			int G = MULG(Cb) + MULG2(Cr);
+			int B = MULB(Cb);
 
 			RGB15(0, Yblk[0]);
 			RGB15(1, Yblk[1]);
@@ -481,7 +480,6 @@ void yuv2rgb15(int *blk,unsigned short *image) {
 void yuv2rgb24(int *blk,unsigned char *image) {
 	int x,y;
 	int *Yblk = blk+DCTSIZE2*2;
-	int Cb,Cr,R,G,B;
 	int *Cbblk = blk;
 	int *Crblk = blk+DCTSIZE2;
 
@@ -489,11 +487,11 @@ void yuv2rgb24(int *blk,unsigned char *image) {
 	for (y=0;y<16;y+=2,Crblk+=4,Cbblk+=4,Yblk+=8,image+=24*3) {
 		if (y==8) Yblk+=DCTSIZE2;
 		for (x=0;x<4;x++,image+=6,Crblk++,Cbblk++,Yblk+=2) {
-			Cr = *Crblk;
-			Cb = *Cbblk;
-			R = MULR(Cr);
-			G = MULG(Cb) + MULG2(Cr);
-			B = MULB(Cb);
+			int Cr = *Crblk;
+			int Cb = *Cbblk;
+			int R = MULR(Cr);
+			int G = MULG(Cb) + MULG2(Cr);
+			int B = MULB(Cb);
 
 			RGB24(0, Yblk[0]);
 			RGB24(1*3, Yblk[1]);

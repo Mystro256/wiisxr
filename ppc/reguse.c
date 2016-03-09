@@ -274,12 +274,12 @@ int useOfPsxReg(u32 code, int use, int psxreg)
 static int _nextPsxRegUse(u32 pc, int psxreg, int numInstr) __attribute__ ((__pure__, __unused__));
 static int _nextPsxRegUse(u32 pc, int psxreg, int numInstr)
 {
-    u32 *ptr, code, bPC = 0;
-    int i, use, reguse = 0;
+    u32 code, bPC = 0;
+    int i, reguse = 0;
 
     for (i=0; i<numInstr; ) {
         // load current instruction
-		  ptr = (u32*)PSXM(pc);
+		  u32 *ptr = (u32*)PSXM(pc);
 		  if (ptr==NULL) {
 				// going nowhere... might as well assume a write, since we will hopefully never reach here
 				reguse = REGUSE_WRITE;
@@ -287,7 +287,7 @@ static int _nextPsxRegUse(u32 pc, int psxreg, int numInstr)
 		  }
 		  code = SWAP32(*ptr);
 		  // get usage patterns for instruction
-		  use = getRegUse(code);
+		  int use = getRegUse(code);
 		  // find the use of psxreg in the instruction
         reguse = useOfPsxReg(code, use, psxreg);
         

@@ -552,22 +552,22 @@
   BB0 = NC_OVERFLOW3(gteBBK + (gteLB1*gteIR1 +gteLB2*gteIR2 + gteLB3*gteIR3));
   ^
 /wiisxr/Gamecube/../ppc/pR3000A.c: In function 'recLH':
-/wiisxr/Gamecube/../ppc/pR3000A.c:1775:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1776:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     MapConst(_Rt_, psxRs16(addr));
     ^
-/wiisxr/Gamecube/../ppc/pR3000A.c:1775:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1776:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /wiisxr/Gamecube/../ppc/pR3000A.c: In function 'recLHU':
-/wiisxr/Gamecube/../ppc/pR3000A.c:1815:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1816:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     MapConst(_Rt_, psxRu16(addr));
     ^
-/wiisxr/Gamecube/../ppc/pR3000A.c:1815:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1816:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /wiisxr/Gamecube/../ppc/pR3000A.c: In function 'recLW':
-/wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1897:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     MapConst(_Rt_, psxRu32(addr));
     ^
-/wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../ppc/pR3000A.c:1896:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1897:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1897:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1897:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /wiisxr/Gamecube/utils/mload.c: In function 'mload_memset':
 /wiisxr/Gamecube/utils/mload.c:158:2: warning: implicit declaration of function 'iosDestroyHeap' [-Wimplicit-function-declaration]
   iosDestroyHeap(hid);
