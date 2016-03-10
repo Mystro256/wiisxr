@@ -1052,6 +1052,7 @@ void psxBios_OpenTh() { // 0e
 
 	for (th=1; th<8; th++)
 		if (Thread[th].status == 0) break;
+	if (th>7) return; //No threads available?
 
 #ifdef PSXBIOS_LOG
 	PSXBIOS_LOG("psxBios_%s: %x\n", biosB0n[0x0e], th);

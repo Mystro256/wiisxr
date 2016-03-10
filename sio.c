@@ -395,9 +395,9 @@ int SaveMcds(fileBrowser_file *mcd1, fileBrowser_file *mcd2) {
 }
 
 bool CreateMcd(int slot, fileBrowser_file *mcd) {
-	char *cardData = NULL;
+	char *cardData;
 	if (slot == 1) cardData = Mcd1Data;
-	if (slot == 2) cardData = Mcd2Data;
+	else /*(slot == 2)*/ cardData = Mcd2Data;
 
 	int i=0, j=0, curPos =0;
 

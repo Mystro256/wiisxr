@@ -266,19 +266,22 @@ void ExecCfg(char *arg) {
 
 	strcpy(cfg, "./cfgPeopsSoft");
 	if (stat(cfg, &buf) != -1) {
-		sprintf(cfg, "%s %s", cfg, arg);
+		strcat(cfg, " ");
+		strcat(cfg, arg);
 		system(cfg); return;
 	}
 
 	strcpy(cfg, "./cfg/cfgPeopsSoft");
 	if (stat(cfg, &buf) != -1) {
-		sprintf(cfg, "%s %s", cfg, arg);
+		strcat(cfg, " ");
+		strcat(cfg, arg);
 		system(cfg); return;
 	}
 
 	sprintf(cfg, "%s/cfgPeopsSoft", getenv("HOME"));
 	if (stat(cfg, &buf) != -1) {
-		sprintf(cfg, "%s %s", cfg, arg);
+		strcat(cfg, " ");
+		strcat(cfg, arg);
 		system(cfg); return;
 	}
 
@@ -413,7 +416,10 @@ void WriteConfig(void) {
  SetValue("UseFixes", iUseFixes);
 
  out = fopen(t,"wb");
- if (!out) return;
+ if (!out) {
+	 if(pB) free(pB);
+	 return;
+ }
 
  len = fwrite(pB, 1, size, out);
  fclose(out);
