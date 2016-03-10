@@ -274,7 +274,7 @@ int useOfPsxReg(u32 code, int use, int psxreg)
 static int _nextPsxRegUse(u32 pc, int psxreg, int numInstr) __attribute__ ((__pure__, __unused__));
 static int _nextPsxRegUse(u32 pc, int psxreg, int numInstr)
 {
-    u32 code, bPC = 0;
+    u32 code;
     int i, reguse = 0;
 
     for (i=0; i<numInstr; ) {
@@ -307,7 +307,7 @@ static int _nextPsxRegUse(u32 pc, int psxreg, int numInstr)
 					reguse = _nextPsxRegUse(pc, psxreg, 1);
 					if (reguse != REGUSE_NONE) break;
 					
-					bPC = _fImm_(code) * 4 + pc;
+					u32 bPC = _fImm_(code) * 4 + pc;
 					reguse = _nextPsxRegUse(pc+4, psxreg, (numInstr-i-1)/2);
 					if (reguse != REGUSE_NONE) {
 						int reguse2 = _nextPsxRegUse(bPC, psxreg, (numInstr-i-1)/2);
@@ -324,7 +324,7 @@ static int _nextPsxRegUse(u32 pc, int psxreg, int numInstr)
 					reguse = _nextPsxRegUse(pc, psxreg, 1);
 					if (reguse != REGUSE_NONE) break;
 					
-					bPC = _fTarget_(code) * 4 + (pc & 0xf0000000);
+					u32 bPC = _fTarget_(code) * 4 + (pc & 0xf0000000);
 					reguse = _nextPsxRegUse(bPC, psxreg, numInstr-i-1);
 #endif
 					break;

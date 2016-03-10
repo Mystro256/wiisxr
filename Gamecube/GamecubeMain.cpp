@@ -220,11 +220,10 @@ void loadSettings(int argc, char *argv[])
 	LoadCdBios = BOOTTHRUBIOS_NO;
 
 	//config stuff
-	fileBrowser_file* configFile_file;
 	int (*configFile_init)(fileBrowser_file*) = fileBrowser_libfat_init;
 #ifdef HW_RVL
 	if(argv[0][0] == 'u') {  //assume USB
-		configFile_file = &saveDir_libfat_USB;
+		fileBrowser_file* configFile_file = &saveDir_libfat_USB;
 		if(configFile_init(configFile_file)) {                //only if device initialized ok
 			FILE* f = fopen( "usb:/wiisx/settings.cfg", "r" );  //attempt to open file
 			if(f) {        //open ok, read it
@@ -263,7 +262,7 @@ void loadSettings(int argc, char *argv[])
 	else /*if((argv[0][0]=='s') || (argv[0][0]=='/'))*/
 #endif //HW_RVL
 	{ //assume SD
-		configFile_file = &saveDir_libfat_Default;
+		fileBrowser_file* configFile_file = &saveDir_libfat_Default;
 		if(configFile_init(configFile_file)) {                //only if device initialized ok
 			FILE* f = fopen( "sd:/wiisx/settings.cfg", "r" );  //attempt to open file
 			if(f) {        //open ok, read it

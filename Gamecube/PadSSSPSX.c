@@ -51,7 +51,7 @@ static int pad_initialized = 0;
 static struct
 {
 	SSSConfig config;	//unused?
-	int devcnt;			//unused?
+	//int devcnt;			//unused
 	u16 padStat[2];		//Digital Buttons
 	int padID[2];
 	int padMode1[2];	//0 = digital, 1 = analog
@@ -62,7 +62,7 @@ static struct
 	int padVib0[2];		//Command byte for small motor
 	int padVib1[2];		//Command byte for large motor
 	int padVibF[2][4];	//Sm motor value; Big motor value; Sm motor running?; Big motor running?
-	int padVibC[2];		//unused?
+	//int padVibC[2];		//unused
 	u64 padPress[2][16];//unused?
 	int curPad;			//0=pad1; 1=pad2
 	int curByte;		//current command/data byte

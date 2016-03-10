@@ -458,8 +458,6 @@ void CALLBACK clearDynarec(void) {
 }
 
 int LoadPlugins() {
-	int ret;
-	char Plugin[256];
 
 	if (LoadCDRplugin("CDR") == -1) return -1;
 	if (LoadGPUplugin("GPU") == -1) return -1;
@@ -469,13 +467,14 @@ int LoadPlugins() {
 
 	if (!strcmp("Disabled", Config.Net)) Config.UseNet = 0;
 	else {
+		char Plugin[256];
 		Config.UseNet = 1;
 		sprintf(Plugin, "%s%s", Config.PluginsDir, Config.Net);
 		if (LoadNETplugin(Plugin) == -1) return -1;
 	}
 
 #ifndef __MACOSX__
-	ret = CDR_init();
+	int ret = CDR_init();
 	if (ret < 0) { SysPrintf ("CDRinit error : %d\n", ret); return -1; }
 	ret = GPU_init();
 	if (ret < 0) { SysPrintf ("GPUinit error: %d\n", ret); return -1; }

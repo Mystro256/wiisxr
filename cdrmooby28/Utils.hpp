@@ -88,9 +88,9 @@ inline void flipBits(T& num)
 {
    char* front = (char*)&num;
    char* end = front + sizeof(T) - 1;
-   char t;
    while (front < end)
    {
+      char t;
       t = *front;
       *front = *end;
       *end = t;
@@ -145,7 +145,7 @@ inline bool extensionMatches(const std::string& file, const std::string& ext)
 // returns what the name of the program running this plugin is.
 inline std::string getProgramName(void)
 {
-   std::string toReturn;
+   //std::string toReturn;
    return "WiiSX";
 }
 

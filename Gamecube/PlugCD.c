@@ -85,7 +85,7 @@ long getTD(int track, unsigned char* buffer)
 		buffer[2] = CD.tl[track-1].start[2];
 	}
 	
-	sprintf(txtbuffer, "getTD %i: [%i][%i][%i]",track,buffer[0],buffer[1],buffer[2]);
+	sprintf(txtbuffer, "getTD %i: [%u][%u][%u]",track,buffer[0],buffer[1],buffer[2]);
   DEBUG_print(txtbuffer, DBG_CDR3);
 
 	// bcd encode it
