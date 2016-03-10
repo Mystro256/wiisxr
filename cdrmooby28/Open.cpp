@@ -86,7 +86,7 @@ void openIt(void)
    } catch(Exception& e) {
 	   closeIt();
 	   moobyMessage(e.text());
-	   throw e;
+	   throw;
    } catch(std::exception& e) {
 	   closeIt();
 	   moobyMessage(e.what());

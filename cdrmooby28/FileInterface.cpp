@@ -35,14 +35,14 @@ using namespace std;
 extern Preferences prefs;
 
 FileInterface::FileInterface(const unsigned long requestedFrames, 
-      const unsigned long requiredFrames)
+      const unsigned long requiredFrames) :
+  pregapTime (CDTime(99,59,74)),
+  pregapLength (CDTime(0,0,0))
 {
   
   bufferFrames = 0;
   cacheMode = oldMode;
-  fileBuffer = NULL; 
-  pregapTime = CDTime(99,59,74);
-  pregapLength = CDTime(0,0,0);
+  fileBuffer = NULL;
    
    //cache.setMaxSize(atoi(prefs.prefsMap[cacheSizeString].c_str()));
    cache.setMaxSize(1);
