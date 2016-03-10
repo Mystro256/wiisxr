@@ -87,6 +87,9 @@ void IplFont::initFont()
 	free(fontArea);
 }
 
+#ifndef WII
+//used to disable lowlevel Qoob Modchip for cube
+
 void IplFont::setIplConfig(unsigned char c)
 {
 	//lowlevel Qoob Modchip disable
@@ -106,6 +109,7 @@ void IplFont::setIplConfig(unsigned char c)
 
 	exi[0] &= 0x405;	//deselect IPL
 }
+#endif
 
 typedef struct _yay0header {
 	unsigned int id ATTRIBUTE_PACKED;

@@ -1491,9 +1491,8 @@ __inline BOOL CheckForEndlessLoop(unsigned long laddr)
 
 long PEOPS_GPUdmaChain(unsigned long * baseAddrL, unsigned long addr)
 {
- unsigned long dmaMem;
  unsigned char * baseAddrB;
- short count;unsigned int DMACommandCounter = 0;
+ unsigned int DMACommandCounter = 0;
 
  #ifdef PEOPS_SDLOG
 	DEBUG_print("append",DBG_SDGECKOAPPEND);
@@ -1514,9 +1513,9 @@ long PEOPS_GPUdmaChain(unsigned long * baseAddrL, unsigned long addr)
    if(DMACommandCounter++ > 2000000) break;
    if(CheckForEndlessLoop(addr)) break;
 
-   count = baseAddrB[addr+3];
+   short count = baseAddrB[addr+3];
 
-   dmaMem=addr+4;
+   unsigned long dmaMem=addr+4;
 
    if(count>0) PEOPS_GPUwriteDataMem(&baseAddrL[dmaMem>>2],count);
 

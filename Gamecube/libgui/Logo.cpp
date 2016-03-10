@@ -244,6 +244,7 @@ void Logo::drawQuad(u8 v0, u8 v1, u8 v2, u8 v3, u8 c)
 	GX_Color1x8 (c);
 }
 
+/*
 void Logo::drawLine(u8 v0, u8 v1, u8 c)
 {
 	// draws a line from 2 vertex idx and one color idx
@@ -254,6 +255,7 @@ void Logo::drawLine(u8 v0, u8 v1, u8 c)
 	GX_Position1x8 (v1);
 	GX_Color1x8 (c);
 }
+*/
 
 #ifndef PI
 #define PI 3.14159f
@@ -261,18 +263,17 @@ void Logo::drawLine(u8 v0, u8 v1, u8 c)
 
 void Logo::drawBand(guVector center, guVector axis1, guVector axis2, float radius1, float radius2, float thetaMax, int numSegments, u8 c) 
 {
-	float theta1, theta2, cos_theta1, cos_theta2, sin_theta1, sin_theta2;
 	guVector vec0, vec1, vec2, vec3, tmp;
 
 	GX_Begin (GX_QUADS, GX_VTXFMT0, numSegments*4);  //numSegs quads
 	for (int i=0; i<numSegments; i++)
 	{
-		theta1 = thetaMax * 2*PI/360 * i/numSegments;
-		theta2 = thetaMax * 2*PI/360 * (i+1)/numSegments;
-		cos_theta1 = cos ( theta1 );
-		cos_theta2 = cos ( theta2 );
-		sin_theta1 = sin ( theta1 );
-		sin_theta2 = sin ( theta2 );
+		float theta1 = thetaMax * 2*PI/360 * i/numSegments;
+		float theta2 = thetaMax * 2*PI/360 * (i+1)/numSegments;
+		float cos_theta1 = cos ( theta1 );
+		float cos_theta2 = cos ( theta2 );
+		float sin_theta1 = sin ( theta1 );
+		float sin_theta2 = sin ( theta2 );
 
 		//vec0 = radius1 * (axis1 * cos( theta1 ) + axis2 * sin( theta1 )) ;
 		guVecScale(&axis1,&vec0,cos_theta1);

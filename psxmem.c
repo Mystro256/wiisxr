@@ -139,7 +139,6 @@ void psxMemShutdown() {
 static int writeok=1;
 
 u8 psxMemRead8(u32 mem) {
-	char *p;
 	u32 t;
 
 	t = mem >> 16;
@@ -149,7 +148,7 @@ u8 psxMemRead8(u32 mem) {
 		else
 			return psxHwRead8(mem);
 	} else {
-		p = (char *)(psxMemRLUT[t]);
+		char *p = (char *)(psxMemRLUT[t]);
 		if (p != NULL) {
 			return *(u8 *)(p + (mem & 0xffff));
 		} else {
@@ -162,7 +161,6 @@ u8 psxMemRead8(u32 mem) {
 }
 
 u16 psxMemRead16(u32 mem) {
-	char *p;
 	u32 t;
 
 	t = mem >> 16;
@@ -172,7 +170,7 @@ u16 psxMemRead16(u32 mem) {
 		else
 			return psxHwRead16(mem);
 	} else {
-		p = (char *)(psxMemRLUT[t]);
+		char *p = (char *)(psxMemRLUT[t]);
 		if (p != NULL) {
 			return SWAPu16(*(u16 *)(p + (mem & 0xffff)));
 		} else {
@@ -185,7 +183,6 @@ u16 psxMemRead16(u32 mem) {
 }
 
 u32 psxMemRead32(u32 mem) {
-	char *p;
 	u32 t;
 
 	t = mem >> 16;
@@ -195,7 +192,7 @@ u32 psxMemRead32(u32 mem) {
 		else
 			return psxHwRead32(mem);
 	} else {
-		p = (char *)(psxMemRLUT[t]);
+		char *p = (char *)(psxMemRLUT[t]);
 		if (p != NULL) {
 			return SWAPu32(*(u32 *)(p + (mem & 0xffff)));
 		} else {
@@ -208,7 +205,6 @@ u32 psxMemRead32(u32 mem) {
 }
 
 void psxMemWrite8(u32 mem, u8 value) {
-	char *p;
 	u32 t;
 
 	t = mem >> 16;
@@ -218,7 +214,7 @@ void psxMemWrite8(u32 mem, u8 value) {
 		else
 			psxHwWrite8(mem, value);
 	} else {
-		p = (char *)(psxMemWLUT[t]);
+		char *p = (char *)(psxMemWLUT[t]);
 		if (p != NULL) {
 			*(u8  *)(p + (mem & 0xffff)) = value;
 #ifdef PSXREC
@@ -233,7 +229,6 @@ void psxMemWrite8(u32 mem, u8 value) {
 }
 
 void psxMemWrite16(u32 mem, u16 value) {
-	char *p;
 	u32 t;
 
 	t = mem >> 16;
@@ -243,7 +238,7 @@ void psxMemWrite16(u32 mem, u16 value) {
 		else
 			psxHwWrite16(mem, value);
 	} else {
-		p = (char *)(psxMemWLUT[t]);
+		char *p = (char *)(psxMemWLUT[t]);
 		if (p != NULL) {
 			*(u16 *)(p + (mem & 0xffff)) = SWAPu16(value);
 #ifdef PSXREC
@@ -258,7 +253,6 @@ void psxMemWrite16(u32 mem, u16 value) {
 }
 
 void psxMemWrite32(u32 mem, u32 value) {
-	char *p;
 	u32 t;
 
 //	if ((mem&0x1fffff) == 0x71E18 || value == 0x48088800) SysPrintf("t2fix!!\n");
@@ -269,7 +263,7 @@ void psxMemWrite32(u32 mem, u32 value) {
 		else
 			psxHwWrite32(mem, value);
 	} else {
-		p = (char *)(psxMemWLUT[t]);
+		char *p = (char *)(psxMemWLUT[t]);
 		if (p != NULL) {
 			*(u32 *)(p + (mem & 0xffff)) = SWAPu32(value);
 #ifdef PSXREC
@@ -315,7 +309,6 @@ void psxMemWrite32(u32 mem, u32 value) {
 }
 
 void *psxMemPointer(u32 mem) {
-	char *p;
 	u32 t;
 
 	t = mem >> 16;
@@ -325,7 +318,7 @@ void *psxMemPointer(u32 mem) {
 		else
 			return NULL;
 	} else {
-		p = (char *)(psxMemWLUT[t]);
+		char *p = (char *)(psxMemWLUT[t]);
 		if (p != NULL) {
 			return (void *)(p + (mem & 0xffff));
 		}

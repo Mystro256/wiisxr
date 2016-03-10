@@ -727,10 +727,10 @@ void primMoveImage(unsigned char * baseAddr)
     }
   }
 
+/*
  imageSX+=imageX1;
  imageSY+=imageY1;
 
-/*
  if(!PSXDisplay.Interlaced)                            // stupid frame skip stuff
   {
    if(UseFrameSkip &&
@@ -1360,8 +1360,8 @@ void primLineGEx(unsigned char *baseAddr)
 {    
  unsigned long *gpuData = ((unsigned long *) baseAddr);
  int iMax=255;
- unsigned long lc0,lc1;
- short slx0,slx1,sly0,sly1;int i=2;BOOL bDraw=TRUE;
+ unsigned long lc1;
+ short slx1,sly1;int i=2;BOOL bDraw=TRUE;
 
  sly1 = (short)((GETLE32(&gpuData[1])>>16) & 0xffff);
  slx1 = (short)(GETLE32(&gpuData[1]) & 0xffff);
@@ -1378,7 +1378,7 @@ void primLineGEx(unsigned char *baseAddr)
 
  while(!(((GETLE32(&gpuData[i]) & 0xF000F000) == 0x50005000) && i>=4))
   {
-   sly0=sly1; slx0=slx1; lc0=lc1;
+   short sly0=sly1; short slx0=slx1; unsigned long lc0=lc1;
    lc1=GETLE32(&gpuData[i]) & 0xffffff;
 
    i++;
@@ -1470,7 +1470,7 @@ void primLineFEx(unsigned char *baseAddr)
 {
  unsigned long *gpuData = ((unsigned long *) baseAddr);
  int iMax;
- short slx0,slx1,sly0,sly1;int i=2;BOOL bDraw=TRUE;
+ short slx1,sly1;int i=2;BOOL bDraw=TRUE;
 
  iMax=255;
 
@@ -1486,7 +1486,7 @@ void primLineFEx(unsigned char *baseAddr)
 
  while(!(((GETLE32(&gpuData[i]) & 0xF000F000) == 0x50005000) && i>=3))
   {
-   sly0 = sly1;slx0=slx1;
+   short sly0 = sly1;short slx0=slx1;
    sly1 = (short)((GETLE32(&gpuData[i])>>16) & 0xffff);
    slx1 = (short)(GETLE32(&gpuData[i]) & 0xffff);
    if(!(dwActFixes&8))

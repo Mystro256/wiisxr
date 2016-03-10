@@ -47,7 +47,9 @@ private:
 	IplFont();
 	~IplFont();
 	void initFont();
+	#ifndef WII
 	void setIplConfig(unsigned char c);
+	#endif
 	void decodeYay0(void *src, void *dst);
 	void convertI2toI4(void *dst, void *src, int xres, int yres);
 
