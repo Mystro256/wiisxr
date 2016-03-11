@@ -265,7 +265,6 @@ void BlitScreenNS_GX(unsigned char * surf,long x,long y, short dx, short dy)
  unsigned short row,column;
 // unsigned short dx=PreviousPSXDisplay.Range.x1;
 // unsigned short dy=PreviousPSXDisplay.DisplayMode.y;
- unsigned short LineOffset,SurfOffset;
  long lPitch=iResX_Max<<1;
 // long lPitch=iResX<<1;
 
@@ -277,13 +276,13 @@ void BlitScreenNS_GX(unsigned char * surf,long x,long y, short dx, short dy)
 
  if(PSXDisplay.RGB24)
   {
-   unsigned char * pD;unsigned int startxy;
+   unsigned char * pD;
 
    surf+=PreviousPSXDisplay.Range.x0<<1;
 
    for(column=0;column<dy;column++)
     {
-     startxy=((1024)*(column+y))+x;
+     unsigned int startxy=((1024)*(column+y))+x;
 
      pD=(unsigned char *)&psxVuw[startxy];
 
@@ -298,6 +297,7 @@ void BlitScreenNS_GX(unsigned char * surf,long x,long y, short dx, short dy)
   }
  else
   {
+   unsigned short LineOffset,SurfOffset;
    unsigned long * SRCPtr = (unsigned long *)(psxVuw +
                              (y<<10) + x);
 

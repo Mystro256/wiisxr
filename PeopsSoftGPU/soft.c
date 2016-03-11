@@ -4796,7 +4796,7 @@ void drawPoly3TGEx4(short x1, short y1, short x2, short y2, short x3, short y3, 
  long difR,difB,difG,difR2,difB2,difG2;
  long difX, difY,difX2, difY2;
  long posX,posY,YAdjust,clutP,XAdjust;
- short tC1,tC2;
+ short tC1;
 
  if(x1>drawW && x2>drawW && x3>drawW) return;
  if(y1>drawH && y2>drawH && y3>drawH) return;
@@ -4849,6 +4849,7 @@ void drawPoly3TGEx4(short x1, short y1, short x2, short y2, short x3, short y3, 
 
        for(j=xmin;j<xmax;j+=2) 
         {
+         short tC2;
          XAdjust=(posX>>16);
          tC1 = psxVub[((posY>>5)&0xFFFFF800)+YAdjust+(XAdjust>>1)];
          tC1=(tC1>>((XAdjust&1)<<2))&0xf;
@@ -4942,7 +4943,7 @@ void drawPoly3TGEx4_TW(short x1, short y1, short x2, short y2, short x3, short y
  long difR,difB,difG,difR2,difB2,difG2;
  long difX, difY,difX2, difY2;
  long posX,posY,YAdjust,clutP,XAdjust;
- short tC1,tC2;
+ short tC1;
 
  if(x1>drawW && x2>drawW && x3>drawW) return;
  if(y1>drawH && y2>drawH && y3>drawH) return;
@@ -4996,6 +4997,7 @@ void drawPoly3TGEx4_TW(short x1, short y1, short x2, short y2, short x3, short y
 
        for(j=xmin;j<xmax;j+=2) 
         {
+         short tC2;
          XAdjust=(posX>>16) & (TWin.Position.x1-1);
          tC1 = psxVub[(((posY>>16) & (TWin.Position.y1-1))<<11)+
                       YAdjust+(XAdjust>>1)];
@@ -5121,7 +5123,7 @@ void drawPoly4TGEx4(short x1, short y1, short x2, short y2, short x3, short y3, 
  long difR,difB,difG,difR2,difB2,difG2;
  long difX, difY, difX2, difY2;
  long posX,posY,YAdjust,clutP,XAdjust;
- short tC1,tC2;
+ short tC1;
 
  if(x1>drawW && x2>drawW && x3>drawW && x4>drawW) return;
  if(y1>drawH && y2>drawH && y3>drawH && y4>drawH) return;
@@ -5179,6 +5181,7 @@ void drawPoly4TGEx4(short x1, short y1, short x2, short y2, short x3, short y3, 
 
        for(j=xmin;j<xmax;j+=2)
         {
+         short tC2;
          XAdjust=(posX>>16);
          tC1 = psxVub[((posY>>5)&0xFFFFF800)+YAdjust+(XAdjust>>1)];
          tC1=(tC1>>((XAdjust&1)<<2))&0xf;
@@ -5303,7 +5306,7 @@ void drawPoly3TGEx8(short x1, short y1, short x2, short y2, short x3, short y3, 
  long difR,difB,difG,difR2,difB2,difG2;
  long difX, difY,difX2, difY2;
  long posX,posY,YAdjust,clutP;
- short tC1,tC2;
+ short tC1;
 
  if(x1>drawW && x2>drawW && x3>drawW) return;
  if(y1>drawH && y2>drawH && y3>drawH) return;
@@ -5355,6 +5358,7 @@ void drawPoly3TGEx8(short x1, short y1, short x2, short y2, short x3, short y3, 
 
        for(j=xmin;j<xmax;j+=2)
         {
+         short tC2;
          tC1 = psxVub[((posY>>5)&0xFFFFF800)+YAdjust+((posX>>16))];
          tC2 = psxVub[(((posY+difY)>>5)&0xFFFFF800)+YAdjust+
                       (((posX+difX)>>16))];
@@ -5439,7 +5443,7 @@ void drawPoly3TGEx8_TW(short x1, short y1, short x2, short y2, short x3, short y
  long difR,difB,difG,difR2,difB2,difG2;
  long difX, difY,difX2, difY2;
  long posX,posY,YAdjust,clutP;
- short tC1,tC2;
+ short tC1;
 
  if(x1>drawW && x2>drawW && x3>drawW) return;
  if(y1>drawH && y2>drawH && y3>drawH) return;
@@ -5492,6 +5496,7 @@ void drawPoly3TGEx8_TW(short x1, short y1, short x2, short y2, short x3, short y
 
        for(j=xmin;j<xmax;j+=2)
         {
+         short tC2;
          tC1 = psxVub[(((posY>>16) & (TWin.Position.y1-1))<<11)+
                       YAdjust+((posX>>16) & (TWin.Position.x1-1))];
          tC2 = psxVub[((((posY+difY)>>16) & (TWin.Position.y1-1))<<11)+
@@ -5605,7 +5610,7 @@ void drawPoly4TGEx8(short x1, short y1, short x2, short y2, short x3, short y3, 
  long difR,difB,difG,difR2,difB2,difG2;
  long difX, difY, difX2, difY2;
  long posX,posY,YAdjust,clutP;
- short tC1,tC2;
+ short tC1;
 
  if(x1>drawW && x2>drawW && x3>drawW && x4>drawW) return;
  if(y1>drawH && y2>drawH && y3>drawH && y4>drawH) return;
@@ -5662,6 +5667,7 @@ void drawPoly4TGEx8(short x1, short y1, short x2, short y2, short x3, short y3, 
 
        for(j=xmin;j<xmax;j+=2)
         {
+         short tC2;
          tC1 = psxVub[((posY>>5)&0xFFFFF800)+YAdjust+(posX>>16)];
          tC2 = psxVub[(((posY+difY)>>5)&0xFFFFF800)+YAdjust+
                      ((posX+difX)>>16)];

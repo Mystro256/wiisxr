@@ -412,7 +412,7 @@ void WriteConfig(void) {
  SetValue("UseFrameSkip", UseFrameSkip);
  SetValue("FPSDetection", iFrameLimit);
  SetFloatValue("FrameRate", fFrameRate);
- SetValue("CfgFixes", (unsigned int)dwCfgFixes);
+ SetValue("CfgFixes", (int)dwCfgFixes);
  SetValue("UseFixes", iUseFixes);
 
  out = fopen(t,"wb");
@@ -421,7 +421,7 @@ void WriteConfig(void) {
 	 return;
  }
 
- len = fwrite(pB, 1, size, out);
+ fwrite(pB, 1, size, out);
  fclose(out);
 
  free(pB);
