@@ -1795,7 +1795,7 @@ void (*biosC0[256])();
 
 int psxBiosSetupTables()
 {
-	u32 base, size;
+	u32 base;//, size;
 	int i;
 
 	for(i = 0; i < 256; i++) {
@@ -2122,8 +2122,8 @@ int psxBiosSetupTables()
 //************** THE END ***************************************
 
 	base = 0x1000;
-	size = sizeof(EvCB) * 32;
-	Event = (void *)&psxR[base]; base+= size*6;
+	//size = sizeof(EvCB) * 32;
+	Event = (void *)&psxR[base]; //base+= size*6;
 	HwEV = Event;
 	EvEV = Event + 32;
 	RcEV = Event + 32*2;
