@@ -182,7 +182,6 @@
 /wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(pad_buf2);
-
   ^
 /wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
