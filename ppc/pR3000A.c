@@ -1687,7 +1687,7 @@ static void preMemWrite(int size)
 static void recLB() {
 // Rt = mem[Rs + Im] (signed)
 	
-    if (IsConst(_Rs_)) {
+    /*if (IsConst(_Rs_)) {
         u32 addr = iRegs[_Rs_].k + _Imm_;
         int t = addr >> 16;
     
@@ -1700,21 +1700,23 @@ static void recLB() {
         if ((t & 0x1fe0) == 0 && (t & 0x1fff) != 0) {
             if (!_Rt_) return;
                 
-            LIW(PutHWReg32(_Rt_), (u32)&psxM[addr & 0x1fffff]);
-            LBZ(PutHWReg32(_Rt_), 0, GetHWReg32(_Rt_));
+            addr = (u32)&psxM[addr & 0x1fffff];
+            LIW(PutHWReg32(_Rt_), ((addr>>16)<<16)+(addr&0x8000<<1)); // FIXME: is this correct?
+            LBZ(PutHWReg32(_Rt_), addr&0xffff, GetHWReg32(_Rt_));
             EXTSB(PutHWReg32(_Rt_), GetHWReg32(_Rt_));
             return;
         }
         if (t == 0x1f80 && addr < 0x1f801000) {
             if (!_Rt_) return;
     
-            LIW(PutHWReg32(_Rt_), (u32)&psxH[addr & 0xfff]);
-            LBZ(PutHWReg32(_Rt_), 0, GetHWReg32(_Rt_));
+            addr = (u32)&psxH[addr & 0xfff];
+            LIW(PutHWReg32(_Rt_), ((addr>>16)<<16)+(addr&0x8000<<1)); // FIXME: is this correct?
+            LBZ(PutHWReg32(_Rt_), addr&0xffff, GetHWReg32(_Rt_));
             EXTSB(PutHWReg32(_Rt_), GetHWReg32(_Rt_));
             return;
         }
     //	SysPrintf("unhandled r8 %x\n", addr);
-    }
+    }*/
 	
 	preMemRead();
 	CALLFunc((u32)psxMemRead8);
@@ -1727,7 +1729,7 @@ static void recLB() {
 static void recLBU() {
 // Rt = mem[Rs + Im] (unsigned)
 
-    if (IsConst(_Rs_)) {
+    /*if (IsConst(_Rs_)) {
         u32 addr = iRegs[_Rs_].k + _Imm_;
         int t = addr >> 16;
     
@@ -1752,7 +1754,7 @@ static void recLBU() {
             return;
         }
     //	SysPrintf("unhandled r8 %x\n", addr);
-    }
+    }*/
         
 	preMemRead();
 	CALLFunc((u32)psxMemRead8);
@@ -2048,76 +2050,6 @@ static void recSH() {
 
 static void recSW() {
 // mem[Rs + Im] = Rt
-	//u32 *b1, *b2;
-#if 0
-	if (IsConst(_Rs_)) {
-		u32 addr = iRegs[_Rs_].k + _Imm_;
-		int t = addr >> 16;
-
-		if ((t & 0x1fe0) == 0 && (t & 0x1fff) != 0) {
-			LIW(0, addr & 0x1fffff);
-			STWBRX(GetHWReg32(_Rt_), GetHWRegSpecial(PSXMEM), 0);
-			return;
-		}
-		if (t == 0x1f80 && addr < 0x1f801000) {
-			LIW(0, (u32)&psxH[addr & 0xfff]);
-			STWBRX(GetHWReg32(_Rt_), 0, 0);
-			return;
-		}
-		if (t == 0x1f80) {
-			switch (addr) {
-				case 0x1f801080: case 0x1f801084: 
-				case 0x1f801090: case 0x1f801094: 
-				case 0x1f8010a0: case 0x1f8010a4: 
-				case 0x1f8010b0: case 0x1f8010b4: 
-				case 0x1f8010c0: case 0x1f8010c4: 
-				case 0x1f8010d0: case 0x1f8010d4: 
-				case 0x1f8010e0: case 0x1f8010e4: 
-				case 0x1f801074:
-				case 0x1f8010f0:
-					LIW(0, (u32)&psxH[addr & 0xffff]);
-					STWBRX(GetHWReg32(_Rt_), 0, 0);
-					return;
-
-/*				case 0x1f801810:
-					if (IsConst(_Rt_)) {
-						PUSH32I(iRegs[_Rt_].k);
-					} else {
-						PUSH32M((u32)&psxRegs.GPR.r[_Rt_]);
-					}
-					CALL32M((u32)&GPU_writeData);
-#ifndef __WIN32__
-					resp+= 4;
-#endif
-					return;
-
-				case 0x1f801814:
-					if (IsConst(_Rt_)) {
-						PUSH32I(iRegs[_Rt_].k);
-					} else {
-						PUSH32M((u32)&psxRegs.GPR.r[_Rt_]);
-					}
-					CALL32M((u32)&GPU_writeStatus);
-#ifndef __WIN32__
-					resp+= 4;
-#endif*/
-			}
-		}
-//		SysPrintf("unhandled w32 %x\n", addr);
-	}
-	
-/*	LIS(0, 0x0079 + ((_Imm_ <= 0) ? 1 : 0));
-	CMPLW(GetHWReg32(_Rs_), 0);
-	BGE_L(b1);
-	
-	//SaveContext();
-	ADDI(0, GetHWReg32(_Rs_), _Imm_);
-	RLWINM(0, GetHWReg32(_Rs_), 0, 11, 31);
-	STWBRX(GetHWReg32(_Rt_), GetHWRegSpecial(PSXMEM), 0);
-	B_L(b2);
-	
-	B_DST(b1);*/
-#endif
 	preMemWrite(4);
 	CALLFunc((u32)psxMemWrite32);
 	
