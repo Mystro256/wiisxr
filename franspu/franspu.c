@@ -1,5 +1,3 @@
-#ifndef ALTERNATESPU
-
 #include <gccore.h>
 #include <malloc.h>
 #include "franspu.h"
@@ -589,4 +587,3 @@ void FRAN_SPU_registerCallback(void (*callback)(void)) {
 void FRAN_SPU_registerCDDAVolume(void (*CDDAVcallback)(unsigned short,unsigned short)) {
 	
 }
-#endif

@@ -40,11 +40,7 @@
 // num of channels
 #define MAXCHAN     24
 // ~ 1 ms of data
-#ifdef ALTERNATESPU
-#define NSSIZE (1024*64) //alot.
-#else
 #define NSSIZE 45
-#endif
 
 extern int SSumR[NSSIZE];
 extern int SSumL[NSSIZE];
