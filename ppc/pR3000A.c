@@ -19,11 +19,19 @@
 #include <gccore.h>
 #include <malloc.h>
 #include <stdint.h>
+#ifdef _MSC_VER_
+#pragma warning(disable:4244)
+#pragma warning(disable:4761)
+#endif
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <sys/types.h>
+
+#ifndef MAP_ANONYMOUS
+#define MAP_ANONYMOUS MAP_ANON
+#endif
 
 #include "../psxcommon.h"
 #include "ppc.h"
@@ -49,16 +57,6 @@ static u32 cop2readypc = 0;
 static u32 idlecyclecount = 0;
 static iRegisters iRegs[34];
 
-int psxCP2time[64] = {
-        2 , 16, 1 , 1 , 1 , 1 , 8 , 1 , // 00
-        1 , 1 , 1 , 1 , 6 , 1 , 1 , 1 , // 08
-        8 , 8 , 8 , 19, 13, 1 , 44, 1 , // 10
-        1 , 1 , 1 , 17, 11, 1 , 14, 1 , // 18
-        30, 1 , 1 , 1 , 1 , 1 , 1 , 1 , // 20
-        5 , 8 , 17, 1 , 1 , 5 , 6 , 1 , // 28
-        23, 1 , 1 , 1 , 1 , 1 , 1 , 1 , // 30
-        1 , 1 , 1 , 1 , 1 , 6 , 5 , 39  // 38
-};
 
 static void (*recBSC[64])();
 static void (*recSPC[64])();
@@ -641,15 +639,19 @@ static void Return()
 {
 	iFlushRegs(0);
 	FlushAllHWReg();
-	LIW(0, (u32)returnPC);
-	MTLR(0);
-	BLR();
-
+	if (((u32)returnPC & 0x1fffffc) == (u32)returnPC) {
+		BA((u32)returnPC);
+	}
+	else {
+		LIW(0, (u32)returnPC);
+		MTLR(0);
+		BLR();
+	}
 }
 
 static void iRet() {
     /* store cycle */
-    count = idlecyclecount + (pc - pcold)/4;
+    count = (idlecyclecount + (pc - pcold) / 4) * BIAS;
     ADDI(PutHWRegSpecial(CYCLECOUNT), GetHWRegSpecial(CYCLECOUNT), count);
     Return();
 }
@@ -701,7 +703,7 @@ static void SetBranch() {
 		LIW(0, psxRegs.code);
 		STW(0, OFFSET(&psxRegs, &psxRegs.code), GetHWRegSpecial(PSXREGS));
 		/* store cycle */
-		count = idlecyclecount + (pc - pcold)/4;
+		count = (idlecyclecount + (pc - pcold) / 4) * BIAS;
 		ADDI(PutHWRegSpecial(CYCLECOUNT), GetHWRegSpecial(CYCLECOUNT), count);
 		
 		treg = GetHWRegSpecial(TARGET);
@@ -724,7 +726,7 @@ static void SetBranch() {
 	DisposeHWReg(GetHWRegFromCPUReg(treg));
 	FlushAllHWReg();
 
-	count = idlecyclecount + (pc - pcold)/4;
+	count = (idlecyclecount + (pc - pcold) / 4) * BIAS;
         ADDI(PutHWRegSpecial(CYCLECOUNT), GetHWRegSpecial(CYCLECOUNT), count);
 	FlushAllHWReg();
 	CALLFunc((u32)psxBranchTest);
@@ -744,7 +746,7 @@ static void iJump(u32 branchPC) {
 		LIW(0, psxRegs.code);
 		STW(0, OFFSET(&psxRegs, &psxRegs.code), GetHWRegSpecial(PSXREGS));
 		/* store cycle */
-		count = idlecyclecount + (pc - pcold)/4;
+		count = (idlecyclecount + (pc - pcold) / 4) * BIAS;
 		ADDI(PutHWRegSpecial(CYCLECOUNT), GetHWRegSpecial(CYCLECOUNT), count);
 
 		LIW(PutHWRegSpecial(ARG2), branchPC);
@@ -763,7 +765,7 @@ static void iJump(u32 branchPC) {
 	LIW(PutHWRegSpecial(PSXPC), branchPC);
 	FlushAllHWReg();
 
-	count = idlecyclecount + (pc - pcold)/4;
+	count = (idlecyclecount + (pc - pcold) / 4) * BIAS;
         //if (/*psxRegs.code == 0 &&*/ count == 2 && branchPC == pcold) {
         //    LIW(PutHWRegSpecial(CYCLECOUNT), 0);
         //} else {
@@ -824,7 +826,7 @@ static void iBranch(u32 branchPC, int savectx) {
 		LIW(0, psxRegs.code);
 		STW(0, OFFSET(&psxRegs, &psxRegs.code), GetHWRegSpecial(PSXREGS));
 		/* store cycle */
-		count = idlecyclecount + ((pc+4) - pcold)/4;
+		count = (idlecyclecount + ((pc+4) - pcold) / 4) * BIAS;
 		ADDI(PutHWRegSpecial(CYCLECOUNT), GetHWRegSpecial(CYCLECOUNT), count);
 
 		LIW(PutHWRegSpecial(ARG2), branchPC);
@@ -845,7 +847,7 @@ static void iBranch(u32 branchPC, int savectx) {
 	FlushAllHWReg();
 
 	/* store cycle */
-	count = idlecyclecount + (pc - pcold)/4;
+	count = (idlecyclecount + (pc - pcold) / 4) * BIAS;
         //if (/*psxRegs.code == 0 &&*/ count == 2 && branchPC == pcold) {
         //    LIW(PutHWRegSpecial(CYCLECOUNT), 0);
         //} else {
@@ -893,18 +895,6 @@ static void iBranch(u32 branchPC, int savectx) {
 		memcpy(iRegs, iRegsS, sizeof(iRegs));
 		memcpy(HWRegisters, HWRegistersS, sizeof(HWRegisters));
 		HWRegUseCount = HWRegUseCountS;
-	}
-}
-
-
-void iDumpRegs() {
-	int i, j;
-
-	printf("%08x %08x\n", psxRegs.pc, psxRegs.cycle);
-	for (i=0; i<4; i++) {
-		for (j=0; j<8; j++)
-			printf("%08x ", psxRegs.GPR.r[j*i]);
-		printf("\n");
 	}
 }
 
@@ -963,28 +953,6 @@ static void rec##f() { \
 	iRet(); \
 }
 
-#define CP2_FUNC(f) \
-void gte##f(); \
-static void rec##f() { \
-	if (pc < cop2readypc) idlecyclecount += ((cop2readypc - pc)>>2); \
-	iFlushRegs(0); \
-	LIW(0, (u32)psxRegs.code); \
-	STW(0, OFFSET(&psxRegs, &psxRegs.code), GetHWRegSpecial(PSXREGS)); \
-	FlushAllHWReg(); \
-	CALLFunc ((u32)gte##f); \
-	cop2readypc = pc + (psxCP2time[_fFunct_(psxRegs.code)]<<2); \
-}
-
-#define CP2_FUNCNC(f) \
-void gte##f(); \
-static void rec##f() { \
-	if (pc < cop2readypc) idlecyclecount += ((cop2readypc - pc)>>2); \
-	iFlushRegs(0); \
-	CALLFunc ((u32)gte##f); \
-/*	branch = 2; */\
-	cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]; \
-}
-
 static int allocMem() {
 	int i;
 
@@ -1040,7 +1008,7 @@ __inline static void execute() {
 }
 
 static void recExecute() {
-	while(!stop) execute();
+	for (;;) execute();
 }
 
 static void recExecuteBlock() {
@@ -1700,16 +1668,18 @@ static void recLB() {
         if ((t & 0x1fe0) == 0 && (t & 0x1fff) != 0) {
             if (!_Rt_) return;
                 
-            LIW(PutHWReg32(_Rt_), (u32)&psxM[addr & 0x1fffff]);
-            LBZ(PutHWReg32(_Rt_), 0, GetHWReg32(_Rt_));
+            addr = (u32)&psxM[addr & 0x1fffff];
+            LIW(PutHWReg32(_Rt_), ((addr>>16)<<16)+(addr&0x8000<<1)); // FIXME: is this correct?
+            LBZ(PutHWReg32(_Rt_), addr&0xffff, GetHWReg32(_Rt_));
             EXTSB(PutHWReg32(_Rt_), GetHWReg32(_Rt_));
             return;
         }
         if (t == 0x1f80 && addr < 0x1f801000) {
             if (!_Rt_) return;
     
-            LIW(PutHWReg32(_Rt_), (u32)&psxH[addr & 0xfff]);
-            LBZ(PutHWReg32(_Rt_), 0, GetHWReg32(_Rt_));
+            addr = (u32)&psxH[addr & 0xfff];
+            LIW(PutHWReg32(_Rt_), ((addr>>16)<<16)+(addr&0x8000<<1)); // FIXME: is this correct?
+            LBZ(PutHWReg32(_Rt_), addr&0xffff, GetHWReg32(_Rt_));
             EXTSB(PutHWReg32(_Rt_), GetHWReg32(_Rt_));
             return;
         }
@@ -1740,15 +1710,17 @@ static void recLBU() {
         if ((t & 0x1fe0) == 0 && (t & 0x1fff) != 0) {
             if (!_Rt_) return;
                 
-            LIW(PutHWReg32(_Rt_), (u32)&psxM[addr & 0x1fffff]);
-            LBZ(PutHWReg32(_Rt_), 0, GetHWReg32(_Rt_));
+            addr = (u32)&psxM[addr & 0x1fffff];
+            LIW(PutHWReg32(_Rt_), ((addr>>16)<<16)+(addr&0x8000<<1)); // FIXME: is this correct?
+            LBZ(PutHWReg32(_Rt_), addr&0xffff, GetHWReg32(_Rt_));
             return;
         }
         if (t == 0x1f80 && addr < 0x1f801000) {
             if (!_Rt_) return;
     
-            LIW(PutHWReg32(_Rt_), (u32)&psxH[addr & 0xfff]);
-            LBZ(PutHWReg32(_Rt_), 0, GetHWReg32(_Rt_));
+            addr = (u32)&psxH[addr & 0xfff];
+            LIW(PutHWReg32(_Rt_), ((addr>>16)<<16)+(addr&0x8000<<1)); // FIXME: is this correct?
+            LBZ(PutHWReg32(_Rt_), addr&0xffff, GetHWReg32(_Rt_));
             return;
         }
     //	SysPrintf("unhandled r8 %x\n", addr);
@@ -1861,15 +1833,25 @@ static void recLHU() {
 					case 0x1f801104: case 0x1f801114: case 0x1f801124:
 						if (!_Rt_) return;
 						
-						LIW(PutHWReg32(_Rt_), (u32)&psxCounters[(addr >> 4) & 0x3].mode);
-						LWZ(PutHWReg32(_Rt_), 0, GetHWReg32(_Rt_));
+                        ReserveArgs(1);
+                        LIW(PutHWRegSpecial(ARG1), (addr >> 4) & 0x3);
+                        DisposeHWReg(iRegs[_Rt_].reg);
+                        InvalidateCPURegs();
+                        
+                        SetDstCPUReg(3);
+                        PutHWReg32(_Rt_);
 						return;
 	
 					case 0x1f801108: case 0x1f801118: case 0x1f801128:
 						if (!_Rt_) return;
 
-						LIW(PutHWReg32(_Rt_), (u32)&psxCounters[(addr >> 4) & 0x3].target);
-						LWZ(PutHWReg32(_Rt_), 0, GetHWReg32(_Rt_));
+                        ReserveArgs(1);
+                        LIW(PutHWRegSpecial(ARG1), (addr >> 4) & 0x3);
+                        DisposeHWReg(iRegs[_Rt_].reg);
+                        InvalidateCPURegs();
+                        
+                        SetDstCPUReg(3);
+                        PutHWReg32(_Rt_);
 						return;
 					}
 		}
@@ -2554,36 +2536,8 @@ static void recCTC0() {
 	recMTC0();
 }
 
-// GTE function callers
-CP2_FUNC(MFC2);
-CP2_FUNC(MTC2);
-CP2_FUNC(CFC2);
-CP2_FUNC(CTC2);
-CP2_FUNC(LWC2);
-CP2_FUNC(SWC2);
+#include "pGte.h"
 
-CP2_FUNCNC(RTPS);
-CP2_FUNC(OP);
-CP2_FUNCNC(NCLIP);
-CP2_FUNCNC(DPCS);
-CP2_FUNCNC(INTPL);
-CP2_FUNC(MVMVA);
-CP2_FUNCNC(NCDS);
-CP2_FUNCNC(NCDT);
-CP2_FUNCNC(CDP);
-CP2_FUNCNC(NCCS);
-CP2_FUNCNC(CC);
-CP2_FUNCNC(NCS);
-CP2_FUNCNC(NCT);
-CP2_FUNC(SQR);
-CP2_FUNCNC(DCPL);
-CP2_FUNCNC(DPCT);
-CP2_FUNCNC(AVSZ3);
-CP2_FUNCNC(AVSZ4);
-CP2_FUNCNC(RTPT);
-CP2_FUNC(GPF);
-CP2_FUNC(GPL);
-CP2_FUNCNC(NCCT);
 
 static void recHLE() {
 	iFlushRegs(0);
@@ -2596,7 +2550,7 @@ static void recHLE() {
 		CALLFunc((u32)psxHLEt[0]); // call dummy function
 	}
 	
-	count = idlecyclecount + (pc - pcold)/4 + 20;
+	count = (idlecyclecount + (pc - pcold) / 4 + 20) * BIAS;
 	ADDI(PutHWRegSpecial(CYCLECOUNT), GetHWRegSpecial(CYCLECOUNT), count);
 	FlushAllHWReg();
 	CALLFunc((u32)psxBranchTest);
@@ -2696,11 +2650,10 @@ static void recRecompile() {
 	iRegs[0].state = ST_CONST;
 	
 	/* if ppcPtr reached the mem limit reset whole mem */
-	if (((u32)ppcPtr - (u32)recMem) >= (RECMEM_SIZE - 0x10000)) // fix me. don't just assume 0x10000
+	if (((u32)ppcPtr - (u32)recMem) >= (RECMEM_SIZE - 0x10000))
 		recReset();
-#ifdef TAG_CODE
-	ppcAlign();
-#endif
+
+	ppcAlign(/*32*/4);
 	ptr = ppcPtr;
 		
 	// tell the LUT where to find us
@@ -2718,22 +2671,29 @@ static void recRecompile() {
 
 		if (branch) {
 			branch = 0;
-			break;
+			//if (dump) iDumpBlock(ptr);
+			goto done;
 		}
 	}
-  if(!branch) {
-	  iFlushRegs(pc);
-	  LIW(PutHWRegSpecial(PSXPC), pc);
-	  iRet();
-  }
 
-  DCFlushRange((u8*)ptr,(u32)(u8*)ppcPtr-(u32)(u8*)ptr);
-  ICInvalidateRange((u8*)ptr,(u32)(u8*)ppcPtr-(u32)(u8*)ptr);
-  
-#ifdef TAG_CODE
-	sprintf((char *)ppcPtr, "PC=%08x", pcold);  //causes misalignment
+	iFlushRegs(pc);
+	
+	LIW(PutHWRegSpecial(PSXPC), pc);
+
+	iRet();
+
+done:;
+	u32 a = (u32)(u8*)ptr;
+	while(a < (u32)(u8*)ppcPtr) {
+	  __asm__ __volatile__("icbi 0,%0" : : "r" (a));
+	  __asm__ __volatile__("dcbst 0,%0" : : "r" (a));
+	  a += 4;
+	}
+	__asm__ __volatile__("sync");
+	__asm__ __volatile__("isync");
+	
+	sprintf((char *)ppcPtr, "PC=%08x", pcold);
 	ppcPtr += strlen((char *)ppcPtr);
-#endif
   dyna_used = ((u32)ppcPtr - (u32)recMem)/1024;
 }
 
