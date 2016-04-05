@@ -1700,18 +1700,16 @@ static void recLB() {
         if ((t & 0x1fe0) == 0 && (t & 0x1fff) != 0) {
             if (!_Rt_) return;
                 
-            addr = (u32)&psxM[addr & 0x1fffff];
-            LIW(PutHWReg32(_Rt_), ((addr>>16)<<16)+(addr&0x8000<<1)); // FIXME: is this correct?
-            LBZ(PutHWReg32(_Rt_), addr&0xffff, GetHWReg32(_Rt_));
+            LIW(PutHWReg32(_Rt_), (u32)&psxM[addr & 0x1fffff]);
+            LBZ(PutHWReg32(_Rt_), 0, GetHWReg32(_Rt_));
             EXTSB(PutHWReg32(_Rt_), GetHWReg32(_Rt_));
             return;
         }
         if (t == 0x1f80 && addr < 0x1f801000) {
             if (!_Rt_) return;
     
-            addr = (u32)&psxH[addr & 0xfff];
-            LIW(PutHWReg32(_Rt_), ((addr>>16)<<16)+(addr&0x8000<<1)); // FIXME: is this correct?
-            LBZ(PutHWReg32(_Rt_), addr&0xffff, GetHWReg32(_Rt_));
+            LIW(PutHWReg32(_Rt_), (u32)&psxH[addr & 0xfff]);
+            LBZ(PutHWReg32(_Rt_), 0, GetHWReg32(_Rt_));
             EXTSB(PutHWReg32(_Rt_), GetHWReg32(_Rt_));
             return;
         }
