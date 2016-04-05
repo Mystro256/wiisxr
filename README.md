@@ -77,28 +77,30 @@ make
 I realize many people know how to build on devkitPro, but here's a guide for noobies:
 
 1. Download devkitPro (PPC version for your system) from here: http://sourceforge.net/projects/devkitpro/files/devkitPPC/
-If you're using Windows, it's suggested to use the auto installer instead and after installing it, skip to step 7 (note that the default devkitPro folder is C:\devkitPro):
+If you're using Windows, it's suggested to use the auto installer instead. After installing it, skip to step 7 (note that the default devkitPro folder is C:\devkitPro):
 http://sourceforge.net/projects/devkitpro/files/Automated%20Installer/
 
-2. Extract the devkitPPC folder from the file you downloaded into a folder called devkitPro (your file system should look like this: devkitPro/devkitPPC/, make the devkitPro where ever you want, I used ~/devkitPro)
+2. Extract the devkitPPC folder from the file you downloaded into a folder called *devkitPro* (your file system should look like this: *devkitPro/devkitPPC/*, make the *devkitPro* folder where ever you want, I used ~/devkitPro)
 
-3. Download libfat-ogc: http://sourceforge.net/projects/devkitpro/files/libfat/
+3. Download libogc: http://sourceforge.net/projects/devkitpro/files/libogc/
 
-4. Download libogc: http://sourceforge.net/projects/devkitpro/files/libogc/
+4. Make a folder called libogc in the *devkitPro* folder like so: *devkitPro/libogc*
 
-5. Make a folder called libogc in the devkitPro folder like so: devkitPro/libogc
+5. Extract the libogc include and lib folders into the *devkitPro/libogc* folder.
 
-6. Extract the include and lib folders from libogc and libfat-ogc into the libogc folder.
+6. Download libfatmod: https://github.com/Mystro256/libfatmod/releases/download/v1.0.14/libfatmod-ogc-1.0.14.tar.bz2
 
-7. Download zlib from here: http://sourceforge.net/projects/devkitpro/files/portlibs/ppc/
+7. Extract the libfatmod include and lib folders into the *devkitPro/libogc* folder.
 
-8. Download libwupc: https://github.com/FIX94/libwupc
+8. Download zlib from here: http://sourceforge.net/projects/devkitpro/files/portlibs/ppc/
 
-9. Make a portlibs folder in the devkitPro folder, then a ppc in the portlibs folder, like so: devkitPro/portlibs/ppc
+9. Download libwupc: https://github.com/FIX94/libwupc/archive/master.zip
 
-10. Extract the include, lib and share folders from zlib and libwupc into the ppc folder.
+10. Make a portlibs folder in the devkitPro folder, then a ppc in the portlibs folder, like so: *devkitPro/portlibs/ppc*
 
-11. On Linux or Mac OSX only, make sure you specify the environment variables, like so (I used ~/devkitPro for the location; replace this with what you used):
+11. Extract the include, lib and share folders from zlib and libwupc into the *devkitPro/portlibs/ppc* folder.
+
+12. On Linux or Mac OSX only, make sure you specify the environment variables, like so (I used ~/devkitPro for the location; replace this with what you used):
 
 ```bash
 export DEVKITPRO=$HOME/devkitPro
