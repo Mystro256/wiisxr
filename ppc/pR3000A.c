@@ -19,10 +19,6 @@
 #include <gccore.h>
 #include <malloc.h>
 #include <stdint.h>
-#ifdef _MSC_VER_
-#pragma warning(disable:4244)
-#pragma warning(disable:4761)
-#endif
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

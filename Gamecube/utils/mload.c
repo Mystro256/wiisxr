@@ -85,6 +85,7 @@ typedef struct
 
 static const char mload_fs[] ATTRIBUTE_ALIGN(32) = "/dev/mload";
 static s32 mload_fd = -1;
+static s32 hid = -1;
 
 // to init/test if the device is running
 int mload_init()
@@ -142,20 +143,18 @@ static int mload_write(const void * buf, u32 size)
 static int mload_memset(void *starlet_addr, int set, int len)
 {
 	int ret;
-	s32 hid = -1;
 
 	if (mload_init() < 0)
 		return -1;
 
-	hid = iosCreateHeap(0x800);
+	if (hid < 0)
+		hid = iosCreateHeap(0x800);
 
 	if (hid < 0)
 		return hid;
 
 	ret = IOS_IoctlvFormat(hid, mload_fd, MLOAD_MEMSET, "iii:", starlet_addr,
 			set, len);
-
-	iosDestroyHeap(hid);
 
 	return ret;
 }
@@ -237,20 +236,18 @@ static int mload_run_thread(void *starlet_addr, void *starlet_top_stack,
 		int stack_size, int priority)
 {
 	int ret;
-	s32 hid = -1;
 
 	if (mload_init() < 0)
 		return -1;
 
-	hid = iosCreateHeap(0x800);
+	if (hid < 0)
+		hid = iosCreateHeap(0x800);
 
 	if (hid < 0)
 		return hid;
 
 	ret = IOS_IoctlvFormat(hid, mload_fd, MLOAD_RUN_THREAD, "iiii:",
 			starlet_addr, starlet_top_stack, stack_size, priority);
-
-	iosDestroyHeap(hid);
 
 	return ret;
 }
