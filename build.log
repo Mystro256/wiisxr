@@ -473,101 +473,200 @@
   psxMu32ref(0x0894) = SWAPu32((0x3b << 26) | 0);
   ^
 /wiisxr/Gamecube/../psxbios.c: In function 'psxBiosFreeze':
-/wiisxr/Gamecube/../psxbios.c:2390:42: warning: argument to 'sizeof' in 'memcpy' call is the same expression as the source; did you mean to remove the addressof? [-Wsizeof-pointer-memaccess]
+/wiisxr/Gamecube/../psxbios.c:2394:42: warning: argument to 'sizeof' in 'memcpy' call is the same expression as the source; did you mean to remove the addressof? [-Wsizeof-pointer-memaccess]
  #define bfreezes(ptr) bfreeze(ptr, sizeof(ptr))
                                           ^
 /wiisxr/Gamecube/../psxbios.c:2386:42: note: in definition of macro 'bfreeze'
   if (Mode == 1) memcpy(&psxR[base], ptr, size); \
                                           ^
-/wiisxr/Gamecube/../psxbios.c:2442:2: note: in expansion of macro 'bfreezes'
+/wiisxr/Gamecube/../psxbios.c:2447:2: note: in expansion of macro 'bfreezes'
   bfreezes(&signature);
   ^
-/wiisxr/Gamecube/../psxbios.c:2390:42: warning: argument to 'sizeof' in 'memcpy' call is the same expression as the destination; did you mean to remove the addressof? [-Wsizeof-pointer-memaccess]
+/wiisxr/Gamecube/../psxbios.c:2394:42: warning: argument to 'sizeof' in 'memcpy' call is the same expression as the destination; did you mean to remove the addressof? [-Wsizeof-pointer-memaccess]
  #define bfreezes(ptr) bfreeze(ptr, sizeof(ptr))
                                           ^
 /wiisxr/Gamecube/../psxbios.c:2387:42: note: in definition of macro 'bfreeze'
   if (Mode == 0) memcpy(ptr, &psxR[base], size); \
                                           ^
-/wiisxr/Gamecube/../psxbios.c:2442:2: note: in expansion of macro 'bfreezes'
+/wiisxr/Gamecube/../psxbios.c:2447:2: note: in expansion of macro 'bfreezes'
   bfreezes(&signature);
   ^
-/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2458:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(jmp_int);
   ^
-/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2453:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2458:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2458:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2458:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2458:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2458:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2458:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2458:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2458:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2458:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2459:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(pad_buf);
   ^
-/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2454:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2459:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2459:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2459:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2459:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2459:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2459:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2459:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2459:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2459:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2460:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(pad_buf1);
   ^
-/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2455:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2460:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2460:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2460:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2460:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2460:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2460:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2460:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2460:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2460:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2461:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(pad_buf2);
   ^
-/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2456:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2457:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2461:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2461:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2461:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2461:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2461:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2461:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2461:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2461:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2461:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2462:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(heap_addr);
   ^
-/wiisxr/Gamecube/../psxbios.c:2457:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2457:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2457:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2457:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2457:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2457:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2457:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2457:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../psxbios.c:2457:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2462:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2462:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2462:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2462:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2462:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2462:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2462:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2462:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../psxbios.c:2462:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /wiisxr/Gamecube/../ppc/pR3000A.c: In function 'recLH':
-/wiisxr/Gamecube/../ppc/pR3000A.c:1776:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1748:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     MapConst(_Rt_, psxRs16(addr));
     ^
-/wiisxr/Gamecube/../ppc/pR3000A.c:1776:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1748:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /wiisxr/Gamecube/../ppc/pR3000A.c: In function 'recLHU':
-/wiisxr/Gamecube/../ppc/pR3000A.c:1816:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1788:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     MapConst(_Rt_, psxRu16(addr));
     ^
-/wiisxr/Gamecube/../ppc/pR3000A.c:1816:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1788:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 /wiisxr/Gamecube/../ppc/pR3000A.c: In function 'recLW':
-/wiisxr/Gamecube/../ppc/pR3000A.c:1897:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1879:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     MapConst(_Rt_, psxRu32(addr));
     ^
-/wiisxr/Gamecube/../ppc/pR3000A.c:1897:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../ppc/pR3000A.c:1897:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-/wiisxr/Gamecube/../ppc/pR3000A.c:1897:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1879:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1879:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:1879:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/wiisxr/Gamecube/../ppc/pR3000A.c:2539:0:
+/wiisxr/Gamecube/../ppc/pGte.h: In function 'recMFC2':
+/wiisxr/Gamecube/../ppc/pGte.h:46:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]<<2; \
+                   ^
+/wiisxr/Gamecube/../ppc/pGte.h:59:1: note: in expansion of macro 'CP2_FUNC'
+ CP2_FUNC(MFC2);
+ ^
+/wiisxr/Gamecube/../ppc/pGte.h: In function 'recMTC2':
+/wiisxr/Gamecube/../ppc/pGte.h:46:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]<<2; \
+                   ^
+/wiisxr/Gamecube/../ppc/pGte.h:60:1: note: in expansion of macro 'CP2_FUNC'
+ CP2_FUNC(MTC2);
+ ^
+/wiisxr/Gamecube/../ppc/pGte.h: In function 'recCFC2':
+/wiisxr/Gamecube/../ppc/pGte.h:46:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]<<2; \
+                   ^
+/wiisxr/Gamecube/../ppc/pGte.h:61:1: note: in expansion of macro 'CP2_FUNC'
+ CP2_FUNC(CFC2);
+ ^
+/wiisxr/Gamecube/../ppc/pGte.h: In function 'recCTC2':
+/wiisxr/Gamecube/../ppc/pGte.h:46:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]<<2; \
+                   ^
+/wiisxr/Gamecube/../ppc/pGte.h:62:1: note: in expansion of macro 'CP2_FUNC'
+ CP2_FUNC(CTC2);
+ ^
+/wiisxr/Gamecube/../ppc/pGte.h: In function 'recLWC2':
+/wiisxr/Gamecube/../ppc/pGte.h:46:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]<<2; \
+                   ^
+/wiisxr/Gamecube/../ppc/pGte.h:63:1: note: in expansion of macro 'CP2_FUNC'
+ CP2_FUNC(LWC2);
+ ^
+/wiisxr/Gamecube/../ppc/pGte.h: In function 'recSWC2':
+/wiisxr/Gamecube/../ppc/pGte.h:46:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]<<2; \
+                   ^
+/wiisxr/Gamecube/../ppc/pGte.h:64:1: note: in expansion of macro 'CP2_FUNC'
+ CP2_FUNC(SWC2);
+ ^
+/wiisxr/Gamecube/../ppc/pGte.h: In function 'recOP':
+/wiisxr/Gamecube/../ppc/pGte.h:46:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]<<2; \
+                   ^
+/wiisxr/Gamecube/../ppc/pGte.h:66:1: note: in expansion of macro 'CP2_FUNC'
+ CP2_FUNC(OP);
+ ^
+/wiisxr/Gamecube/../ppc/pGte.h: In function 'recDPCS':
+/wiisxr/Gamecube/../ppc/pGte.h:46:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]<<2; \
+                   ^
+/wiisxr/Gamecube/../ppc/pGte.h:68:1: note: in expansion of macro 'CP2_FUNC'
+ CP2_FUNC(DPCS);
+ ^
+/wiisxr/Gamecube/../ppc/pGte.h: In function 'recINTPL':
+/wiisxr/Gamecube/../ppc/pGte.h:46:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]<<2; \
+                   ^
+/wiisxr/Gamecube/../ppc/pGte.h:69:1: note: in expansion of macro 'CP2_FUNC'
+ CP2_FUNC(INTPL);
+ ^
+/wiisxr/Gamecube/../ppc/pGte.h: In function 'recMVMVA':
+/wiisxr/Gamecube/../ppc/pGte.h:46:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]<<2; \
+                   ^
+/wiisxr/Gamecube/../ppc/pGte.h:70:1: note: in expansion of macro 'CP2_FUNC'
+ CP2_FUNC(MVMVA);
+ ^
+/wiisxr/Gamecube/../ppc/pGte.h: In function 'recSQR':
+/wiisxr/Gamecube/../ppc/pGte.h:46:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]<<2; \
+                   ^
+/wiisxr/Gamecube/../ppc/pGte.h:78:1: note: in expansion of macro 'CP2_FUNC'
+ CP2_FUNC(SQR);
+ ^
+/wiisxr/Gamecube/../ppc/pGte.h: In function 'recDCPL':
+/wiisxr/Gamecube/../ppc/pGte.h:46:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]<<2; \
+                   ^
+/wiisxr/Gamecube/../ppc/pGte.h:79:1: note: in expansion of macro 'CP2_FUNC'
+ CP2_FUNC(DCPL);
+ ^
+/wiisxr/Gamecube/../ppc/pGte.h: In function 'recGPF':
+/wiisxr/Gamecube/../ppc/pGte.h:46:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]<<2; \
+                   ^
+/wiisxr/Gamecube/../ppc/pGte.h:84:1: note: in expansion of macro 'CP2_FUNC'
+ CP2_FUNC(GPF);
+ ^
+/wiisxr/Gamecube/../ppc/pGte.h: In function 'recGPL':
+/wiisxr/Gamecube/../ppc/pGte.h:46:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  cop2readypc = pc + psxCP2time[_fFunct_(psxRegs.code)]<<2; \
+                   ^
+/wiisxr/Gamecube/../ppc/pGte.h:85:1: note: in expansion of macro 'CP2_FUNC'
+ CP2_FUNC(GPL);
+ ^
 /wiisxr/Gamecube/utils/mload.c: In function 'mload_memset':
 /wiisxr/Gamecube/utils/mload.c:158:2: warning: implicit declaration of function 'iosDestroyHeap' [-Wimplicit-function-declaration]
   iosDestroyHeap(hid);

@@ -2387,7 +2387,12 @@ void psxBiosException() {
 	if (Mode == 0) memcpy(ptr, &psxR[base], size); \
 	base+=size;
 
+#define bfreezelast(ptr, size) \
+	if (Mode == 1) memcpy(&psxR[base], ptr, size); \
+	if (Mode == 0) memcpy(ptr, &psxR[base], size);
+
 #define bfreezes(ptr) bfreeze(ptr, sizeof(ptr))
+#define bfreezeslast(ptr) bfreezelast(ptr, sizeof(ptr))
 #define bfreezel(ptr) {*ptr=SWAP32p((void*)ptr); bfreeze(ptr, 4); *ptr=SWAP32p((void*)ptr);}
 
 #define bfreezepsxMptr(ptr) \
@@ -2463,7 +2468,7 @@ void psxBiosFreeze(int Mode) {
 	bfreezel(&CardState);
 	bfreezes(Thread);
 	bfreezel(&CurThread);
-	bfreezes(FDesc);
+	bfreezeslast(FDesc);
 	
 	biosSwap();
 }
