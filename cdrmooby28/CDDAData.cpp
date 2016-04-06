@@ -130,7 +130,7 @@ int CDDACallbackOneTrackStop(  void *inputBuffer, void *outputBuffer,
    return 0;
 }
 
-PlayCDDAData::PlayCDDAData(const std::vector<TrackInfo> ti, CDTime gapLength) 
+PlayCDDAData::PlayCDDAData(const std::vector<TrackInfo> &ti, CDTime gapLength)
    : stream(NULL), 
      frameOffset(0), theCD(NULL), trackList(ti), playing(false),
      repeat(false), endOfTrack(false), pregapLength(gapLength)

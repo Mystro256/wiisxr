@@ -272,7 +272,7 @@ char * pGetConfigInfos(int iCfg)
  strcat(pB,szTxt);
  //----------------------------------------------------//
  if(iCfg && iWindowMode)
-  sprintf(szTxt,"Resolution/Color:\r\n- %dx%d ",LOWORD(iWinSize),HIWORD(iWinSize));
+  sprintf(szTxt,"Resolution/Color:\r\n- %ux%u ",LOWORD(iWinSize),HIWORD(iWinSize));
  else
   sprintf(szTxt,"Resolution/Color:\r\n- %dx%d ",iResX,iResY);
  strcat(pB,szTxt);
@@ -378,7 +378,7 @@ void CALLBACK GPUmakeSnapshot(void)                    // snapshot of whole vram
  do
   {
    snapshotnr++;
-   sprintf(filename,"%s/peopssoft%03ld.bmp",getenv("HOME"),snapshotnr);
+   sprintf(filename,"%s/peopssoft%03lu.bmp",getenv("HOME"),snapshotnr);
 
    bmpfile=fopen(filename,"rb");
    if (bmpfile == NULL) break;
@@ -479,7 +479,9 @@ long PEOPS_GPUopen(unsigned long * disp,char * CapText,char * CfgFile)
 
  pCaptionText=CapText;
 
+#ifndef _FPSE
  pConfigFile=CfgFile;
+#endif
 
  ReadConfig();                                         // read registry
 
@@ -1282,7 +1284,7 @@ void PEOPS_GPUwriteDataMem(unsigned long * pMem, int iSize)
 #ifdef PEOPS_SDLOG
  int jj,jjmax;
 	DEBUG_print("append",DBG_SDGECKOAPPEND);
-	sprintf(txtbuffer,"Calling GPUwriteDataMem(): mode = %d, *pmem = 0x%8x, iSize = %d\r\n",DataWriteMode,GETLE32(pMem),iSize);
+	sprintf(txtbuffer,"Calling GPUwriteDataMem(): mode = %d, *pmem = 0x%8p, iSize = %d\r\n",DataWriteMode,GETLE32(pMem),iSize);
 	DEBUG_print(txtbuffer,DBG_SDGECKOPRINT);
 	DEBUG_print("close",DBG_SDGECKOCLOSE);
 #endif //PEOPS_SDLOG
@@ -1398,7 +1400,7 @@ ENDVRAM:
 	jjmax = (gpuDataC>128) ? 6 : gpuDataP;
 	for(jj = 0; jj<jjmax; jj++)
 	{
-		sprintf(txtbuffer," 0x%8x",gpuDataM[jj]);
+		sprintf(txtbuffer," 0x%8lx",gpuDataM[jj]);
 		DEBUG_print(txtbuffer,DBG_SDGECKOPRINT);
 	}
 	sprintf(txtbuffer,")\r\n");
@@ -1489,13 +1491,12 @@ __inline BOOL CheckForEndlessLoop(unsigned long laddr)
 
 long PEOPS_GPUdmaChain(unsigned long * baseAddrL, unsigned long addr)
 {
- unsigned long dmaMem;
  unsigned char * baseAddrB;
- short count;unsigned int DMACommandCounter = 0;
+ unsigned int DMACommandCounter = 0;
 
  #ifdef PEOPS_SDLOG
 	DEBUG_print("append",DBG_SDGECKOAPPEND);
-	sprintf(txtbuffer,"Calling GPUdmaChain(): *baseAddrL = 0x%8x, addr = 0x%8x\r\n",baseAddrL, addr);
+	sprintf(txtbuffer,"Calling GPUdmaChain(): *baseAddrL = 0x%8p, addr = 0x%8lx\r\n",baseAddrL, addr);
 	DEBUG_print(txtbuffer,DBG_SDGECKOPRINT);
 	DEBUG_print("close",DBG_SDGECKOCLOSE);
 #endif //PEOPS_SDLOG
@@ -1512,9 +1513,9 @@ long PEOPS_GPUdmaChain(unsigned long * baseAddrL, unsigned long addr)
    if(DMACommandCounter++ > 2000000) break;
    if(CheckForEndlessLoop(addr)) break;
 
-   count = baseAddrB[addr+3];
+   short count = baseAddrB[addr+3];
 
-   dmaMem=addr+4;
+   unsigned long dmaMem=addr+4;
 
    if(count>0) PEOPS_GPUwriteDataMem(&baseAddrL[dmaMem>>2],count);
 
@@ -1533,7 +1534,11 @@ long PEOPS_GPUdmaChain(unsigned long * baseAddrL, unsigned long addr)
 
 void CALLBACK GPUabout(void)                           // ABOUT
 {
+
+#ifndef _FPSE
  AboutDlgProc();
+#endif
+ return;
 }
 
 ////////////////////////////////////////////////////////////////////////

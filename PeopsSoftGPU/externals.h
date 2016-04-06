@@ -300,6 +300,12 @@ extern BOOL           bSSSPSXLimit;
 
 #endif
 
+// key.c
+
+#ifndef _IN_KEY
+
+#endif
+
 // cfg.c
 
 #ifndef _IN_CFG

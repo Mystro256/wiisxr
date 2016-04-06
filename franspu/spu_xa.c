@@ -96,7 +96,7 @@ void FeedXA(xa_decode_t *xap)
 	else
 	{
 		unsigned short * pS=(unsigned short *)xap->pcm;
-		unsigned long l;short s=0;
+		short s=0;
 		
 		for(i=0;i<iSize;i++)
 		{
@@ -105,7 +105,7 @@ void FeedXA(xa_decode_t *xap)
 				s = *pS++;
 				spos -= 0x10000L;
 			}
-			l=s;
+			unsigned long l=s;
 			
 			*XAFeed++=(l|(l<<16));
 			

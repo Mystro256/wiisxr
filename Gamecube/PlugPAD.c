@@ -163,7 +163,7 @@ void auto_assign_controllers(void)
 }
 
 int load_configurations(FILE* f, controller_t* controller){
-	int i,j;
+	int i;
 	char magic[4] = { 
 		'W', 'X', controller->identifier, CONTROLLER_CONFIG_VERSION
 	};
@@ -212,11 +212,13 @@ int load_configurations(FILE* f, controller_t* controller){
 		fread(&controller->config_slot[i].invertedYR, 4, 1, f);
 	}
 
-	if (loadButtonSlot != LOADBUTTON_DEFAULT)
+	if (loadButtonSlot != LOADBUTTON_DEFAULT) {
+		int j;
 		for(j=0; j<4; ++j)
 			memcpy(&controller->config[j],
 			       &controller->config_slot[(int)loadButtonSlot],
 			       sizeof(controller_config_t));
+	}
 	
 	return 1;
 }

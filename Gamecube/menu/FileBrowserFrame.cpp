@@ -270,7 +270,7 @@ void FileBrowserFrame::drawChildren(menu::Graphics &gfx)
 
 		//Draw buttons
 		menu::ComponentList::const_iterator iteration;
-		for (iteration = componentList.begin(); iteration != componentList.end(); iteration++)
+		for (iteration = componentList.begin(); iteration != componentList.end(); ++iteration)
 		{
 			(*iteration)->draw(gfx);
 		}
@@ -482,7 +482,7 @@ void fileBrowserFrame_LoadFile(int i)
 			strcat(RomInfo,buffer);
 			sprintf(buffer,"CD-ROM ID: %s\n", CdromId);
 			strcat(RomInfo,buffer);
-			sprintf(buffer,"ISO Size: %d Mb\n",isoFile.size/1024/1024);
+			sprintf(buffer,"ISO Size: %u Mb\n",isoFile.size/1024/1024);
 			strcat(RomInfo,buffer);
 			sprintf(buffer,"Country: %s\n",(!Config.PsxType) ? "NTSC":"PAL");
 			strcat(RomInfo,buffer);
@@ -490,7 +490,7 @@ void fileBrowserFrame_LoadFile(int i)
 			strcat(RomInfo,buffer);
 			unsigned char tracks[2];
       Mooby2CDRgetTN(&tracks[0]);
-      sprintf(buffer,"Number of tracks %i\n", tracks[1]);
+      sprintf(buffer,"Number of tracks %u\n", tracks[1]);
 			strcat(RomInfo,buffer);
     		
 			

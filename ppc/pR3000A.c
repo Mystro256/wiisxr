@@ -99,12 +99,13 @@ u32 dyna_total = RECMEM_SIZE;
 
 static int GetFreeHWReg()
 {
-	int i, least, index;
+	int index;
 	
 	if (DstCPUReg != -1) {
 		index = GetHWRegFromCPUReg(DstCPUReg);
 		DstCPUReg = -1;
 	} else {
+		int i;
 	    // LRU algorith with a twist ;)
 	    for (i=0; i<NUM_HW_REGISTERS-1; i++) {
 		    if (!(HWRegisters[i].usage & HWUSAGE_RESERVED)) {
@@ -112,7 +113,7 @@ static int GetFreeHWReg()
 		    }
 	    }
     
-	    least = HWRegisters[i].lastUsed; index = i;
+	    int least = HWRegisters[i].lastUsed; index = i;
 	    for (; i<NUM_HW_REGISTERS; i++) {
 		    if (!(HWRegisters[i].usage & HWUSAGE_RESERVED)) {
 			    if (HWRegisters[i].usage == HWUSAGE_NONE && HWRegisters[i].code >= 13) {
@@ -296,10 +297,10 @@ void SetDstCPUReg(int cpureg)
 
 static void ReserveArgs(int args)
 {
-	int index, i;
-	
+	int i;
+
 	for (i=0; i<args; i++) {
-		index = GetHWRegFromCPUReg(3+i);
+		int index = GetHWRegFromCPUReg(3+i);
 		HWRegisters[index].usage |= HWUSAGE_RESERVED | HWUSAGE_HARDWIRED | HWUSAGE_ARG;
 	}
 }
@@ -2408,7 +2409,6 @@ static void recJALR() {
 static void recBEQ() {
 // Branch if Rs == Rt
 	u32 bpc = _Imm_ * 4 + pc;
-	u32 *b;
 
 	if (_Rs_ == _Rt_) {
 		iJump(bpc);
@@ -2446,7 +2446,8 @@ static void recBEQ() {
 		else {
 			CMPLW(GetHWReg32(_Rs_), GetHWReg32(_Rt_));
 		}
-		
+		u32 *b;
+
 		BEQ_L(b);
 		
 		iBranch(pc+4, 1);
@@ -2461,7 +2462,6 @@ static void recBEQ() {
 static void recBNE() {
 // Branch if Rs != Rt
 	u32 bpc = _Imm_ * 4 + pc;
-	u32 *b;
 
 	if (_Rs_ == _Rt_) {
 		iJump(pc+4);
@@ -2499,7 +2499,8 @@ static void recBNE() {
 		else {
 			CMPLW(GetHWReg32(_Rs_), GetHWReg32(_Rt_));
 		}
-		
+
+		u32 *b;
 		BNE_L(b);
 		
 		iBranch(pc+4, 1);
@@ -2729,7 +2730,6 @@ static void (*recCP2BSC[32])() = {
 };
 
 static void recRecompile() {
-	char *p;
 	u32 *ptr;
 	int i;
 	
@@ -2780,7 +2780,7 @@ static void recRecompile() {
 	
 	//where did 500 come from?
 	for (count=0; count<500;) {
-		p = (char *)PSXM(pc);
+		char *p = (char *)PSXM(pc);
 		if (p == NULL) recError();
 		psxRegs.code = SWAP32(*(u32 *)p);
 		pc+=4; count++;

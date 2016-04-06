@@ -129,9 +129,7 @@ void FrameCap (void)
 {
  static unsigned long curticks, lastticks, _ticks_since_last_update;
  static unsigned long TicksToWait = 0;
- BOOL Waiting = TRUE;
 
-  {
    curticks = timeGetTime();
    _ticks_since_last_update = curticks - lastticks;
 
@@ -154,6 +152,7 @@ void FrameCap (void)
 //	sprintf(txtbuffer, "FrameCap: Wait; dwFRTicks %i; TicksWait %i; TicksSince %i",(int)dwFrameRateTicks, (int)TicksToWait, (int)_ticks_since_last_update);
 //	DEBUG_print(txtbuffer,DBG_GPU3);
 #endif //SHOW_DEBUG
+     BOOL Waiting = TRUE;
      while (Waiting)
       {
        curticks = timeGetTime();
@@ -171,7 +170,6 @@ void FrameCap (void)
         }
       }
     }
-  }
 }
 
 void FrameCapSSSPSX(void)                              // frame limit func SSSPSX

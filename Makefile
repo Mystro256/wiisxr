@@ -20,7 +20,7 @@ Wii:
 	@$(MAKE) -C Gamecube -f Makefile_Wii
  
 GC:
-	@$(ECHO) "Building Wii..."
+	@$(ECHO) "Building GC..."
 	@$(MAKE) -C Gamecube -f Makefile_GC
  
 clean:

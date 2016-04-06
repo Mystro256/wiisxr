@@ -395,9 +395,9 @@ int SaveMcds(fileBrowser_file *mcd1, fileBrowser_file *mcd2) {
 }
 
 bool CreateMcd(int slot, fileBrowser_file *mcd) {
-	char *cardData = NULL;
+	char *cardData;
 	if (slot == 1) cardData = Mcd1Data;
-	if (slot == 2) cardData = Mcd2Data;
+	else /*(slot == 2)*/ cardData = Mcd2Data;
 
 	int i=0, j=0, curPos =0;
 
@@ -498,7 +498,6 @@ void ConvertMcd(char *mcd, char *data) {
 void GetMcdBlockInfo(int mcd, int block, McdBlock *Info) {
 	char *data = NULL, *ptr, *str;
 	unsigned short clut[16];
-	unsigned short c;
 	int i, x;
 
 	memset(Info, 0, sizeof(McdBlock));
@@ -518,7 +517,7 @@ void GetMcdBlockInfo(int mcd, int block, McdBlock *Info) {
 	memcpy(Info->sTitle, ptr, 48*2);
 
 	for (i=0; i < 48; i++) {
-		c = *(ptr) << 8;
+		unsigned short c = *(ptr) << 8;
 		c|= *(ptr+1);
 		if (!c) break;
 

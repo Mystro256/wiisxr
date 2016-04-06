@@ -284,10 +284,9 @@ int fileBrowser_libfat_writeFile(fileBrowser_file* file, void* buffer, unsigned 
 */
 int fileBrowser_libfat_init(fileBrowser_file* f){
 
-  int res = 0;
-
  	if(!rThreadCreated) InitRemovalThread();
 #ifdef HW_RVL
+  int res = 0;
   if(f->name[0] == 's') {      //SD
     if(!sdMounted) {           //if there's nothing currently mounted
       pauseRemovalThread();
@@ -338,6 +337,7 @@ int fileBrowser_libfat_init(fileBrowser_file* f){
   return res;
 #else
   if(!sdMounted) {           //GC has only SD
+	int res = 0;
 
     if(sdNeedsUnmount) fatUnmount("sd");
     switch(sdNeedsUnmount){  //unmount previous devices

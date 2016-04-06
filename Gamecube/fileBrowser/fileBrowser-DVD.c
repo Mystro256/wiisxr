@@ -46,11 +46,10 @@ fileBrowser_file topLevel_DVD =
  
 int fileBrowser_DVD_readDir(fileBrowser_file* ffile, fileBrowser_file** dir){	
   
-  int ret = 0;
   num_entries = 0;
   
   if(dvd_get_error() || !dvd_init) { //if some error
-    ret = init_dvd();
+    int ret = init_dvd();
     if(ret) {    //try init
       return ret; //fail
     }

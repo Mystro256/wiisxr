@@ -173,7 +173,6 @@ static int mload_elf(void *my_elf, data_elf *data_elf)
 		return -1; // aligned to 4 please!
 
 	elfheader *head = (void *) elf;
-	elfphentry *entries;
 
 	if (head->ident0 != 0x7F454C46)
 		return -1;
@@ -188,7 +187,7 @@ static int mload_elf(void *my_elf, data_elf *data_elf)
 
 	for (n = 0; n < head->phnum; n++)
 	{
-		entries = (void *) (elf + p);
+		elfphentry *entries = (void *) (elf + p);
 		p += sizeof(elfphentry);
 
 		if (entries->type == 4)

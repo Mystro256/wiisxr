@@ -104,7 +104,7 @@ void Cursor::updateCursor()
 				hoverOverComponent = NULL;
 			}
 			std::vector<CursorEntry>::iterator iteration;
-			for (iteration = cursorList.begin(); iteration != cursorList.end(); iteration++)
+			for (iteration = cursorList.begin(); iteration != cursorList.end(); ++iteration)
 			{
 				if(	currentFrame == (*iteration).frame &&
 					(cursorX > (*iteration).xRange[0]) && (cursorX < (*iteration).xRange[1]) &&
@@ -129,7 +129,7 @@ void Cursor::updateCursor()
 void Cursor::setCursorFocus(Component* component)
 {
 	int buttonsDown = 0;
-	int focusDirection = 0;
+	//int focusDirection = 0;
 	Component* newHoverOverComponent = NULL;
 
 #ifdef HW_RVL
@@ -137,7 +137,7 @@ void Cursor::setCursorFocus(Component* component)
 	if (buttonsPressed & WPAD_BUTTON_B) buttonsDown |= Focus::ACTION_BACK;
 #endif
 	if (freezeAction) buttonsDown = 0;
-	if (component) newHoverOverComponent = component->updateFocus(focusDirection,buttonsDown);
+	if (component) newHoverOverComponent = component->updateFocus(0/*focusDirection*/,buttonsDown);
 	if (newHoverOverComponent) 
 	{
 		if (hoverOverComponent) hoverOverComponent->setFocus(false);
@@ -148,9 +148,9 @@ void Cursor::setCursorFocus(Component* component)
 
 void Cursor::drawCursor(Graphics& gfx)
 {
-	int width, height;
 	if(cursorX > 0.0f || cursorY > 0.0f)
 	{
+		int width, height;
 		gfx.enableBlending(true);
 		gfx.setTEV(GX_REPLACE);
 

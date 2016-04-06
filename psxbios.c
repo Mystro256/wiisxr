@@ -1052,6 +1052,7 @@ void psxBios_OpenTh() { // 0e
 
 	for (th=1; th<8; th++)
 		if (Thread[th].status == 0) break;
+	if (th>7) return; //No threads available?
 
 #ifdef PSXBIOS_LOG
 	PSXBIOS_LOG("psxBios_%s: %x\n", biosB0n[0x0e], th);
@@ -1794,7 +1795,7 @@ void (*biosC0[256])();
 
 int psxBiosSetupTables()
 {
-	u32 base, size;
+	u32 base;//, size;
 	int i;
 
 	for(i = 0; i < 256; i++) {
@@ -2121,8 +2122,8 @@ int psxBiosSetupTables()
 //************** THE END ***************************************
 
 	base = 0x1000;
-	size = sizeof(EvCB) * 32;
-	Event = (void *)&psxR[base]; base+= size*6;
+	//size = sizeof(EvCB) * 32;
+	Event = (void *)&psxR[base]; //base+= size*6;
 	HwEV = Event;
 	EvEV = Event + 32;
 	RcEV = Event + 32*2;

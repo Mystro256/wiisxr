@@ -140,7 +140,6 @@ static s32 USB2Storage_Initialize()
 
 static s32 USB2Storage_Open(int verbose)
 {
-	char *devicepath = NULL;
 	s32 ret = USB_OK;
 	u32 size = 0;
 
@@ -154,7 +153,7 @@ static s32 USB2Storage_Open(int verbose)
 
 	if (__usb2fd <= 0)
 	{
-		devicepath = iosAlloc(hId, UMS_MAXPATH);
+		char *devicepath = iosAlloc(hId, UMS_MAXPATH);
 		if (devicepath == NULL)
 		{
 			LWP_MutexUnlock(usb2_mutex);
