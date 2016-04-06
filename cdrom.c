@@ -1,6 +1,5 @@
 /***************************************************************************
  *   Copyright (C) 2007 Ryan Schultz, PCSX-df Team, PCSX team              *
- *   schultz.ryan@gmail.com, http://rschultz.ath.cx/code.php               *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -15,7 +14,7 @@
  *   You should have received a copy of the GNU General Public License     *
  *   along with this program; if not, write to the                         *
  *   Free Software Foundation, Inc.,                                       *
- *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.           *
  ***************************************************************************/
 
 /* 
@@ -25,34 +24,37 @@
 #include "cdrom.h"
 
 /* CD-ROM magic numbers */
-#define CdlSync         0
-#define CdlNop	        1
-#define CdlSetloc	2
-#define CdlPlay	        3
-#define CdlForward	4
-#define CdlBackward	5
-#define CdlReadN	6
-#define CdlStandby	7
-#define CdlStop	        8
-#define CdlPause        9
-#define CdlInit 	10
-#define CdlMute	        11
-#define CdlDemute	12
-#define CdlSetfilter	13
-#define CdlSetmode	14
-#define CdlGetmode      15
-#define CdlGetlocL	16
-#define CdlGetlocP	17
-#define Cdl18     	18
-#define CdlGetTN	19
-#define CdlGetTD	20
-#define CdlSeekL	21
-#define CdlSeekP	22
-#define CdlTest 	25
-#define CdlID   	26
-#define CdlReadS	27
-#define CdlReset	28
-#define CdlReadToc      30
+#define CdlSync        0
+#define CdlNop         1
+#define CdlSetloc      2
+#define CdlPlay        3
+#define CdlForward     4
+#define CdlBackward    5
+#define CdlReadN       6
+#define CdlStandby     7
+#define CdlStop        8
+#define CdlPause       9
+#define CdlInit        10 // 0xa
+#define CdlMute        11 // 0xb
+#define CdlDemute      12 // 0xc
+#define CdlSetfilter   13 // 0xd
+#define CdlSetmode     14 // 0xe
+#define CdlGetmode     15 // 0xf
+#define CdlGetlocL     16 // 0x10
+#define CdlGetlocP     17 // 0x11
+#define CdlReadT       18 // 0x12
+#define CdlGetTN       19 // 0x13
+#define CdlGetTD       20 // 0x14
+#define CdlSeekL       21 // 0x15
+#define CdlSeekP       22 // 0x16
+#define CdlSetclock    23 // 0x17
+#define CdlGetclock    24 // 0x18
+#define CdlTest        25 // 0x19
+#define CdlID          26 // 0x1a
+#define CdlReadS       27 // 0x1b
+#define CdlReset       28 // 0x1c
+#define CdlGetQ        29 // 0x1d
+#define CdlReadToc     30 // 0x1e
 
 #define AUTOPAUSE	249
 #define READ_ACK	250
@@ -63,14 +65,14 @@
 /* don't set 255, it's reserved */
 
 char *CmdName[0x100]= {
-	"CdlSync",    "CdlNop",       "CdlSetloc",  "CdlPlay",
-	"CdlForward", "CdlBackward",  "CdlReadN",   "CdlStandby",
-	"CdlStop",    "CdlPause",     "CdlInit",    "CdlMute",
-	"CdlDemute",  "CdlSetfilter", "CdlSetmode", "CdlGetmode",
-	"CdlGetlocL", "CdlGetlocP",   "Cdl18",      "CdlGetTN",
-	"CdlGetTD",   "CdlSeekL",     "CdlSeekP",   NULL,
-	NULL,         "CdlTest",      "CdlID",      "CdlReadS",
-	"CdlReset",   NULL,           "CDlReadToc", NULL
+    "CdlSync",     "CdlNop",       "CdlSetloc",  "CdlPlay",
+    "CdlForward",  "CdlBackward",  "CdlReadN",   "CdlStandby",
+    "CdlStop",     "CdlPause",     "CdlInit",    "CdlMute",
+    "CdlDemute",   "CdlSetfilter", "CdlSetmode", "CdlGetmode",
+    "CdlGetlocL",  "CdlGetlocP",   "CdlReadT",   "CdlGetTN",
+    "CdlGetTD",    "CdlSeekL",     "CdlSeekP",   "CdlSetclock",
+    "CdlGetclock", "CdlTest",      "CdlID",      "CdlReadS",
+    "CdlReset",    NULL,           "CDlReadToc", NULL
 };
 
 unsigned char Test04[] = { 0 };
@@ -79,6 +81,13 @@ unsigned char Test20[] = { 0x98, 0x06, 0x10, 0xC3 };
 unsigned char Test22[] = { 0x66, 0x6F, 0x72, 0x20, 0x45, 0x75, 0x72, 0x6F };
 unsigned char Test23[] = { 0x43, 0x58, 0x44, 0x32, 0x39 ,0x34, 0x30, 0x51 };
 
+// cdr.Stat:
+#define NoIntr		0
+#define DataReady	1
+#define Complete	2
+#define Acknowledge	3
+#define DataEnd		4
+#define DiskError	5
 // 1x = 75 sectors per second
 // PSXCLK = 1 sec in the ps
 // so (PSXCLK / 75) / BIAS = cdr read time (linuzappz)
@@ -139,13 +148,6 @@ void ReadTrack() {
 	cdr.RErr = CDR_readTrack(cdr.Prev);
 }
 
-// cdr.Stat:
-#define NoIntr		0
-#define DataReady	1
-#define Complete	2
-#define Acknowledge	3
-#define DataEnd		4
-#define DiskError	5
 
 void AddIrqQueue(unsigned char irq, unsigned long ecycle) {
 	cdr.Irq = irq;
