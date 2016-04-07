@@ -4,6 +4,8 @@ ifndef ECHO
 ECHO = echo
 endif
 
+VERSION = beta2.2
+
 .PHONY:  all
 
 all:
@@ -22,6 +24,9 @@ Wii:
 GC:
 	@$(ECHO) "Building GC..."
 	@$(MAKE) -C Gamecube -f Makefile_GC
+
+dist: Wii
+	@$(MAKE) -C Gamecube/release/ VERSION=$(VERSION)
  
 clean:
 	@$(ECHO) "Cleaning..."

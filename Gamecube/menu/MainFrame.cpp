@@ -164,10 +164,12 @@ void Func_Credits()
 {
 	char CreditsInfo[512] = "";
 #ifdef HW_RVL
-	strcat(CreditsInfo,"WiiSX Beta 2.1 - www.emulatemii.com\n");
+	strcat(CreditsInfo,"WiiSXR Beta 2.2 - github.com/Mystro256/wiisxr\n");
 #else
-	strcat(CreditsInfo,"CubeSX Beta 2.1 - www.emulatemii.com\n");
+	strcat(CreditsInfo,"CubeSXR Beta 2.2 - github.com/Mystro256/wiisxr\n");
 #endif
+	strcat(CreditsInfo,"\n");
+	strcat(CreditsInfo,"WiiSXR: Mystro256\n");
 	strcat(CreditsInfo,"\n");
 	strcat(CreditsInfo,"Wii64 Team:\n");
 	strcat(CreditsInfo,"    emu_kidid - general coding\n");
@@ -179,7 +181,9 @@ void Func_Credits()
 	strcat(CreditsInfo,"PCSX/PCSX-df Teams\n");
 	strcat(CreditsInfo,"Wintermute/Shagkur - devkitPro/libOGC\n");
 #ifdef HW_RVL
-	strcat(CreditsInfo,"Team Twiizers - for Wii homebrew\n");
+	strcat(CreditsInfo,"matguitarist - USB 2.0 Support\n");
+	strcat(CreditsInfo,"Daxtsu - LIBWUPC support\n");
+	strcat(CreditsInfo,"iiiGerardoiii - WIISXR logo\n");
 #endif
 
 	menu::MessageBox::getInstance().setMessage(CreditsInfo);

@@ -1,5 +1,5 @@
 README : WiiSXR / CubeSXR
-Beta 2.1R
+Beta 2.2
 
 LICENSE:
     This software is licensed under the GNU General Public License v2
@@ -9,11 +9,11 @@ LICENSE:
 
 QUICK USAGE:
  * ISOs can be .bin/.cue (Make sure .cue contains _relative_ directory!), .img, or .iso format
- * To install: Extract the contents of wiiSX-beta2.1.zip to the root of your SD card
- * For SD/USB: Put ISOs (.bin/.cue or other formats) in the directory named /wiisx/isos,
-    All save types will automatically be placed in /wiisx/saves
+ * To install: Extract the contents of wiiSXR-beta2.2.zip to the root of your SD card
+ * For SD/USB: Put ISOs (.bin/.cue or other formats) in the directory named /wiisxr/isos,
+    All save types will automatically be placed in /wiisxr/saves
  * For DVD: ISOs may be anywhere on the disc (requires DVDxV2 on Wii)
- * For actual BIOS: Put SCPH1001.BIN in the directory on SD/USB named /wiisx/bios
+ * For actual BIOS: Put SCPH1001.BIN in the directory on SD/USB named /wiisxr/bios
  * Load the executable from the HBC or in the loader of your choice
     Once loaded, select 'Load ISO' and choose the source and select the ISO to load
       (Note: to go up a directory select '..', B will exit the file browser)
@@ -58,16 +58,19 @@ Settings:
    * Copy Saves: Not yet implemented
    * Delete Saves: Not yet implemented
 
-COMPATIBILITY LIST:
+REPORTING ISSUES:
  Report any issues to https://github.com/Mystro256/wiisxr/issues
 
+CODE:
+ Source code can be found here https://github.com/Mystro256/wiisxr/
+
 CREDITS:
+ * WIISXR fork: mystro256
+ * WIISXR logo: iiiGerardoiii
  * General Coder: emu_kidid
  * Graphics & Menu Coder: sepp256
  * Audio & Core Coder: tehpola
  * Artwork: drmr
- * WIISXR logo: iiiGerardoiii
- * WIISXR fork: mystro256
  * USB 2.0 support: matguitarist
  * LibWUPC integration: Daxtsu
  * LibWUPC: https://github.com/FIX94/libwupc
@@ -79,16 +82,18 @@ CREDITS:
  * franspu
  * CDRMooby
  * SSSPSX
- * Compiled using devKitPro r27
+ * Compiled using devKitPro
      ( http://sourceforge.net/projects/devkitpro )
  * Visit us on www.emulatemii.com and http://code.google.com/p/pcsxgc
 
 CHANGE LOG:
-Beta 2.2 (WIP, not released yet) rolling/master:
-   * Fixed some compiler warnings
-   * Build on devKitPro r27
-   * Rebranding (logos and trademarks not "free")
-   * Lots of code cleanup
+Beta 2.2:
+   * Very minor speed fixes (nothing too major)
+   * UStealth support
+   * Fix crashes for some games (e.g. Mortal Combat)
+   * Fix crash on quit
+   * Built on lastest devKitPro
+   * Rebranding to WiiSXR
 
 Beta 2.1 Mod 6 (Daxtsu):
    + LibWupc (support for WiiU Classic Controller Pro)

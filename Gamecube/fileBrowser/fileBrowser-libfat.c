@@ -62,7 +62,7 @@ static char usbMounted = 0;
 static char usbNeedsUnmount = 0;
 
 fileBrowser_file topLevel_libfat_Default =
-	{ "sd:/wiisx/isos", // file name
+	{ "sd:/wiisxr/isos", // file name
 	  0, // sector
 	  0, // offset
 	  0, // size
@@ -70,7 +70,7 @@ fileBrowser_file topLevel_libfat_Default =
 	 };
 
 fileBrowser_file topLevel_libfat_USB =
-	{ "usb:/wiisx/isos", // file name
+	{ "usb:/wiisxr/isos", // file name
 	  0, // sector
 	  0, // offset
 	  0, // size
@@ -78,7 +78,7 @@ fileBrowser_file topLevel_libfat_USB =
 	 };
 
 fileBrowser_file saveDir_libfat_Default =
-	{ "sd:/wiisx/saves",
+	{ "sd:/wiisxr/saves",
 	  0,
 	  0,
 	  0,
@@ -86,7 +86,7 @@ fileBrowser_file saveDir_libfat_Default =
 	 };
 
 fileBrowser_file saveDir_libfat_USB =
-	{ "usb:/wiisx/saves",
+	{ "usb:/wiisxr/saves",
 	  0,
 	  0,
 	  0,
@@ -94,7 +94,7 @@ fileBrowser_file saveDir_libfat_USB =
 	 };
 	 
 fileBrowser_file biosDir_libfat_Default =
-	{ "sd:/wiisx/bios",
+	{ "sd:/wiisxr/bios",
 	  0,
 	  0,
 	  0,
@@ -102,7 +102,7 @@ fileBrowser_file biosDir_libfat_Default =
 	 };
 
 fileBrowser_file biosDir_libfat_USB =
-	{ "usb:/wiisx/bios",
+	{ "usb:/wiisxr/bios",
 	  0,
 	  0,
 	  0,

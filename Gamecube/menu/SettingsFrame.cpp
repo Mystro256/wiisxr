@@ -875,7 +875,7 @@ void Func_SaveSettingsSD()
 	int (*configFile_init)(fileBrowser_file*) = fileBrowser_libfat_init;
 	configFile_file = &saveDir_libfat_Default;
 	if(configFile_init(configFile_file)) {                //only if device initialized ok
-		FILE* f = fopen( "sd:/wiisx/settings.cfg", "wb" );  //attempt to open file
+		FILE* f = fopen( "sd:/wiisxr/settings.cfg", "wb" );  //attempt to open file
 		if(f) {
 			writeConfig(f);                                   //write out the config
 			fclose(f);
@@ -892,7 +892,7 @@ void Func_SaveSettingsUSB()
 	int (*configFile_init)(fileBrowser_file*) = fileBrowser_libfat_init;
 	configFile_file = &saveDir_libfat_USB;
 	if(configFile_init(configFile_file)) {                //only if device initialized ok
-		FILE* f = fopen( "usb:/wiisx/settings.cfg", "wb" ); //attempt to open file
+		FILE* f = fopen( "usb:/wiisxr/settings.cfg", "wb" ); //attempt to open file
 		if(f) {
 			writeConfig(f);                                   //write out the config
 			fclose(f);
@@ -1069,32 +1069,32 @@ void Func_SaveButtonsSD()
 	int num_written = 0;
 	configFile_file = &saveDir_libfat_Default;
 	if(configFile_init(configFile_file)) {                //only if device initialized ok
-		FILE* f = fopen( "sd:/wiisx/controlG.cfg", "wb" );  //attempt to open file
+		FILE* f = fopen( "sd:/wiisxr/controlG.cfg", "wb" );  //attempt to open file
 		if(f) {
 			save_configurations(f, &controller_GC);					//write out GC controller mappings
 			fclose(f);
 			num_written++;
 		}
 #ifdef HW_RVL
-		f = fopen( "sd:/wiisx/controlC.cfg", "wb" );  //attempt to open file
+		f = fopen( "sd:/wiisxr/controlC.cfg", "wb" );  //attempt to open file
 		if(f) {
 			save_configurations(f, &controller_Classic);			//write out Classic controller mappings
 			fclose(f);
 			num_written++;
 		}
-		f = fopen( "sd:/wiisx/controlN.cfg", "wb" );  //attempt to open file
+		f = fopen( "sd:/wiisxr/controlN.cfg", "wb" );  //attempt to open file
 		if(f) {
 			save_configurations(f, &controller_WiimoteNunchuk);	//write out WM+NC controller mappings
 			fclose(f);
 			num_written++;
 		}
-		f = fopen( "sd:/wiisx/controlW.cfg", "wb" );  //attempt to open file
+		f = fopen( "sd:/wiisxr/controlW.cfg", "wb" );  //attempt to open file
 		if(f) {
 			save_configurations(f, &controller_Wiimote);			//write out Wiimote controller mappings
 			fclose(f);
 			num_written++;
 		}
-		f = fopen("sd:/wiisx/controlP.cfg", "wb");  //attempt to open file
+		f = fopen("sd:/wiisxr/controlP.cfg", "wb");  //attempt to open file
 		if (f) {
 			save_configurations(f, &controller_WiiUPro);			//write out Wii U Pro controller mappings
 			fclose(f);
@@ -1115,32 +1115,32 @@ void Func_SaveButtonsUSB()
 	int num_written = 0;
 	configFile_file = &saveDir_libfat_USB;
 	if(configFile_init(configFile_file)) {                //only if device initialized ok
-		FILE* f = fopen( "usb:/wiisx/controlG.cfg", "wb" );  //attempt to open file
+		FILE* f = fopen( "usb:/wiisxr/controlG.cfg", "wb" );  //attempt to open file
 		if(f) {
 			save_configurations(f, &controller_GC);					//write out GC controller mappings
 			fclose(f);
 			num_written++;
 		}
 #ifdef HW_RVL
-		f = fopen( "usb:/wiisx/controlC.cfg", "wb" );  //attempt to open file
+		f = fopen( "usb:/wiisxr/controlC.cfg", "wb" );  //attempt to open file
 		if(f) {
 			save_configurations(f, &controller_Classic);			//write out Classic controller mappings
 			fclose(f);
 			num_written++;
 		}
-		f = fopen( "usb:/wiisx/controlN.cfg", "wb" );  //attempt to open file
+		f = fopen( "usb:/wiisxr/controlN.cfg", "wb" );  //attempt to open file
 		if(f) {
 			save_configurations(f, &controller_WiimoteNunchuk);	//write out WM+NC controller mappings
 			fclose(f);
 			num_written++;
 		}
-		f = fopen( "usb:/wiisx/controlW.cfg", "wb" );  //attempt to open file
+		f = fopen( "usb:/wiisxr/controlW.cfg", "wb" );  //attempt to open file
 		if(f) {
 			save_configurations(f, &controller_Wiimote);			//write out Wiimote controller mappings
 			fclose(f);
 			num_written++;
 		}
-		f = fopen("usb:/wiisx/controlP.cfg", "wb");  //attempt to open file
+		f = fopen("usb:/wiisxr/controlP.cfg", "wb");  //attempt to open file
 		if (f) {
 			save_configurations(f, &controller_WiiUPro);			//write out Wii U Pro controller mappings
 			fclose(f);

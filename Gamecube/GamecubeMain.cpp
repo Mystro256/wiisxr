@@ -225,33 +225,33 @@ void loadSettings(int argc, char *argv[])
 	if(argv[0][0] == 'u') {  //assume USB
 		fileBrowser_file* configFile_file = &saveDir_libfat_USB;
 		if(configFile_init(configFile_file)) {                //only if device initialized ok
-			FILE* f = fopen( "usb:/wiisx/settings.cfg", "r" );  //attempt to open file
+			FILE* f = fopen( "usb:/wiisxr/settings.cfg", "r" );  //attempt to open file
 			if(f) {        //open ok, read it
 				readConfig(f);
 				fclose(f);
 			}
-			f = fopen( "usb:/wiisx/controlG.cfg", "r" );  //attempt to open file
+			f = fopen( "usb:/wiisxr/controlG.cfg", "r" );  //attempt to open file
 			if(f) {
 				load_configurations(f, &controller_GC);					//read in GC controller mappings
 				fclose(f);
 			}
 #ifdef HW_RVL
-			f = fopen( "usb:/wiisx/controlC.cfg", "r" );  //attempt to open file
+			f = fopen( "usb:/wiisxr/controlC.cfg", "r" );  //attempt to open file
 			if(f) {
 				load_configurations(f, &controller_Classic);			//read in Classic controller mappings
 				fclose(f);
 			}
-			f = fopen( "usb:/wiisx/controlN.cfg", "r" );  //attempt to open file
+			f = fopen( "usb:/wiisxr/controlN.cfg", "r" );  //attempt to open file
 			if(f) {
 				load_configurations(f, &controller_WiimoteNunchuk);		//read in WM+NC controller mappings
 				fclose(f);
 			}
-			f = fopen( "usb:/wiisx/controlW.cfg", "r" );  //attempt to open file
+			f = fopen( "usb:/wiisxr/controlW.cfg", "r" );  //attempt to open file
 			if(f) {
 				load_configurations(f, &controller_Wiimote);			//read in Wiimote controller mappings
 				fclose(f);
 			}
-			f = fopen("usb:/wiisx/controlP.cfg", "r");  //attempt to open file
+			f = fopen("usb:/wiisxr/controlP.cfg", "r");  //attempt to open file
 			if (f) {
 				load_configurations(f, &controller_WiiUPro);			//read in Wii U Pro controller mappings
 				fclose(f);
@@ -264,33 +264,33 @@ void loadSettings(int argc, char *argv[])
 	{ //assume SD
 		fileBrowser_file* configFile_file = &saveDir_libfat_Default;
 		if(configFile_init(configFile_file)) {                //only if device initialized ok
-			FILE* f = fopen( "sd:/wiisx/settings.cfg", "r" );  //attempt to open file
+			FILE* f = fopen( "sd:/wiisxr/settings.cfg", "r" );  //attempt to open file
 			if(f) {        //open ok, read it
 				readConfig(f);
 				fclose(f);
 			}
-			f = fopen( "sd:/wiisx/controlG.cfg", "r" );  //attempt to open file
+			f = fopen( "sd:/wiisxr/controlG.cfg", "r" );  //attempt to open file
 			if(f) {
 				load_configurations(f, &controller_GC);					//read in GC controller mappings
 				fclose(f);
 			}
 #ifdef HW_RVL
-			f = fopen( "sd:/wiisx/controlC.cfg", "r" );  //attempt to open file
+			f = fopen( "sd:/wiisxr/controlC.cfg", "r" );  //attempt to open file
 			if(f) {
 				load_configurations(f, &controller_Classic);			//read in Classic controller mappings
 				fclose(f);
 			}
-			f = fopen( "sd:/wiisx/controlN.cfg", "r" );  //attempt to open file
+			f = fopen( "sd:/wiisxr/controlN.cfg", "r" );  //attempt to open file
 			if(f) {
 				load_configurations(f, &controller_WiimoteNunchuk);		//read in WM+NC controller mappings
 				fclose(f);
 			}
-			f = fopen( "sd:/wiisx/controlW.cfg", "r" );  //attempt to open file
+			f = fopen( "sd:/wiisxr/controlW.cfg", "r" );  //attempt to open file
 			if(f) {
 				load_configurations(f, &controller_Wiimote);			//read in Wiimote controller mappings
 				fclose(f);
 			}
-			f = fopen("sd:/wiisx/controlP.cfg", "r");  //attempt to open file
+			f = fopen("sd:/wiisxr/controlP.cfg", "r");  //attempt to open file
 			if (f) {
 				load_configurations(f, &controller_WiiUPro);			//read in Wii U Pro controller mappings
 				fclose(f);

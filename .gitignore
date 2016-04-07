@@ -1,2 +1,4 @@
 Gamecube/build
-Gamecube/WiiSX.elf
+Gamecube/WiiSXR.elf
+Gamecube/release/apps/wiiSXR/boot.dol
+wiiSXR-*.zip
