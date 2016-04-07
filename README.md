@@ -20,11 +20,9 @@ Please contact me if you have licensing concerns. I will try to make this as GPL
 
 ##Downloads
 
-I'll try to keep the latest working build in the Gamecube folder. Please note this is a big work in progress and is not guaranteed to work.
+All downloads can be found here:
 
-Here's the link, just replace your current boot.dol file in the apps/wiisx folder (I'll get a better download going later on):
-
-https://github.com/Mystro256/wiisxr/raw/master/Gamecube/WiiSX.dol
+https://github.com/Mystro256/wiisxr/releases
 
 ##Reporting Bugs
 
@@ -41,8 +39,8 @@ Some Goals in mind:
 
 - Fix gcc build warnings (see build.log for details). Not sure how much the punned pointers will effect optimization, but no warnings is always better than any at all IMHO.
 - Update with any code from pcsxr (Take as much as possible from pcsxr development... unfortunately the wii is limited and some things cannot be ported: http://pcsxr.codeplex.com). As well, most the focus of their development is for x86, leaving not much to take for PPC/Wii. Any fixes can be ported to PCSXR if desired or applicable as well.
-- Improve plugins (perhaps replace them?)... e.g. cdrmooby28 has some optimization and possible heap issues. As well, maybe an opengl plugin can be ported to gx (with the help of something like gl2gx), and a sound plugin with the help of a SDL layer (or ported?).
-- A new GUI with libwiigui, and in turn remove all the Gamecube specific code, to simplify things. It will be easier to change, update and fix. Plus it's all draw with gx (not sure how wiisx gui works TBH) and doesn't have unmaintainable assembly code. It seems like everything breaks in the GUI when I change minor things, so this maybe a necessity... it maybe somewhere in the assembly that's messing things up.
+- Improve plugins (perhaps replace them?)... e.g. cdrmooby28 has some optimization and possible memory issues. As well, maybe an opengl plugin can be ported to gx (with the help of something like gl2gx, WIP see gxrender branch), and a sound plugin with the help of a SDL layer (or ported?).
+- A new GUI with libwiigui, and in turn remove all the Gamecube specific code, to simplify things. It will be easier to change, update and fix. Plus it doesn't involve having unmaintainable assembly code. It seems like everything breaks in the GUI when I change minor things, so this maybe a necessity... it maybe somewhere in the assembly that's messing things up.
 - More controller support, i.e. gamecube, hid, etc... the wii u pro controller is supported but very buggy.
 
 Don't forget to fork me if you want to contribute! :)
@@ -72,6 +70,12 @@ To do this, just call the make command like so and it'll do the rest for you:
 make
 ```
 
+To make a zip file to redistribute:
+
+```bash
+make dist
+```
+
 ##Build System Guide
     
 I realize many people know how to build on devkitPro, but here's a guide for noobies:
@@ -80,25 +84,25 @@ I realize many people know how to build on devkitPro, but here's a guide for noo
 If you're using Windows, it's suggested to use the auto installer instead. After installing it, skip to step 7 (note that the default devkitPro folder is C:\devkitPro):
 http://sourceforge.net/projects/devkitpro/files/Automated%20Installer/
 
-2. Extract the devkitPPC folder from the file you downloaded into a folder called *devkitPro* (your file system should look like this: *devkitPro/devkitPPC/*, make the *devkitPro* folder where ever you want, I used ~/devkitPro)
+2. Extract the devkitPPC folder from the file you downloaded into a folder called **devkitPro** (your file system should look like this: **devkitPro/devkitPPC/**, make the **devkitPro** folder where ever you want, I used ~/devkitPro)
 
 3. Download libogc: http://sourceforge.net/projects/devkitpro/files/libogc/
 
-4. Make a folder called libogc in the *devkitPro* folder like so: *devkitPro/libogc*
+4. Make a folder called libogc in the **devkitPro** folder like so: **devkitPro/libogc**
 
-5. Extract the libogc include and lib folders into the *devkitPro/libogc* folder.
+5. Extract the libogc include and lib folders into the **devkitPro/libogc** folder.
 
 6. Download libfatmod: https://github.com/Mystro256/libfatmod/releases/download/v1.0.14/libfatmod-ogc-1.0.14.tar.bz2
 
-7. Extract the libfatmod include and lib folders into the *devkitPro/libogc* folder.
+7. Extract the libfatmod include and lib folders into the **devkitPro/libogc** folder.
 
 8. Download zlib from here: http://sourceforge.net/projects/devkitpro/files/portlibs/ppc/
 
 9. Download libwupc: https://github.com/FIX94/libwupc/archive/master.zip
 
-10. Make a portlibs folder in the devkitPro folder, then a ppc in the portlibs folder, like so: *devkitPro/portlibs/ppc*
+10. Make a portlibs folder in the devkitPro folder, then a ppc in the portlibs folder, like so: **devkitPro/portlibs/ppc**
 
-11. Extract the include, lib and share folders from zlib and libwupc into the *devkitPro/portlibs/ppc* folder.
+11. Extract the include, lib and share folders from zlib and libwupc into the **devkitPro/portlibs/ppc** folder.
 
 12. On Linux or Mac OSX only, make sure you specify the environment variables, like so (I used ~/devkitPro for the location; replace this with what you used):
 
