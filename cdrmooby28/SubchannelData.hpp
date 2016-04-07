@@ -176,7 +176,7 @@ private:
 class SBISubchannelData : public SubchannelData
 {
 public:
-   SBISubchannelData() {}
+   SBISubchannelData() : filePtr(NULL) {}
    virtual void openFile(const std::string& file, int type) 
       throw(Exception);
    virtual void seek(const CDTime& cdt)
@@ -199,7 +199,7 @@ private:
 class M3SSubchannelData : public SubchannelData
 {
 public:
-   M3SSubchannelData() {}
+   M3SSubchannelData() : filePtr(NULL) {}
    virtual void openFile(const std::string& file, int type) 
       throw(Exception);
    virtual void seek(const CDTime& cdt)

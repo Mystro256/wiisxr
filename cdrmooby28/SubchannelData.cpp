@@ -66,7 +66,7 @@ SubchannelData* SubchannelDataFactory(const std::string& fileroot, int type)
    return scd;
 }
 
-SUBSubchannelData::SUBSubchannelData() 
+SUBSubchannelData::SUBSubchannelData() : filePtr(NULL), enableCache(0)
 {
       // set the cache to be the size given in the prefs
    //cache.setMaxSize(atoi(prefs.prefsMap[cacheSizeString].c_str()));

@@ -37,10 +37,10 @@ extern Preferences prefs;
 FileInterface::FileInterface(const unsigned long requestedFrames, 
       const unsigned long requiredFrames) :
   pregapTime (CDTime(99,59,74)),
-  pregapLength (CDTime(0,0,0))
+  pregapLength (CDTime(0,0,0)),
+  filePtr(NULL),
+  bufferPointer(NULL)
 {
-  
-  bufferFrames = 0;
   cacheMode = oldMode;
   fileBuffer = NULL;
    
@@ -51,11 +51,15 @@ FileInterface::FileInterface(const unsigned long requestedFrames,
       bufferFrames = (requestedFrames < requiredFrames) ? requiredFrames : requestedFrames;
       fileBuffer = new unsigned char[bufferFrames * bytesPerFrame];
    }
+   else
+   {
+      bufferFrames = 0;
+   }
       // set the holdout size
 //   if (prefs.prefsMap[cachingModeString] == newCachingString)
 //      cacheMode = newMode;
 //   else if (prefs.prefsMap[cachingModeString] == oldCachingString)
-      cacheMode = oldMode;
+//      cacheMode = oldMode;
 }
 
 
