@@ -88,10 +88,10 @@ CREDITS:
 
 CHANGE LOG:
 Beta 2.2:
-   * Very minor speed fixes (nothing too major)
+   * Very minor speed tweaks (some games are smoother)
    * UStealth support
-   * Fix crashes for some games (e.g. Mortal Combat)
-   * Fix crash on quit
+   * Fix crashes for a handful of games
+   * Fix crash when quitting
    * Built on lastest devKitPro
    * Rebranding to WiiSXR
 
