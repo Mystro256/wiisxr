@@ -1,35 +1,3 @@
-/wiisxr/Gamecube/../cdrmooby28/FileInterface.cpp:16:0:
-/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
- static const char* repeatString = "repeat";
-                    ^
-/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
- static const char* volumeString = "volume";
-                    ^
-/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
- static const char* repeatAllString = "repeatAll";
-                    ^
-/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
- static const char* repeatOneString = "repeatOne";
-                    ^
-/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:27:20: warning: 'playOneString' defined but not used [-Wunused-variable]
- static const char* playOneString = "playOne";
-                    ^
-/wiisxr/Gamecube/../cdrmooby28/Globals.cpp:16:0:
-/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
- static const char* repeatString = "repeat";
-                    ^
-/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:21:20: warning: 'volumeString' defined but not used [-Wunused-variable]
- static const char* volumeString = "volume";
-                    ^
-/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:25:20: warning: 'repeatAllString' defined but not used [-Wunused-variable]
- static const char* repeatAllString = "repeatAll";
-                    ^
-/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:26:20: warning: 'repeatOneString' defined but not used [-Wunused-variable]
- static const char* repeatOneString = "repeatOne";
-                    ^
-/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:27:20: warning: 'playOneString' defined but not used [-Wunused-variable]
- static const char* playOneString = "playOne";
-                    ^
 /wiisxr/Gamecube/PadSSSPSX.c: In function 'SSS_PADpoll':
 /wiisxr/Gamecube/PadSSSPSX.c:268:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
     *(u16*)&buf[2] = global.padStat[pad];

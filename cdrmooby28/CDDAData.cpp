@@ -12,15 +12,19 @@ http://mooby.psxfanatics.com
 ************************************************************************/
 
 #include "CDDAData.hpp"
-#include "Preferences.hpp"
+//#include "Preferences.hpp"
 
 using namespace std;
 
-extern Preferences prefs;
+//extern Preferences prefs;
 extern std::string programName;
 
 
 static sem_t audioReady;
+#define REPEATALL 0
+#define REPEATONE 1
+#define PLAYONE   2
+static int repeatPref = REPEATALL;
 
 static void* CDDAThread(void* userData){
 	return NULL;
@@ -136,9 +140,10 @@ PlayCDDAData::PlayCDDAData(const std::vector<TrackInfo> &ti, const CDTime &gapLe
      repeat(false), endOfTrack(false), pregapLength(gapLength)
 {
    memset(nullAudio, 0, sizeof(nullAudio));
-   volume = atof(prefs.prefsMap[volumeString].c_str());
-   if (volume < 0) volume = 0;
-   else if (volume > 1) volume = 1;
+   //volume = atof(prefs.prefsMap[volumeString].c_str());
+   //if (volume < 0) volume = 0;
+   //else if (volume > 1) volume = 1;
+   volume = 1;
    
    live = true;
    LWP_SemInit(&audioReady, 1, 1);
@@ -191,18 +196,9 @@ int PlayCDDAData::play(const CDTime& startTime)
 
    InitialTime = startTime;
 
-   // make sure there's a valid option chosen
-   if ((prefs.prefsMap[repeatString] != repeatOneString) &&
-       (prefs.prefsMap[repeatString] != repeatAllString) &&
-       (prefs.prefsMap[repeatString] != playOneString))
-   {
-      prefs.prefsMap[repeatString] = repeatAllString;
-      //prefs.write();
-   }
 
       // figure out which track to play to set the end time
-   if ( (prefs.prefsMap[repeatString] == repeatOneString) ||
-        (prefs.prefsMap[repeatString] == playOneString))
+   if ( repeatPref != REPEATALL )
    {
       unsigned int i = 1;
       while ( (i < (trackList.size() - 1)) && (startTime > trackList[i].trackStart) )
@@ -227,8 +223,7 @@ int PlayCDDAData::play(const CDTime& startTime)
       CDDAStart = localStartTime;
       CDDAEnd = trackList[i].trackStart + trackList[i].trackLength;
    }
-
-   else if (prefs.prefsMap[repeatString] == repeatAllString)
+   else //repeatPref == REPEATALL
    {
       CDDAEnd = trackList[trackList.size() - 1].trackStart +
          trackList[trackList.size() - 1].trackLength;

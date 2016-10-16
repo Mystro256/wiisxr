@@ -13,7 +13,7 @@ http://mooby.psxfanatics.com
 #include "FileInterface.hpp"
 #include "TrackParser.hpp"
 #include "Utils.hpp"
-#include "Preferences.hpp"
+//#include "Preferences.hpp"
 
 #include <sstream>
 
@@ -32,7 +32,7 @@ extern fileBrowser_file subFile;
 // leave this here or the unrarlib will complain about errors
 using namespace std;
 
-extern Preferences prefs;
+//extern Preferences prefs;
 
 FileInterface::FileInterface(const unsigned long requestedFrames, 
       const unsigned long requiredFrames) :
