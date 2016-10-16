@@ -25,7 +25,7 @@ class TrackInfo
 public:
    TrackInfo() : trackNumber(0) {}
 
-   TrackInfo(const CDTime& tl)
+   explicit TrackInfo(const CDTime& tl)
       : trackNumber(0), trackStart(0, CDTime::abFrame), trackLength(tl) {}
 
    inline friend std::ostream& operator<<(std::ostream& o, const TrackInfo& ti)

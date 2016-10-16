@@ -29,7 +29,7 @@ namespace menu {
 class Graphics
 {
 public:
-	Graphics(GXRModeObj *vmode);
+	explicit Graphics(GXRModeObj *vmode);
 	~Graphics();
 	void init();
 	void drawInit();

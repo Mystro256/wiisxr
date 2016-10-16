@@ -147,12 +147,12 @@ public:
       convertTime();
    }
 
-   CDTime(const MSFTime& msftime)
+   explicit CDTime(const MSFTime& msftime)
 		: conversions(msf), MSF(msftime), absoluteByte(0), absoluteFrame(0)
    {convertTime();}
 
 	// converts a time like 00:00:00 to a CD time
-   CDTime(const std::string& str)
+   explicit CDTime(const std::string& str)
       : conversions(msf), absoluteByte(0), absoluteFrame(0)
    {
       MSF.setMSF(atoi(str.substr(0,2).c_str()), atoi(str.substr(3, 2).c_str()), 

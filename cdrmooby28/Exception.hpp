@@ -25,7 +25,7 @@ class Exception
 public:
    Exception() : line(0) {}
 
-   Exception(const std::string& str)
+   explicit Exception(const std::string& str)
       : line(0) {error.push_back(str);}
 
    inline void setLine(const unsigned long l) {line = l;}

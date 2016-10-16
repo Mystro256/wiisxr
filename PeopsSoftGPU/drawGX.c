@@ -276,7 +276,6 @@ void BlitScreenNS_GX(unsigned char * surf,long x,long y, short dx, short dy)
 
  if(PSXDisplay.RGB24)
   {
-   unsigned char * pD;
 
    surf+=PreviousPSXDisplay.Range.x0<<1;
 
@@ -284,7 +283,7 @@ void BlitScreenNS_GX(unsigned char * surf,long x,long y, short dx, short dy)
     {
      unsigned int startxy=((1024)*(column+y))+x;
 
-     pD=(unsigned char *)&psxVuw[startxy];
+     unsigned char * pD=(unsigned char *)&psxVuw[startxy];
 
      for(row=0;row<dx;row++)
       {

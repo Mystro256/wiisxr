@@ -27,7 +27,7 @@ class TrackParser
 {
 public:
       // attempts to open the cue file 'filename'
-   TrackParser(const std::string& filename);
+   explicit TrackParser(const std::string& filename);
 
    virtual ~TrackParser() {}
       // parses the cue file, if any.  throws when there's a read error
@@ -70,7 +70,7 @@ protected:
 class NullParser : public TrackParser
 {
 public:
-   NullParser(const std::string& filename = std::string());
+   explicit NullParser(const std::string& filename = std::string());
 
    virtual ~NullParser() {}
 
@@ -81,7 +81,7 @@ public:
 class CueParser : public TrackParser
 {
 public:
-   CueParser(const std::string& filename)
+   explicit CueParser(const std::string& filename)
       : TrackParser(filename)
    {}
 
@@ -99,7 +99,7 @@ public:
 class CCDParser : public TrackParser
 {
 public:
-   CCDParser(const std::string& filename)
+   explicit CCDParser(const std::string& filename)
       : TrackParser(filename)
    {}
 

@@ -18,7 +18,7 @@ public:
       data = new unsigned char[bytesPerFrame];
    }
 
-   Frame(const unsigned char* d)
+   explicit Frame(const unsigned char* d)
    {
       data = new unsigned char[bytesPerFrame];
       memcpy(data, d, bytesPerFrame);

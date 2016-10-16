@@ -37,7 +37,7 @@
 class MenuContext
 {
 public:
-	MenuContext(GXRModeObj *vmode);
+	explicit MenuContext(GXRModeObj *vmode);
 	~MenuContext();
 	bool isRunning();
 	void setActiveFrame(int frameIndex);

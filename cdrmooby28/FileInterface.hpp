@@ -136,7 +136,7 @@ protected:
 class UncompressedFileInterface : public FileInterface
 {
 public:
-   UncompressedFileInterface(const unsigned long bf)
+   explicit UncompressedFileInterface(const unsigned long bf)
       : FileInterface(bf, UncompressedBufferFrames) 
    {}
    

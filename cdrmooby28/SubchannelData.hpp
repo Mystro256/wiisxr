@@ -42,7 +42,7 @@ public:
       memset(subData, 0, SubchannelFrameSize);
    }
 
-   SubchannelFrame(const CDTime& time)
+   explicit SubchannelFrame(const CDTime& time)
    {
       subData = new unsigned char[SubchannelFrameSize];
       memset(subData, 0, SubchannelFrameSize);

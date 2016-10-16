@@ -16,7 +16,7 @@ class TimeCache
 public:
    TimeCache() : maxSize(10) {}
 
-   TimeCache(size_t size) { setMaxSize(size); }
+   explicit TimeCache(size_t size) { setMaxSize(size); }
 
    TimeCache& setMaxSize(size_t size)
    { 
