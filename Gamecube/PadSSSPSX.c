@@ -261,8 +261,8 @@ unsigned char SSS_PADpoll (const unsigned char value)
 			memcpy (buf, cmd41, sizeof (cmd41));
 			return 0xf3;
 		case 0x42:
+			UpdateState (pad);
 		case 0x43:
-			if (value == 0x42) UpdateState (pad);
 			global.cmdLen = 2 + 2 * (global.padID[pad] & 0x0f);
 			buf[1] = global.padModeC[pad] ? 0x00 : 0x5a;
 			*(u16*)&buf[2] = global.padStat[pad];
