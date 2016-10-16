@@ -126,24 +126,6 @@
   psxMu32ref(0x0894) = SWAPu32((0x3b << 26) | 0);
   ^
 /wiisxr/Gamecube/../psxbios.c: In function 'psxBiosFreeze':
-/wiisxr/Gamecube/../psxbios.c:2393:42: warning: argument to 'sizeof' in 'memcpy' call is the same expression as the source; did you mean to remove the addressof? [-Wsizeof-pointer-memaccess]
- #define bfreezes(ptr) bfreeze(ptr, sizeof(ptr))
-                                          ^
-/wiisxr/Gamecube/../psxbios.c:2385:42: note: in definition of macro 'bfreeze'
-  if (Mode == 1) memcpy(&psxR[base], ptr, size); \
-                                          ^
-/wiisxr/Gamecube/../psxbios.c:2446:2: note: in expansion of macro 'bfreezes'
-  bfreezes(&signature);
-  ^
-/wiisxr/Gamecube/../psxbios.c:2393:42: warning: argument to 'sizeof' in 'memcpy' call is the same expression as the destination; did you mean to remove the addressof? [-Wsizeof-pointer-memaccess]
- #define bfreezes(ptr) bfreeze(ptr, sizeof(ptr))
-                                          ^
-/wiisxr/Gamecube/../psxbios.c:2386:42: note: in definition of macro 'bfreeze'
-  if (Mode == 0) memcpy(ptr, &psxR[base], size); \
-                                          ^
-/wiisxr/Gamecube/../psxbios.c:2446:2: note: in expansion of macro 'bfreezes'
-  bfreezes(&signature);
-  ^
 /wiisxr/Gamecube/../psxbios.c:2457:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   bfreezepsxMptr(jmp_int);
   ^
