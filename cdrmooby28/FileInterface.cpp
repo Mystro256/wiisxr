@@ -39,9 +39,9 @@ FileInterface::FileInterface(const unsigned long requestedFrames,
   pregapTime (CDTime(99,59,74)),
   pregapLength (CDTime(0,0,0)),
   filePtr(NULL),
-  bufferPointer(NULL)
+  bufferPointer(NULL),
+  cacheMode(oldMode)
 {
-  cacheMode = oldMode;
   fileBuffer = NULL;
    
    //cache.setMaxSize(atoi(prefs.prefsMap[cacheSizeString].c_str()));

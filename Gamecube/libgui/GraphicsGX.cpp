@@ -382,7 +382,7 @@ void Graphics::drawCircle(int x, int y, int radius, int numSegments)
 	GX_End();
 }
 
-void Graphics::drawString(int x, int y, std::string str)
+void Graphics::drawString(int x, int y, const std::string &str)
 {
 	//todo
 }

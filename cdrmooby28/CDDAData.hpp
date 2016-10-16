@@ -53,7 +53,7 @@ class PlayCDDAData : public CDDAData
 public:
 		// ti is the list of track lengths.
       // sets the volume from whatever is stored in the preferences
-   PlayCDDAData(const std::vector<TrackInfo> &ti, CDTime gapLength);
+   PlayCDDAData(const std::vector<TrackInfo> &ti, const CDTime &gapLength);
 
 		// cleans up
    virtual ~PlayCDDAData();
