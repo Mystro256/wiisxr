@@ -205,7 +205,6 @@ int fileBrowser_libfat_readDir(fileBrowser_file* file, fileBrowser_file** dir){
   DIR* dp = opendir( file->name );
     if(!dp) return FILE_BROWSER_ERROR;
     struct dirent * temp = NULL;
-    struct stat fstat;
 
     // Set everything up to read
     //char filename[MAXPATHLEN];
@@ -220,8 +219,8 @@ int fileBrowser_libfat_readDir(fileBrowser_file* file, fileBrowser_file** dir){
         }
         sprintf((*dir)[i].name, "%s/%s", file->name, temp->d_name);
         (*dir)[i].offset = 0;
-        (*dir)[i].size   = fstat.st_size;
-        (*dir)[i].attr   = (fstat.st_mode & S_IFDIR) ?
+        (*dir)[i].size   = 0; //TODO
+        (*dir)[i].attr   = (temp->d_type & DT_DIR) ?
                              FILE_BROWSER_ATTR_DIR : 0;
         ++i;
     }
