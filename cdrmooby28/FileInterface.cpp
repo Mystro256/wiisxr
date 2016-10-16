@@ -36,10 +36,10 @@ extern Preferences prefs;
 
 FileInterface::FileInterface(const unsigned long requestedFrames, 
       const unsigned long requiredFrames) :
-  pregapTime (CDTime(99,59,74)),
-  pregapLength (CDTime(0,0,0)),
   filePtr(NULL),
   bufferPointer(NULL),
+  pregapTime (CDTime(99,59,74)),
+  pregapLength (CDTime(0,0,0)),
   cacheMode(oldMode)
 {
   fileBuffer = NULL;

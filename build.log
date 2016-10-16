@@ -1,16 +1,4 @@
-/wiisxr/Gamecube/../cdrmooby28/FileInterface.cpp:13:0:
-/wiisxr/Gamecube/../cdrmooby28/FileInterface.hpp: In constructor 'FileInterface::FileInterface(long unsigned int, long unsigned int)':
-/wiisxr/Gamecube/../cdrmooby28/FileInterface.hpp:119:11: warning: 'FileInterface::pregapLength' will be initialized after [-Wreorder]
-    CDTime pregapLength;
-           ^
-/wiisxr/Gamecube/../cdrmooby28/FileInterface.hpp:98:23: warning:   'fileBrowser_file* FileInterface::filePtr' [-Wreorder]
-     fileBrowser_file *filePtr;      
-                       ^
-/wiisxr/Gamecube/../cdrmooby28/FileInterface.cpp:37:1: warning:   when initialized here [-Wreorder]
- FileInterface::FileInterface(const unsigned long requestedFrames, 
- ^
 /wiisxr/Gamecube/../cdrmooby28/FileInterface.cpp:16:0:
-/wiisxr/Gamecube/../cdrmooby28/Preferences.hpp: At global scope:
 /wiisxr/Gamecube/../cdrmooby28/Preferences.hpp:20:20: warning: 'repeatString' defined but not used [-Wunused-variable]
  static const char* repeatString = "repeat";
                     ^
