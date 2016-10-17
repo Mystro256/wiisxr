@@ -62,14 +62,14 @@ Button::Button(int style, char** label, float x, float y, float width, float hei
 	case BUTTON_STYLEA_NORMAL:
 		setNormalImage(Resources::getInstance().getImage(Resources::IMAGE_STYLEA_BUTTON));
 		setFocusImage(Resources::getInstance().getImage(Resources::IMAGE_STYLEA_BUTTONFOCUS));
-		height = 56;
+		this->height = 56;
 		break;
 	case BUTTON_STYLEA_SELECT:
 		setNormalImage(Resources::getInstance().getImage(Resources::IMAGE_STYLEA_BUTTONSELECTOFF));
 		setFocusImage(Resources::getInstance().getImage(Resources::IMAGE_STYLEA_BUTTONSELECTOFFFOCUS));
 		setSelectedImage(Resources::getInstance().getImage(Resources::IMAGE_STYLEA_BUTTONSELECTON));
 		setSelectedFocusImage(Resources::getInstance().getImage(Resources::IMAGE_STYLEA_BUTTONSELECTONFOCUS));
-		height = 56;
+		this->height = 56;
 		break;
 	}
 	if (buttonStyle != BUTTON_DEFAULT)
