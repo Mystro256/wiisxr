@@ -18,6 +18,8 @@
  *
 **/
 
+#include <sys/stat.h>
+
 #include "MenuContext.h"
 #include "SettingsFrame.h"
 #include "../libgui/Button.h"
@@ -874,6 +876,11 @@ void Func_SaveSettingsSD()
 	fileBrowser_file* configFile_file;
 	int (*configFile_init)(fileBrowser_file*) = fileBrowser_libfat_init;
 	configFile_file = &saveDir_libfat_Default;
+	struct stat s;
+	if (stat("sd:/wiisxr/", &s)) {
+		menu::MessageBox::getInstance().setMessage("Error opening directory sd:/wiisxr");
+		return;
+	}
 	if(configFile_init(configFile_file)) {                //only if device initialized ok
 		FILE* f = fopen( "sd:/wiisxr/settings.cfg", "wb" );  //attempt to open file
 		if(f) {
@@ -891,6 +898,11 @@ void Func_SaveSettingsUSB()
 	fileBrowser_file* configFile_file;
 	int (*configFile_init)(fileBrowser_file*) = fileBrowser_libfat_init;
 	configFile_file = &saveDir_libfat_USB;
+	struct stat s;
+	if (stat("usb:/wiisxr/", &s)) {
+		menu::MessageBox::getInstance().setMessage("Error opening directory usb:/wiisxr");
+		return;
+	}
 	if(configFile_init(configFile_file)) {                //only if device initialized ok
 		FILE* f = fopen( "usb:/wiisxr/settings.cfg", "wb" ); //attempt to open file
 		if(f) {
