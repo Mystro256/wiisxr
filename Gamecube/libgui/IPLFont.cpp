@@ -324,7 +324,7 @@ void IplFont::drawString(int x, int y, char *string, float scale, bool centered)
 		int i;
 		GX_Begin(GX_QUADS, GX_VTXFMT1, 4);
 		for (i=0; i<4; i++) {
-			int s = (i & 1) ^ ((i & 2) >> 1) ? fontChars.font_size[c] : 1;
+			int s = ((i & 1) ^ ((i & 2) >> 1)) ? fontChars.font_size[c] : 1;
 			int t = (i & 2) ? fontChars.fheight : 1;
 			float s0 = ((float) (fontChars.s[c] + s))/512;
 			float t0 = ((float) (fontChars.t[c] + t))/512;
