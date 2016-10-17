@@ -12,13 +12,10 @@ http://mooby.psxfanatics.com
 ************************************************************************/
 
 #include "CDDAData.hpp"
-//#include "Preferences.hpp"
 
 using namespace std;
 
-//extern Preferences prefs;
 extern std::string programName;
-
 
 static sem_t audioReady;
 #define REPEATALL 0
@@ -135,15 +132,11 @@ int CDDACallbackOneTrackStop(  void *inputBuffer, void *outputBuffer,
 }
 
 PlayCDDAData::PlayCDDAData(const std::vector<TrackInfo> &ti, const CDTime &gapLength)
-   : stream(NULL), 
+   : stream(NULL), volume(1),
      frameOffset(0), theCD(NULL), trackList(ti), playing(false),
      repeat(false), endOfTrack(false), pregapLength(gapLength)
 {
    memset(nullAudio, 0, sizeof(nullAudio));
-   //volume = atof(prefs.prefsMap[volumeString].c_str());
-   //if (volume < 0) volume = 0;
-   //else if (volume > 1) volume = 1;
-   volume = 1;
    
    live = true;
    LWP_SemInit(&audioReady, 1, 1);

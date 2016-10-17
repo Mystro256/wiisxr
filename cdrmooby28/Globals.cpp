@@ -13,14 +13,11 @@ http://mooby.psxfanatics.com
 #include "defines.h"
 #include "Utils.hpp"
 #include "CDInterface.hpp"
-//#include "Preferences.hpp"
 
 /** global data for the plugin **/
 
 // the cd data
 CDInterface* theCD = NULL;
-
-//Preferences prefs;
 
 // a return code
 int rc = 0;

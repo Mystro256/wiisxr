@@ -13,7 +13,6 @@ http://mooby.psxfanatics.com
 #include "FileInterface.hpp"
 #include "TrackParser.hpp"
 #include "Utils.hpp"
-//#include "Preferences.hpp"
 
 #include <sstream>
 
@@ -32,8 +31,6 @@ extern fileBrowser_file subFile;
 // leave this here or the unrarlib will complain about errors
 using namespace std;
 
-//extern Preferences prefs;
-
 FileInterface::FileInterface(const unsigned long requestedFrames, 
       const unsigned long requiredFrames) :
   filePtr(NULL),
@@ -43,8 +40,7 @@ FileInterface::FileInterface(const unsigned long requestedFrames,
   cacheMode(oldMode)
 {
   fileBuffer = NULL;
-   
-   //cache.setMaxSize(atoi(prefs.prefsMap[cacheSizeString].c_str()));
+
    cache.setMaxSize(1);
    if (requiredFrames != 0)
    {
@@ -55,11 +51,6 @@ FileInterface::FileInterface(const unsigned long requestedFrames,
    {
       bufferFrames = 0;
    }
-      // set the holdout size
-//   if (prefs.prefsMap[cachingModeString] == newCachingString)
-//      cacheMode = newMode;
-//   else if (prefs.prefsMap[cachingModeString] == oldCachingString)
-//      cacheMode = oldMode;
 }
 
 

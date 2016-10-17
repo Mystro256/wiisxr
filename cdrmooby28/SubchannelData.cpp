@@ -11,7 +11,6 @@ http://mooby.psxfanatics.com
 ************************************************************************/
 
 #include "SubchannelData.hpp"
-//#include "Preferences.hpp"
 
 extern "C" {
 #include "../fileBrowser/fileBrowser.h"
@@ -20,8 +19,6 @@ extern "C" {
 #include "../fileBrowser/fileBrowser-CARD.h"
 extern fileBrowser_file subFile;
 };
-
-//extern Preferences prefs;
 
 using namespace std;
 
