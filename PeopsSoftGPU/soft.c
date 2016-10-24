@@ -5120,8 +5120,8 @@ void drawPoly4TGEx4(short x1, short y1, short x2, short y2, short x3, short y3, 
  long num; 
  long i,j,xmin,xmax,ymin,ymax;
  long cR1,cG1,cB1;
- long difR,difB,difG,difR2,difB2,difG2;
- long difX, difY, difX2, difY2;
+ long difR,difB,difG;
+ long difX, difY;
  long posX,posY,YAdjust,clutP,XAdjust;
  short tC1;
 
@@ -5162,8 +5162,8 @@ void drawPoly4TGEx4(short x1, short y1, short x2, short y2, short x3, short y3, 
        if(num==0) num=1;
        difX=(right_u-posX)/num;
        difY=(right_v-posY)/num;
-       difX2=difX<<1;
-       difY2=difY<<1;
+       long difX2=difX<<1;
+       long difY2=difY<<1;
 
        cR1=left_R;
        cG1=left_G;
@@ -5171,9 +5171,9 @@ void drawPoly4TGEx4(short x1, short y1, short x2, short y2, short x3, short y3, 
        difR=(right_R-cR1)/num;
        difG=(right_G-cG1)/num;
        difB=(right_B-cB1)/num;
-       difR2=difR<<1;
-       difG2=difG<<1;
-       difB2=difB<<1;
+       long difR2=difR<<1;
+       long difG2=difG<<1;
+       long difB2=difB<<1;
 
        if(xmin<drawX)
         {j=drawX-xmin;xmin=drawX;posX+=j*difX;posY+=j*difY;cR1+=j*difR;cG1+=j*difG;cB1+=j*difB;}
@@ -5235,8 +5235,6 @@ void drawPoly4TGEx4(short x1, short y1, short x2, short y2, short x3, short y3, 
      if(num==0) num=1;
      difX=(right_u-posX)/num;
      difY=(right_v-posY)/num;
-     difX2=difX<<1;
-     difY2=difY<<1;
 
      cR1=left_R;
      cG1=left_G;
@@ -5244,9 +5242,6 @@ void drawPoly4TGEx4(short x1, short y1, short x2, short y2, short x3, short y3, 
      difR=(right_R-cR1)/num;
      difG=(right_G-cG1)/num;
      difB=(right_B-cB1)/num;
-     difR2=difR<<1;
-     difG2=difG<<1;
-     difB2=difB<<1;
 
      if(xmin<drawX)
       {j=drawX-xmin;xmin=drawX;posX+=j*difX;posY+=j*difY;cR1+=j*difR;cG1+=j*difG;cB1+=j*difB;}
@@ -5607,8 +5602,8 @@ void drawPoly4TGEx8(short x1, short y1, short x2, short y2, short x3, short y3, 
  long num; 
  long i,j,xmin,xmax,ymin,ymax;
  long cR1,cG1,cB1;
- long difR,difB,difG,difR2,difB2,difG2;
- long difX, difY, difX2, difY2;
+ long difR,difB,difG;
+ long difX, difY;
  long posX,posY,YAdjust,clutP;
  short tC1;
 
@@ -5648,8 +5643,8 @@ void drawPoly4TGEx8(short x1, short y1, short x2, short y2, short x3, short y3, 
        if(num==0) num=1;
        difX=(right_u-posX)/num;
        difY=(right_v-posY)/num;
-       difX2=difX<<1;
-       difY2=difY<<1;
+       long difX2=difX<<1;
+       long difY2=difY<<1;
 
        cR1=left_R;
        cG1=left_G;
@@ -5657,9 +5652,9 @@ void drawPoly4TGEx8(short x1, short y1, short x2, short y2, short x3, short y3, 
        difR=(right_R-cR1)/num;
        difG=(right_G-cG1)/num;
        difB=(right_B-cB1)/num;
-       difR2=difR<<1;
-       difG2=difG<<1;
-       difB2=difB<<1;
+       long difR2=difR<<1;
+       long difG2=difG<<1;
+       long difB2=difB<<1;
 
        if(xmin<drawX)
         {j=drawX-xmin;xmin=drawX;posX+=j*difX;posY+=j*difY;cR1+=j*difR;cG1+=j*difG;cB1+=j*difB;}
@@ -5713,8 +5708,6 @@ void drawPoly4TGEx8(short x1, short y1, short x2, short y2, short x3, short y3, 
      if(num==0) num=1;
      difX=(right_u-posX)/num;
      difY=(right_v-posY)/num;
-     difX2=difX<<1;
-     difY2=difY<<1;
 
      cR1=left_R;
      cG1=left_G;
@@ -5722,9 +5715,6 @@ void drawPoly4TGEx8(short x1, short y1, short x2, short y2, short x3, short y3, 
      difR=(right_R-cR1)/num;
      difG=(right_G-cG1)/num;
      difB=(right_B-cB1)/num;
-     difR2=difR<<1;
-     difG2=difG<<1;
-     difB2=difB<<1;
 
      if(xmin<drawX)
       {j=drawX-xmin;xmin=drawX;posX+=j*difX;posY+=j*difY;cR1+=j*difR;cG1+=j*difG;cB1+=j*difB;}
@@ -6047,8 +6037,8 @@ void drawPoly4TGD(short x1, short y1, short x2, short y2, short x3, short y3, sh
  long num; 
  long i,j,xmin,xmax,ymin,ymax;
  long cR1,cG1,cB1;
- long difR,difB,difG,difR2,difB2,difG2;
- long difX, difY, difX2, difY2;
+ long difR,difB,difG;
+ long difX, difY;
  long posX,posY;
 
  if(x1>drawW && x2>drawW && x3>drawW && x4>drawW) return;
@@ -6083,8 +6073,8 @@ void drawPoly4TGD(short x1, short y1, short x2, short y2, short x3, short y3, sh
        if(num==0) num=1;
        difX=(right_u-posX)/num;
        difY=(right_v-posY)/num;
-       difX2=difX<<1;
-       difY2=difY<<1;
+       long difX2=difX<<1;
+       long difY2=difY<<1;
 
        cR1=left_R;
        cG1=left_G;
@@ -6092,9 +6082,9 @@ void drawPoly4TGD(short x1, short y1, short x2, short y2, short x3, short y3, sh
        difR=(right_R-cR1)/num;
        difG=(right_G-cG1)/num;
        difB=(right_B-cB1)/num;
-       difR2=difR<<1;
-       difG2=difG<<1;
-       difB2=difB<<1;
+       long difR2=difR<<1;
+       long difG2=difG<<1;
+       long difB2=difB<<1;
 
        if(xmin<drawX)
         {j=drawX-xmin;xmin=drawX;posX+=j*difX;posY+=j*difY;cR1+=j*difR;cG1+=j*difG;cB1+=j*difB;}
@@ -6140,8 +6130,6 @@ void drawPoly4TGD(short x1, short y1, short x2, short y2, short x3, short y3, sh
      if(num==0) num=1;
      difX=(right_u-posX)/num;
      difY=(right_v-posY)/num;
-     difX2=difX<<1;
-     difY2=difY<<1;
 
      cR1=left_R;
      cG1=left_G;
@@ -6149,9 +6137,6 @@ void drawPoly4TGD(short x1, short y1, short x2, short y2, short x3, short y3, sh
      difR=(right_R-cR1)/num;
      difG=(right_G-cG1)/num;
      difB=(right_B-cB1)/num;
-     difR2=difR<<1;
-     difG2=difG<<1;
-     difB2=difB<<1;
 
      if(xmin<drawX)
       {j=drawX-xmin;xmin=drawX;posX+=j*difX;posY+=j*difY;cR1+=j*difR;cG1+=j*difG;cB1+=j*difB;}

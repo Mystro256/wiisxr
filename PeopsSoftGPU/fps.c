@@ -204,9 +204,8 @@ void FrameCapSSSPSX(void)                              // frame limit func SSSPS
 
 void FrameSkip(void)
 {
- static int   iNumSkips=0,iAdditionalSkip=0;           // number of additional frames to skip
+ static int   iNumSkips=0;
  static DWORD dwLastLace=0;                            // helper var for frame limitation
- static DWORD curticks, lastticks, _ticks_since_last_update;
 
  if(!dwLaceCnt) return;                                // important: if no updatelace happened, we ignore it completely
 
@@ -222,10 +221,13 @@ void FrameSkip(void)
   }
  else                                                  // ok, no additional skipping has to be done...
   {                                                    // we check now, if some limitation is needed, or a new skipping has to get started
-   DWORD dwWaitTime;
+   DWORD      dwWaitTime;
+   static DWORD curticks, lastticks, _ticks_since_last_update;
 
    if(bInitCap || bSkipNextFrame)                      // first time or we skipped before?
     {
+     static int iAdditionalSkip=0;                     // number of additional frames to skip
+
      if(UseFrameLimit && !bInitCap)                    // frame limit wanted and not first time called?
       {
        DWORD dwT=_ticks_since_last_update;             // -> that's the time of the last drawn frame
@@ -324,14 +326,14 @@ void FrameSkip(void)
 
 void calcfps(void)
 {
- static unsigned long curticks,_ticks_since_last_update,lastticks;
- static long   fps_cnt = 0;
- static unsigned long  fps_tck = 1;
- static long          fpsskip_cnt = 0;
- static unsigned long fpsskip_tck = 1;
-
+ static unsigned long _ticks_since_last_update;
+ static unsigned long fps_cnt = 0;
+ static unsigned long fps_tck = 1;
   {
-   curticks = timeGetTime();
+   static unsigned long lastticks;
+   static unsigned long curticks;
+
+   curticks= timeGetTime();
    _ticks_since_last_update=curticks-lastticks;
 
    if(UseFrameSkip && !UseFrameLimit && _ticks_since_last_update)
@@ -342,6 +344,9 @@ void calcfps(void)
 
  if(UseFrameSkip && UseFrameLimit)
   {
+   static unsigned long fpsskip_cnt = 0;
+   static unsigned long fpsskip_tck = 1;
+
    fpsskip_tck += _ticks_since_last_update;
 
    if(++fpsskip_cnt==2)
@@ -370,12 +375,13 @@ void calcfps(void)
 
 void PCFrameCap (void)
 {
- static unsigned long curticks, lastticks, _ticks_since_last_update;
+ static unsigned long lastticks;
  static unsigned long TicksToWait = 0;
  BOOL Waiting = TRUE;
 
  while (Waiting)
   {
+   static unsigned long curticks, _ticks_since_last_update;
    curticks = timeGetTime();
    _ticks_since_last_update = curticks - lastticks;
    if ((_ticks_since_last_update > TicksToWait) ||
