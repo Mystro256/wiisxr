@@ -245,7 +245,17 @@ unsigned char SSS_PADpoll (const unsigned char value)
 {
 	const int pad = global.curPad;
 	const int cur = global.curByte;
-	static u8 buf[20];
+
+//Pragma to avoid packing on "buffer" union
+//Not sure if necessary on PPC
+#pragma pack(push,1)
+	union buffer
+	{
+		u16 b16[10];
+		u8  b8[20];
+	};
+
+	static union buffer buf;
 	if (cur == 0)
 	{
 		global.curByte++;
@@ -254,69 +264,67 @@ unsigned char SSS_PADpoll (const unsigned char value)
 		{
 		case 0x40:
 			global.cmdLen = sizeof (cmd40);
-			memcpy (buf, cmd40, sizeof (cmd40));
+			memcpy (buf.b8, cmd40, sizeof (cmd40));
 			return 0xf3;
 		case 0x41:
 			global.cmdLen = sizeof (cmd41);
-			memcpy (buf, cmd41, sizeof (cmd41));
+			memcpy (buf.b8, cmd41, sizeof (cmd41));
 			return 0xf3;
 		case 0x42:
 			UpdateState (pad);
 		case 0x43:
 			global.cmdLen = 2 + 2 * (global.padID[pad] & 0x0f);
-			buf[1] = global.padModeC[pad] ? 0x00 : 0x5a;
-			*(u16*)&buf[2] = global.padStat[pad];
+			buf.b8[1] = global.padModeC[pad] ? 0x00 : 0x5a;
+			buf.b16[1] = global.padStat[pad];
 			if (value == 0x43 && global.padModeE[pad])
 			{
-				buf[4] = 0;
-				buf[5] = 0;
-				buf[6] = 0;
-				buf[7] = 0;
+				buf.b16[2] = 0;
+				buf.b16[3] = 0;
 				return 0xf3;
 			}
 			else
 			{
-				buf[ 4] = pad ? lastport2.rightJoyX : lastport1.rightJoyX ; 
-				buf[ 5] = pad ? lastport2.rightJoyY : lastport1.rightJoyY ; 
-				buf[ 6] = pad ? lastport2.leftJoyX : lastport1.leftJoyX ; 
-				buf[ 7] = pad ? lastport2.leftJoyY : lastport1.leftJoyY ; 
-				if (global.padID[pad] == 0x79)
-				{ 
+				buf.b8[4] = pad ? lastport2.rightJoyX : lastport1.rightJoyX ;
+				buf.b8[5] = pad ? lastport2.rightJoyY : lastport1.rightJoyY ;
+				buf.b8[6] = pad ? lastport2.leftJoyX : lastport1.leftJoyX ;
+				buf.b8[7] = pad ? lastport2.leftJoyY : lastport1.leftJoyY ;
+				//if (global.padID[pad] == 0x79)
+				//{
   				// do some pressure stuff (this is for PS2 only!)
-				}
+				//}
 				return (u8)global.padID[pad];
 			}
 			break;
 		case 0x44:
 			global.cmdLen = sizeof (cmd44);
-			memcpy (buf, cmd44, sizeof (cmd44));
+			memcpy (buf.b8, cmd44, sizeof (cmd44));
 			return 0xf3;
 		case 0x45:
 			global.cmdLen = sizeof (cmd45);
-			memcpy (buf, cmd45, sizeof (cmd45));
-			buf[4] = (u8)global.padMode1[pad];
+			memcpy (buf.b8, cmd45, sizeof (cmd45));
+			buf.b8[4] = (u8)global.padMode1[pad];
 			return 0xf3;
 		case 0x46:
 			global.cmdLen = sizeof (cmd46);
-			memcpy (buf, cmd46, sizeof (cmd46));
+			memcpy (buf.b8, cmd46, sizeof (cmd46));
 			return 0xf3;
 		case 0x47:
 			global.cmdLen = sizeof (cmd47);
-			memcpy (buf, cmd47, sizeof (cmd47));
+			memcpy (buf.b8, cmd47, sizeof (cmd47));
 			return 0xf3;
 		case 0x4c:
 			global.cmdLen = sizeof (cmd4c);
-			memcpy (buf, cmd4c, sizeof (cmd4c));
+			memcpy (buf.b8, cmd4c, sizeof (cmd4c));
 			return 0xf3;
 		case 0x4d:
 			global.cmdLen = sizeof (cmd4d);
-			memcpy (buf, cmd4d, sizeof (cmd4d));
+			memcpy (buf.b8, cmd4d, sizeof (cmd4d));
 			return 0xf3;
 		case 0x4f:
 			global.padID[pad] = 0x79;
 			global.padMode2[pad] = 1;
 			global.cmdLen = sizeof (cmd4f);
-			memcpy (buf, cmd4f, sizeof (cmd4f));
+			memcpy (buf.b8, cmd4f, sizeof (cmd4f));
 			return 0xf3;
 		}
 	}
@@ -346,15 +354,15 @@ unsigned char SSS_PADpoll (const unsigned char value)
 		{
 			switch(value)
 			{
-			case 0:
-				buf[5] = 0x02;
-				buf[6] = 0x00;
-				buf[7] = 0x0A;
+			case 0x00:
+				buf.b8[5] = 0x02;
+				buf.b8[6] = 0x00;
+				buf.b8[7] = 0x0A;
 				break;
-			case 1:
-				buf[5] = 0x01;
-				buf[6] = 0x01;
-				buf[7] = 0x14;
+			case 0x01:
+				buf.b8[5] = 0x01;
+				buf.b8[6] = 0x01;
+				buf.b8[7] = 0x14;
 				break;
 			}
 		}
@@ -363,34 +371,34 @@ unsigned char SSS_PADpoll (const unsigned char value)
 		if (cur == 2)
 		{
 			static const u8 buf5[] = { 0x04, 0x07, 0x02, 0x05 };
-			buf[5] = buf5[value & 3];
+			buf.b8[5] = buf5[value & 0x03];
 		}
 		break;
 	case 0x4d:
 		if (cur >= 2)
 		{
 			if (cur == global.padVib0[pad])
-				buf[cur] = 0x00;
-			if (cur == global.padVib1[pad])
-				buf[cur] = 0x01;
-			if (value == 0x00)
+				buf.b8[cur] = 0x00;
+			else if (cur == global.padVib1[pad])
+				buf.b8[cur] = 0x01;
+
+			switch (value)
 			{
+			case 0x00:
 				global.padVib0[pad] = cur;
+			case 0x01:
 				if ((global.padID[pad] & 0x0f) < (cur - 1) / 2)
 					 global.padID[pad] = (global.padID[pad] & 0xf0) + (cur - 1) / 2;
-			}
-			else if (value == 0x01)
-			{
-				global.padVib1[pad] = cur;
-				if ((global.padID[pad] & 0x0f) < (cur - 1) / 2)
-					 global.padID[pad] = (global.padID[pad] & 0xf0) + (cur - 1) / 2;
+				if(value) global.padVib1[pad] = cur;
 			}
 		}
 		break;
 	}
 	if (cur >= global.cmdLen)
 		return 0;
-	return buf[global.curByte++];
+	return buf.b8[global.curByte++];
+//Revert packing
+#pragma pack(pop)
 }
 
 long SSS_PADreadPort1 (PadDataS* pads)

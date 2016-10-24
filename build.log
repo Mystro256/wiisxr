@@ -1,7 +1,3 @@
-/wiisxr/Gamecube/PadSSSPSX.c: In function 'SSS_PADpoll':
-/wiisxr/Gamecube/PadSSSPSX.c:268:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-    *(u16*)&buf[2] = global.padStat[pad];
-    ^
 /wiisxr/Gamecube/../psxbios.c: In function 'psxBios_printf':
 /wiisxr/Gamecube/../psxbios.c:561:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
   psxMu32ref(sp) = SWAP32((u32)a0);
