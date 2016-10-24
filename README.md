@@ -86,13 +86,13 @@ http://sourceforge.net/projects/devkitpro/files/Automated%20Installer/
 
 2. Extract the devkitPPC folder from the file you downloaded into a folder called **devkitPro** (your file system should look like this: **devkitPro/devkitPPC/**, make the **devkitPro** folder where ever you want, I used ~/devkitPro)
 
-3. Download libogc: http://sourceforge.net/projects/devkitpro/files/libogc/
+3. Download libogc: https://github.com/devkitPro/libogc/releases
 
 4. Make a folder called libogc in the **devkitPro** folder like so: **devkitPro/libogc**
 
 5. Extract the libogc include and lib folders into the **devkitPro/libogc** folder.
 
-6. Download libfatmod: https://github.com/Mystro256/libfatmod/releases/download/v1.0.14/libfatmod-ogc-1.0.14.tar.bz2
+6. Download libfatmod: https://github.com/Mystro256/libfatmod/releases
 
 7. Extract the libfatmod include and lib folders into the **devkitPro/libogc** folder.
 
