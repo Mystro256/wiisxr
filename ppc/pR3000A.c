@@ -1687,7 +1687,7 @@ static void preMemWrite(int size)
 static void recLB() {
 // Rt = mem[Rs + Im] (signed)
 	
-    if (IsConst(_Rs_)) {
+    /*if (IsConst(_Rs_)) {
         u32 addr = iRegs[_Rs_].k + _Imm_;
         int t = addr >> 16;
     
@@ -1714,7 +1714,7 @@ static void recLB() {
             return;
         }
     //	SysPrintf("unhandled r8 %x\n", addr);
-    }
+    }*/
 	
 	preMemRead();
 	CALLFunc((u32)psxMemRead8);
@@ -1727,7 +1727,7 @@ static void recLB() {
 static void recLBU() {
 // Rt = mem[Rs + Im] (unsigned)
 
-    if (IsConst(_Rs_)) {
+    /*if (IsConst(_Rs_)) {
         u32 addr = iRegs[_Rs_].k + _Imm_;
         int t = addr >> 16;
     
@@ -1752,7 +1752,7 @@ static void recLBU() {
             return;
         }
     //	SysPrintf("unhandled r8 %x\n", addr);
-    }
+    }*/
         
 	preMemRead();
 	CALLFunc((u32)psxMemRead8);
