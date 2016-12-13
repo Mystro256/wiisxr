@@ -86,7 +86,7 @@ http://sourceforge.net/projects/devkitpro/files/Automated%20Installer/
 
 2. Extract the devkitPPC folder from the file you downloaded into a folder called **devkitPro** (your file system should look like this: **devkitPro/devkitPPC/**, make the **devkitPro** folder where ever you want, I used ~/devkitPro)
 
-3. Download libogc: https://github.com/devkitPro/libogc/releases
+3. Download libogc: http://sourceforge.net/projects/devkitpro/files/libogc/
 
 4. Make a folder called libogc in the **devkitPro** folder like so: **devkitPro/libogc**
 
