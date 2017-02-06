@@ -123,11 +123,11 @@ void Graphics::init()
 	GX_SetDispCopyDst(vmode->fbWidth,xfbHeight);
 	GX_SetCopyFilter(vmode->aa,vmode->sample_pattern,GX_TRUE,vmode->vfilter);
 	GX_SetFieldMode(vmode->field_rendering,((vmode->viHeight==2*vmode->xfbHeight)?GX_ENABLE:GX_DISABLE));
- 
+
 	if (vmode->aa)
-        GX_SetPixelFmt(GX_PF_RGB565_Z16, GX_ZC_LINEAR);
-    else
-        GX_SetPixelFmt(GX_PF_RGB8_Z24, GX_ZC_LINEAR);
+		GX_SetPixelFmt(GX_PF_RGB565_Z16, GX_ZC_LINEAR);
+	else
+		GX_SetPixelFmt(GX_PF_RGB8_Z24, GX_ZC_LINEAR);
 
 	GX_SetCullMode(GX_CULL_NONE);
 	GX_SetDispCopyGamma(GX_GM_1_0);
