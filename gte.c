@@ -343,7 +343,8 @@ __inline float limG1(float x) {
 	if (x <-2147483648.0) { gteFLAG |= (1<<15); }
 
 	if (x >       1023.0) { x =  1023.0; gteFLAG |= (1<<14); } else
-	if (x <      -1024.0) { x = -1024.0; gteFLAG |= (1<<14); } return (x);
+	if (x <      -1024.0) { x = -1024.0; gteFLAG |= (1<<14); }
+    return (x);
 }
 
 __inline float limG2(float x) {
@@ -351,7 +352,8 @@ __inline float limG2(float x) {
 	if (x <-2147483648.0) { gteFLAG |= (1<<15); }
 
 	if (x >       1023.0) { x =  1023.0; gteFLAG |= (1<<13); } else
-	if (x <      -1024.0) { x = -1024.0; gteFLAG |= (1<<13); } return (x);
+	if (x <      -1024.0) { x = -1024.0; gteFLAG |= (1<<13); }
+    return (x);
 }
 
 __inline s32 F12limA1S(s64 x) { _LIMX(-32768<<12, 32767<<12, 24); }
@@ -381,7 +383,8 @@ __inline s32 FlimG1(s64 x) {
 	if (x < (s64)0xffffffff80000000LL) { gteFLAG |= (1<<15); }
 
 	if (x >       1023) { x =  1023; gteFLAG |= (1<<14); } else
-	if (x <      -1024) { x = -1024; gteFLAG |= (1<<14); } return (x);
+	if (x <      -1024) { x = -1024; gteFLAG |= (1<<14); }
+    return (x);
 }
 
 __inline s32 FlimG2(s64 x) {
@@ -389,7 +392,8 @@ __inline s32 FlimG2(s64 x) {
 	if (x < (s64)0xffffffff80000000LL) { gteFLAG |= (1<<15); }
 
 	if (x >       1023) { x =  1023; gteFLAG |= (1<<13); } else
-	if (x <      -1024) { x = -1024; gteFLAG |= (1<<13); } return (x);
+	if (x <      -1024) { x = -1024; gteFLAG |= (1<<13); }
+    return (x);
 }
 
 #define MAC2IR() { \

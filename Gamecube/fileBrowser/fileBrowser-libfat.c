@@ -139,8 +139,8 @@ static void *removalCallback (void *arg)
   {
     if(!rThreadRun)
       LWP_SuspendThread(removalThread);
-      usleep(THREAD_SLEEP);
-      devsleep -= THREAD_SLEEP;
+    usleep(THREAD_SLEEP);
+    devsleep -= THREAD_SLEEP;
   }
 
   while (1)
