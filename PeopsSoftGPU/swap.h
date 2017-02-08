@@ -19,27 +19,26 @@
 #define GETLEs32(X) ((short)GETLE32((unsigned short *)X))
 
 #ifdef _BIG_ENDIAN
-// GCC style
-extern __inline__ unsigned short GETLE16(unsigned short *ptr) {
+inline unsigned short GETLE16(unsigned short *ptr) {
     unsigned short ret; __asm__ ("lhbrx %0, 0, %1" : "=r" (ret) : "r" (ptr));
     return ret;
 }
-extern __inline__ unsigned long GETLE32(unsigned long *ptr) {
+inline unsigned long GETLE32(unsigned long *ptr) {
     unsigned long ret;
     __asm__ ("lwbrx %0, 0, %1" : "=r" (ret) : "r" (ptr));
     return ret;
 }
-extern __inline__ unsigned long GETLE16D(unsigned long *ptr) {
+inline unsigned long GETLE16D(unsigned long *ptr) {
     unsigned long ret;
     __asm__ ("lwbrx %0, 0, %1\n"
              "rlwinm %0, %0, 16, 0, 31" : "=r" (ret) : "r" (ptr));
     return ret;
 }
 
-extern __inline__ void PUTLE16(unsigned short *ptr, unsigned short val) {
+inline void PUTLE16(unsigned short *ptr, unsigned short val) {
     __asm__ ("sthbrx %0, 0, %1" : : "r" (val), "r" (ptr) : "memory");
 }
-extern __inline__ void PUTLE32(unsigned long *ptr, unsigned long val) {
+inline void PUTLE32(unsigned long *ptr, unsigned long val) {
     __asm__ ("stwbrx %0, 0, %1" : : "r" (val), "r" (ptr) : "memory");
 }
 #else // _BIG_ENDIAN
