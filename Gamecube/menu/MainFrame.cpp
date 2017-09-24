@@ -242,6 +242,12 @@ void Func_PlayGame()
 
 			WUPCData* data = WUPC_Data(i);
 			if (data != NULL && data->button & WPAD_CLASSIC_BUTTON_A) buttonHeld++;
+
+			if(i == 0)
+			{
+				const WiiDRCData* data = WiiDRC_Data();
+				if (data != NULL && data->button & WIIDRC_BUTTON_A) buttonHeld++;
+			}
 #endif
 		}
 	}
