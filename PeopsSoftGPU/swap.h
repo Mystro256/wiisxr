@@ -1,8 +1,8 @@
 
 // byteswappings
 
-#define SWAP16(x) (((x)>>8 & 0xff) | ((x)<<8 & 0xff00))
-#define SWAP32(x) (((x)>>24 & 0xfful) | ((x)>>8 & 0xff00ul) | ((x)<<8 & 0xff0000ul) | ((x)<<24 & 0xff000000ul))
+#define SWAP16(x) (((x & 0xff00)>>8) | ((x & 0xff)<<8))
+#define SWAP32(x) (((x & 0xff000000ul)>>24) | ((x & 0xff0000ul)>>8) | ((x & 0xff00ul)<<8) | ((x & 0xfful)<<24))
 
 // big endian config
 #define HOST2LE32(x) SWAP32(x)
