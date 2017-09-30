@@ -6,7 +6,7 @@
 #include "controller.h"
 #include "../wiiSXconfig.h"
 
-unsigned int convertToPSRange(const int raw)
+static unsigned int convertToPSRange(const int raw)
 {
 	// Convert raw from a value between [-1, 1].
 	// It's easier to convert to another analog range this way.
@@ -31,14 +31,14 @@ enum {
 };
 
 enum {
-	L_STICK_L = 0x01 << 16,
-	L_STICK_R = 0x02 << 16,
-	L_STICK_U = 0x04 << 16,
-	L_STICK_D = 0x08 << 16,
-	R_STICK_L = 0x10 << 16,
-	R_STICK_R = 0x20 << 16,
-	R_STICK_U = 0x40 << 16,
-	R_STICK_D = 0x80 << 16,
+	L_STICK_L = 0x01 << 8,
+	L_STICK_R = 0x02 << 8,
+	L_STICK_U = 0x04 << 8,
+	L_STICK_D = 0x08 << 8,
+	R_STICK_L = 0x10 << 8,
+	R_STICK_R = 0x20 << 8,
+	R_STICK_U = 0x40 << 8,
+	R_STICK_D = 0x80 << 8,
 };
 
 static button_t buttons[] = {
@@ -58,8 +58,8 @@ static button_t buttons[] = {
 	{ 13, WPAD_CLASSIC_BUTTON_PLUS, "+" },
 	{ 14, WPAD_CLASSIC_BUTTON_MINUS, "-" },
 	{ 15, WPAD_CLASSIC_BUTTON_HOME, "Home" },
-	{ 16, WUPC_EXTRA_BUTTON_RSTICK, "RS-Button" },
-	{ 17, WUPC_EXTRA_BUTTON_LSTICK, "LS-Button" },
+	{ 16, WUPC_EXTRA_BUTTON_LSTICK, "LS-Button" },
+	{ 17, WUPC_EXTRA_BUTTON_RSTICK, "RS-Button" },
 	{ 18, R_STICK_U, "RS-Up" },
 	{ 19, R_STICK_L, "RS-Left" },
 	{ 20, R_STICK_R, "RS-Right" },
@@ -111,6 +111,16 @@ static unsigned int getButtons(int Control){
 	struct WUPCData* data = WUPC_Data(Control);
 	if (data != NULL){
 		unsigned int btns = (unsigned int)data->button;
+
+		if(data->xAxisL < -256) btns |= L_STICK_L;
+		if(data->xAxisL >  256) btns |= L_STICK_R;
+		if(data->yAxisL >  256) btns |= L_STICK_U;
+		if(data->yAxisL < -256) btns |= L_STICK_D;
+
+		if(data->xAxisL < -256) btns |= R_STICK_L;
+		if(data->xAxisL >  256) btns |= R_STICK_R;
+		if(data->yAxisR >  256) btns |= R_STICK_U;
+		if(data->yAxisR < -256) btns |= R_STICK_D;
 
 		// Slight hack: Add the extra buttons (L3/R3 basically) to the data.
 		// They do not interfere with the other Wii U controller buttons.
