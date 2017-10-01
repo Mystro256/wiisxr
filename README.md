@@ -18,19 +18,19 @@ https://github.com/FIX94/libwupc
 
 Please contact me if you have licensing concerns. I will try to make this as GPL2+/3+ compliant as possible.
 
-##Downloads
+## Downloads
 
 All downloads can be found here:
 
 https://github.com/Mystro256/wiisxr/releases
 
-##Reporting Bugs
+## Reporting Bugs
 
 Feel free to report bugs, but if you can, please test pcsxr first, to eliminate redundant bugs. If it's not a bug in pcsxr, but a bug here, report it here if desired. I would hope this can be as aligned with pcsxr as possible, so any bugs in pcsxr will be inherited unfortunately. If it is a bug in pcsxr, feel free to report bugs with pcsxr... Please note that I am not affiliated with them, so mentioning me or wiisxr is unnecessary and unadvised to avoid confusion.
 
 As well, I can't guarentee this project will be a success, unless I can get some help! So if you have any programming skill, feel free to fork me and check the Goals section!
 
-##Goals
+## Goals
 
 The aim of this project is to maintain, update and improve the wiisx code to comply with building with the latest devkitPro (PPC), website can be found here:
 http://sourceforge.net/projects/devkitpro/files/devkitPPC/
@@ -47,7 +47,7 @@ Don't forget to fork me if you want to contribute! :)
 I'm open to collaborators!
 Unfortunately its a lot of work and I'm limited on time as is, so any help is appreciated.
 
-##How to Build
+## How to Build
 
 If don't have the build system setup yet, see "Build System Guide" first
 
@@ -76,7 +76,7 @@ To make a zip file to redistribute:
 make dist
 ```
 
-##Build System Guide
+## Build System Guide
     
 I realize many people know how to build on devkitPro, but here's a guide for noobies:
 
@@ -96,15 +96,17 @@ http://sourceforge.net/projects/devkitpro/files/Automated%20Installer/
 
 7. Extract the libfatmod include and lib folders into the **devkitPro/libogc** folder.
 
-8. Download zlib from here: http://sourceforge.net/projects/devkitpro/files/portlibs/ppc/
+9. Download zlib from here: http://sourceforge.net/projects/devkitpro/files/portlibs/ppc/
 
-9. Download libwupc: https://github.com/FIX94/libwupc/archive/master.zip
+10. Download libwupc: https://github.com/FIX94/libwupc/archive/master.zip
 
-10. Make a portlibs folder in the devkitPro folder, then a ppc in the portlibs folder, like so: **devkitPro/portlibs/ppc**
+11. Download libwiidrc: https://github.com/FIX94/libwiidrc/releases
 
-11. Extract the include, lib and share folders from zlib and libwupc into the **devkitPro/portlibs/ppc** folder.
+12. Make a portlibs folder in the devkitPro folder, then a ppc in the portlibs folder, like so: **devkitPro/portlibs/ppc**
 
-12. On Linux or Mac OSX only, make sure you specify the environment variables, like so (I used ~/devkitPro for the location; replace this with what you used):
+13. Extract the include, lib and share folders from zlib, libwupc, and libwiidrc into the **devkitPro/portlibs/ppc** folder.
+
+14. On Linux or Mac OSX only, make sure you specify the environment variables, like so (I used ~/devkitPro for the location; replace this with what you used):
 
 ```bash
 export DEVKITPRO=$HOME/devkitPro
