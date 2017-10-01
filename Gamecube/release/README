@@ -1,5 +1,5 @@
 README : WiiSXR / CubeSXR
-Beta 2.2
+Beta 2.3
 
 LICENSE:
     This software is licensed under the GNU General Public License v2
@@ -87,6 +87,15 @@ CREDITS:
  * Visit us on www.emulatemii.com and http://code.google.com/p/pcsxgc
 
 CHANGE LOG:
+Beta 2.3:
+   * Fix various filebrowser bugs
+   * Speed tweaks
+   * A bunch of code optimization
+   * Fix a regression with dynarec
+   * Compiling against latest DevkitPPC (29-1)
+   * Very minor GUI bug fixes
+   * Add basic Wii U Gamepad support
+
 Beta 2.2:
    * Very minor speed tweaks (some games are smoother)
    * UStealth support
