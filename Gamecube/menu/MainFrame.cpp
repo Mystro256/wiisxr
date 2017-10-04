@@ -164,23 +164,19 @@ void Func_Credits()
 {
 	char CreditsInfo[512] = "";
 #ifdef HW_RVL
-	strcat(CreditsInfo,"WiiSXR Beta 2.2\n");
+	strcat(CreditsInfo,"WiiSXR Beta 2.3\n");
 #else
-	strcat(CreditsInfo,"CubeSXR Beta 2.2\n");
+	strcat(CreditsInfo,"CubeSXR Beta 2.3\n");
 #endif
 	strcat(CreditsInfo,"github.com/Mystro256/wiisxr\n");
-	strcat(CreditsInfo,"WiiSXR: Mystro256\n");
-	strcat(CreditsInfo,"\n");
-	strcat(CreditsInfo,"Wii64 Team:\n");
-	strcat(CreditsInfo,"    emu_kidid - general coding\n");
-	strcat(CreditsInfo,"      sepp256 - graphics & menu\n");
-	strcat(CreditsInfo,"tehpola - audio  \n");
-	strcat(CreditsInfo,"\n");
-	strcat(CreditsInfo,"Special Thanks To:\n");
-	strcat(CreditsInfo,"       drmr - for menu graphics\n");
+	strcat(CreditsInfo,"emu_kidid - general coding\n");
+	strcat(CreditsInfo,"sepp256 - graphics & menu\n");
+	strcat(CreditsInfo,"tehpola - audio\n");
+	strcat(CreditsInfo,"drmr - for menu graphics\n");
 	strcat(CreditsInfo,"PCSX/PCSX-df Teams\n");
 	strcat(CreditsInfo,"Wintermute/Shagkur - devkitPro/libOGC\n");
 #ifdef HW_RVL
+	strcat(CreditsInfo,"FIX94 - Wii U gamepad support\n");
 	strcat(CreditsInfo,"matguitarist - USB 2.0 Support\n");
 	strcat(CreditsInfo,"Daxtsu - LIBWUPC support\n");
 	strcat(CreditsInfo,"iiiGerardoiii - WIISXR logo\n");
