@@ -80,9 +80,8 @@ make dist
     
 I realize many people know how to build on devkitPro, but here's a guide for noobies:
 
-1. Download devkitPro (PPC version for your system) from here: http://sourceforge.net/projects/devkitpro/files/devkitPPC/
-If you're using Windows, it's suggested to use the auto installer instead. After installing it, skip to step 7 (note that the default devkitPro folder is C:\devkitPro):
-http://sourceforge.net/projects/devkitpro/files/Automated%20Installer/
+1. Download devkitPro (PPC version for your system) from here: https://devkitpro.org/wiki/Getting_Started
+If you're using Windows, it's suggested to use the auto installer instead. After installing it, skip to step 7 (note that the default devkitPro folder is C:\devkitPro)
 
 2. Extract the devkitPPC folder from the file you downloaded into a folder called **devkitPro** (your file system should look like this: **devkitPro/devkitPPC/**, make the **devkitPro** folder where ever you want, I used ~/devkitPro)
 
@@ -96,7 +95,7 @@ http://sourceforge.net/projects/devkitpro/files/Automated%20Installer/
 
 7. Extract the libfatmod include and lib folders into the **devkitPro/libogc** folder.
 
-9. Download zlib from here: http://sourceforge.net/projects/devkitpro/files/portlibs/ppc/
+9. Next you will need to install zlib with devkitpro's pacman command. Open up a terminal and type in: pacman -S ppc-zlib
 
 10. Download libwupc: https://github.com/FIX94/libwupc/archive/master.zip
 
@@ -104,7 +103,7 @@ http://sourceforge.net/projects/devkitpro/files/Automated%20Installer/
 
 12. Make a portlibs folder in the devkitPro folder, then a ppc in the portlibs folder, like so: **devkitPro/portlibs/ppc**
 
-13. Extract the include, lib and share folders from zlib, libwupc, and libwiidrc into the **devkitPro/portlibs/ppc** folder.
+13. Extract the include, lib and share folders from libwupc and libwiidrc into the **devkitPro/portlibs/ppc** folder.
 
 14. On Linux or Mac OSX only, make sure you specify the environment variables, like so (I used ~/devkitPro for the location; replace this with what you used):
 
